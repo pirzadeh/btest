@@ -3,15 +3,18 @@ package de.hybris.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 
-public class GoogleSearch {
-	private WebDriver driver;
+import de.hybris.base.PageObject;
+
+public class GoogleSearch extends PageObject{
 
 	//Page URL
-	private static String URL="https://scholar.google.ca/";
-
+	private static String url="https://scholar.google.ca/";
+	
+	public GoogleSearch(WebDriver driver) {
+		super(driver, url);
+	}
+	
 	//Locators
 
 	@FindBy(name = "btnG")
@@ -20,23 +23,16 @@ public class GoogleSearch {
 	@FindBy(name = "q")
 	private WebElement searchField;
 
-	//Constructor
-	public GoogleSearch(WebDriver driver){
-		this.driver=driver;
-		driver.get(URL);
-		PageFactory.initElements(driver, this);
-	}
-
+	
+	//Actions
 	public void clickOnSearchButton(){
 
 		searchButton.click();
-
 	}
-
+	
 	public GoogleSearch enterQuery(String query){
 
 		searchField.sendKeys(query);
 		return this;
-
 	}
 }

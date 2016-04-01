@@ -1,28 +1,10 @@
 package de.hybris.tests;
 
-import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
+import de.hybris.base.BusinessTest;
 import de.hybris.pages.GoogleSearch;
+import org.junit.Test;
 
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
-
-public class GoogleSearchTest {
-
-	WebDriver driver;
-
-	@Before
-	public void setup(){
-		//use FF Driver
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
+public class GoogleSearchTest extends BusinessTest{
 
 	@Test
 	public void searchForSomething() {
@@ -32,12 +14,5 @@ public class GoogleSearchTest {
 		home
 		.enterQuery(query)
 		.clickOnSearchButton();
-
 	}
-
-	@After
-	public void close(){
-		driver.close();
-	}
-
 }
