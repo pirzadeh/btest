@@ -11,7 +11,7 @@ public class BusinessTest {
 	protected WebDriver driver;
 
 	@Before
-	public void setup(){
+	public void basesetup(){
 		//use FF Driver
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -19,7 +19,7 @@ public class BusinessTest {
 	
 
 	@After
-	public void close(){
+	public void baseclose(){
 		driver.close();
 	}
 }
