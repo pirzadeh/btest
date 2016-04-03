@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class PageObject {
-	private WebDriver driver;
+	public WebDriver driver;
 
 	public PageObject(WebDriver driver, String url) {
 		this.setDriver(driver);
@@ -12,6 +12,11 @@ public class PageObject {
 		PageFactory.initElements(driver, this);
 	}
 
+	public PageObject(WebDriver driver) {
+		this.setDriver(driver);
+		PageFactory.initElements(driver, this);
+	}
+	
 	public WebDriver getDriver() {
 		return driver;
 	}

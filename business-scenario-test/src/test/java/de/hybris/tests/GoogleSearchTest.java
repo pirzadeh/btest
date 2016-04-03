@@ -20,5 +20,12 @@ public class GoogleSearchTest extends BusinessTest{
 
 		String query = "selenium page object";
 		page.enterQuery(query).clickOnSearchButton();
+
+	}
+	
+	@Test
+	public void gotoAccount() {
+
+		page.header.clickAppsSign();
 	}
 }
