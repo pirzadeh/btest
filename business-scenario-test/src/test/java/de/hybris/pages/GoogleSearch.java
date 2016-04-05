@@ -9,7 +9,7 @@ import de.hybris.base.PageObject;
 public class GoogleSearch extends PageObject{
 
 	//Page URL
-	private static String url="https://scholar.google.ca/";
+	private static String url="https://google.ca/";
 	
 	public GoogleSearch(WebDriver driver) {
 		super(driver, url);
@@ -23,6 +23,7 @@ public class GoogleSearch extends PageObject{
 	@FindBy(name = "q")
 	private WebElement searchField;
 
+	public Header header = new Header(driver);
 	
 	//Actions
 	public void clickOnSearchButton(){

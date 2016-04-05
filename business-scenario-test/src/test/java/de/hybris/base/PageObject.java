@@ -17,6 +17,11 @@ public class PageObject {
 		PageFactory.initElements(driver, this);
 	}
 
+	public PageObject(WebDriver driver) {
+		this.setDriver(driver);
+		PageFactory.initElements(driver, this);
+	}
+	
 	public WebDriver getDriver() {
 		return driver;
 	}
