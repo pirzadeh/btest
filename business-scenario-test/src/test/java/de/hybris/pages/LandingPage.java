@@ -1,6 +1,7 @@
 package de.hybris.pages;
 
 import de.hybris.base.PageObject;
+import de.hybris.base.SmartEdit;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,14 +26,6 @@ public class LandingPage extends PageObject
 
 	//Locators
 
-	//Username
-	private final WebElement username = driver.findElement(By.xpath("//input[contains(@placeholder, 'Username')]"));
-
-	//Password
-	private final WebElement password = driver.findElement(By.xpath("//input[contains(@placeholder, 'Password')]"));
-
-	@FindBy(name = "submit")
-	private WebElement signin;
 	
 	//helpers
 	
@@ -51,12 +44,16 @@ public class LandingPage extends PageObject
 		  return filteredBody.get();
 	}
 	
-	public WebElement gotoCatalogVersion(String catalog, String catalogVersion){
+	public WebElement findCatalogVersion(String catalog, String catalogVersion){
 		
 		return catalogBodyOf(catalog).findElement(By.xpath("//div[contains(text(),'"+catalogVersion+"')]"));
 	}
 	
-	
+	public SmartEdit gotoCatalogVersion(String catalog, String catalogVersion){
+		
+		findCatalogVersion(catalog, catalogVersion).click();
+		return (new SmartEdit(driver));
+	}
 	
 	
 	
@@ -73,98 +70,4 @@ public class LandingPage extends PageObject
 		return driver.findElement(By.cssSelector(".pagination-container .pagination li:nth-child(" + index + ") a"));
 	}
 	
-	
-/*
- *     catalogs: {
-        get: function() {
-            return element.all(by.css('.catalog-container'));
-        }
-    },
-    firstCatalog: {
-        get: function() {
-            return element(by.css('.catalog-container .catalog-version-container'));
-        }
-    },
-    selectCatalogPageNumber: {
-        get: function(index) {
-            var STARTING_POSITION = 2;
-            index = index + STARTING_POSITION;
-            return element(by.css('.pagination-container .pagination li:nth-child(' + index + ') a'));
-        }
-    },
-    experienceSelectorWidgetText: {
-        get: function() {
-            browser.click(by.css('.navbar-header .navbar-toggle'));
-            browser.sleep(500);
-            browser.click(by.css('.leftNav a[data-ng-click="showSites()"]'));
-            browser.sleep(500);
-        }
-    },
-
-    clickSitesFromLeftMenu: {
-        get: function() {
-
-            return element(by.css('#slot1'));
-        }
-    },
-    catalogBodies: {
-        get: function() {
-            return element.all(by.css('.catalog-body'));
-        }
-    },
-    catalogBodyOf: {
-        value: function(term) {
-            return element(By.cssContainingText('.catalog-body', term));
-        }
-    },
-    syncButtonOf: {
-        value: function(term) {
-            return this.catalogBodyOf(term).element(by.xpath('.//*[contains(@class,"catalog-sync-btn")]'));
-        }
-    },
-    syncStatusOf: {
-        value: function(term) {
-            return this.catalogBodyOf(term).element(by.xpath('.//*[contains(@class,"ySESyncProgress")]'));
-        }
-    },
-    failureStatusOf: {
-        value: function(term) {
-            return this.catalogBodyOf(term).element(by.xpath('.//*[contains(@class,"label-error")]'));
-        }
-    },
-    syncDateOf: {
-        value: function(term) {
-            return this.catalogBodyOf(term).element(by.xpath('.//*[contains(@class,"catalog-last-synced")]'));
-        }
-    },
-    syncConfirmPopup: {
-        get: function() {
-            return element(by.xpath('.//*[contains(@class,"modal-dialog")]'));
-        }
-    },
-    syncConfirmOK: {
-        get: function() {
-            return element(by.id('confirmOk'));
-        }
-    },
- */
-	
-	
-	
-	public LandingPage enterUsername(final String name)
-	{
-		username.sendKeys(name);
-		return this;
-	}
-
-	public LandingPage enterPassword(final String pass)
-	{
-		password.sendKeys(pass);
-		return this;
-	}
-
-	public void signin()
-	{
-		signin.click();
-	}
 }

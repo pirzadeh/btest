@@ -1,6 +1,8 @@
 package de.hybris.base;
 
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class PageObject {
@@ -16,11 +18,6 @@ public class PageObject {
 		this.setDriver(driver);
 		PageFactory.initElements(driver, this);
 	}
-
-	public PageObject(WebDriver driver) {
-		this.setDriver(driver);
-		PageFactory.initElements(driver, this);
-	}
 	
 	public WebDriver getDriver() {
 		return driver;
@@ -29,6 +26,7 @@ public class PageObject {
 	public void setDriver(final WebDriver driver) {
 		this.driver = driver;
 	}
+
 
 
 }
