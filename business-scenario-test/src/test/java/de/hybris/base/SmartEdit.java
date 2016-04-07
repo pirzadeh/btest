@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SmartEdit extends PageObject implements Coordinatable
+public class SmartEdit extends PageObject
 {
 
 	FrameContent frame;
@@ -49,39 +49,39 @@ public class SmartEdit extends PageObject implements Coordinatable
 //	}
 
 	//Behaviours
+//	public void createNewComponent(String type, String slotId){
+//		Actions builder = new Actions(driver);
+//		 
+//		Action dragAndDrop = builder.clickAndHold(From).moveToElement(To).release(To).build();
+//		dragAndDrop.perform();
+//	}
+	
 	public void createNewComponent(String type, String slotId){
-		Actions builder = new Actions(driver);
-		 
-		Action dragAndDrop = builder.clickAndHold(From).moveToElement(To).release(To).build();
-		dragAndDrop.perform();
+		
+		WebElement slot = frame.findElementById(slotId);
+		Point destination = frame.findCoord(slot);
+		
+		whiteRibbon.openComponentMenu();
+		WebElement typeElement  = whiteRibbon.findComponentTypeByName("name");
+		Point source = whiteRibbon.findCoord(typeElement);
+		
+		Point offset = findOffset(source, destination);
+		
+		dragAndDropByOffset(typeElement, offset);
 	}
 	
-	private void createNewComponentByOffset(int x, int y){
-		WebElement draggable = driver.findElement(By.xpath("//*[@id='container']/div[2]"));
-		 new Actions(driver)
-		 .dragAndDropBy(draggable, -200 , 0 )
+	private Point findOffset(Point source, Point destination) {
+		
+		Point offset = new Point(source.x - destination.x, source.y - destination.y);
+		return offset;
+	}
+	
+	private void dragAndDropByOffset(WebElement element, Point offset){
+
+		new Actions(driver)
+		 .dragAndDropBy(element, offset.x , offset.y )
 		 .build()
 		 .perform();
-	}
-	
-
-	
-	@Override
-	public Point findCoord(WebElement element) {
-		Point point = element.getLocation();
-		return point;
-	}
-
-	@Override
-	public Point findCoordById(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Point findCoordByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 	
 	public FrameContent getFrame() {
