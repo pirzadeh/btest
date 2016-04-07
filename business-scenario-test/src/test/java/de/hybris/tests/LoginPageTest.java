@@ -20,6 +20,6 @@ public class LoginPageTest extends BusinessTest{
 
 		final String username = "admin";
 		final String password = "nimda";
-		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").value();
+		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").createNewComponent("CMSParagraphComponent", "Section1Slot-ApparelDEHomepage");
 	}
 }

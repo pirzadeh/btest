@@ -48,7 +48,7 @@ public class FrameContent extends PageObject implements Coordinatable{
 	
 	public WebElement findElementById(String id){
 		frameIsReady();
-		WebElement element = driver.findElement(By.id(id));
+		WebElement element = driver.findElement(By.cssSelector(".smartEditComponent[data-smartedit-component-id='"+id+"']"));
 		return element;
 	}
 	

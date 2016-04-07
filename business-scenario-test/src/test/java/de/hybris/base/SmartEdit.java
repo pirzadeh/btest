@@ -61,11 +61,11 @@ public class SmartEdit extends PageObject
 		WebElement slot = frame.findElementById(slotId);
 		Point destination = frame.findCoord(slot);
 		
-		whiteRibbon.openComponentMenu();
-		WebElement typeElement  = whiteRibbon.findComponentTypeByName("name");
+		
+		WebElement typeElement  = whiteRibbon.findComponentType(type);
 		Point source = whiteRibbon.findCoord(typeElement);
 		
-		Point offset = findOffset(source, destination);
+		Point offset = findOffset(destination, source);
 		
 		dragAndDropByOffset(typeElement, offset);
 	}
@@ -78,10 +78,26 @@ public class SmartEdit extends PageObject
 	
 	private void dragAndDropByOffset(WebElement element, Point offset){
 
-		new Actions(driver)
-		 .dragAndDropBy(element, offset.x , offset.y )
-		 .build()
-		 .perform();
+		driver.manage().window().maximize();
+		Actions actionget = new Actions(driver);
+		actionget.clickAndHold(element).build().perform();
+		
+
+		driver.switchTo().frame(0);
+		Actions action = new Actions(driver);
+		action.moveByOffset(offset.x , offset.y).build().perform();
+		
+		action.release().build().perform();
+		
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		 .dragAndDropBy(element, offset.x , offset.y )
+//		 .build()
+//		 .perform();
 	}
 	
 	public FrameContent getFrame() {

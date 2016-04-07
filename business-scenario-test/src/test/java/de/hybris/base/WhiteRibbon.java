@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class WhiteRibbon extends PageObject implements Coordinatable{
 
-	private final WebElement menuButton = driver.findElement(By.xpath("//input[contains(@placeholder, 'Username')]"));
+	private final WebElement menuButton = driver.findElement(By.tagName("component-menu"));
 
 	
 	public WhiteRibbon(WebDriver driver) {
@@ -16,8 +16,8 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 
 	@Override
 	public Point findCoord(WebElement element) {
-		// TODO Auto-generated method stub
-		return null;
+		Point point = element.getLocation();
+		return point;
 	}
 
 	@Override
@@ -44,9 +44,17 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 		return this;
 	}
 
-	public WebElement findComponentTypeByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
+	public WebElement findComponentType(String type) {
+		putMeInContainer();
+		openComponentMenu();
+		selectComponetMenuTab("Component Types");
+		WebElement element = driver.findElement(By.cssSelector(".smartEditComponent[data-smartedit-component-type='"+type+"']"));
+		return element;
 	}
 
+	public WhiteRibbon selectComponetMenuTab(String tabName){
+		WebElement tabElement = driver.findElement(By.cssSelector("[heading='"+tabName+"']"));
+		tabElement.click();
+		return this;
+	}
 }
