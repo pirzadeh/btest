@@ -36,5 +36,11 @@
             <version>${selenium.version}</version>
         </dependency>
 
+		<!-- Selenium Drivers -->
+		<dependency>
+    		<groupId>io.github.bonigarcia</groupId>
+    		<artifactId>webdrivermanager</artifactId>
+    	<version>1.4.2</version>
+</dependency>
     </dependencies>
 </project>

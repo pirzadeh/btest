@@ -4,13 +4,21 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 public class BusinessTest {
 	protected WebDriver driver;
 
+	@BeforeClass
+    public static void setupClass() {
+        ChromeDriverManager.getInstance().setup();
+    }
+	
 	@Before
 	public void basesetup(){
 		//use FF Driver
@@ -18,10 +26,10 @@ public class BusinessTest {
 		
 		System.out.println("*******************");
 		System.out.println("launching chrome browser");
-		System.setProperty("webdriver.chrome.driver", driverPath+"chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		
+		
+		driver.manage().window().maximize();	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
@@ -29,5 +37,8 @@ public class BusinessTest {
 	@After
 	public void baseclose(){
 		driver.close();
+		if (driver != null) {
+            driver.quit();
+        }
 	}
 }
