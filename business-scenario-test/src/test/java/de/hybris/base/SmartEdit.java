@@ -59,15 +59,15 @@ public class SmartEdit extends PageObject
 	public void createNewComponent(String type, String slotId){
 		
 		WebElement slot = frame.findElementById(slotId);
-		Point destination = frame.findCoord(slot);
+		Point destination = frame.findCoordWithin(slot);
 		
 		
 		WebElement typeElement  = whiteRibbon.findComponentType(type);
-		Point source = whiteRibbon.findCoord(typeElement);
+		Point source = whiteRibbon.findCoordWithin(typeElement);
 		
 		Point offset = findOffset(destination, source);
 		
-		dragAndDropByOffset(typeElement, offset);
+		dragAndDropByOffset(typeElement, offset, slot);
 	}
 	
 	private Point findOffset(Point source, Point destination) {
@@ -76,21 +76,47 @@ public class SmartEdit extends PageObject
 		return offset;
 	}
 	
-	private void dragAndDropByOffset(WebElement element, Point offset){
+	private void dragAndDropByOffset(WebElement element, Point offset, WebElement slot){
+		driver.switchTo().defaultContent();
 
-		driver.manage().window().maximize();
-		Actions actionget = new Actions(driver);
-		actionget.clickAndHold(element).build().perform();
-		
+		mouse.clickAndHold(element).build().perform();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
+		mouse.moveByOffset(2 , 2).build().perform();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.switchTo().frame(0);
-		Actions action = new Actions(driver);
-		action.moveByOffset(offset.x , offset.y).build().perform();
+		mouse.moveByOffset(offset.x , offset.y).build().perform();
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
-		action.release().build().perform();
+		
+//		action.moveToElement(slot).build().perform();
+		
 		
 		try {
-			Thread.sleep(20000);
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		mouse.release().build().perform();
+		
+		try {
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

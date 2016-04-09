@@ -1,6 +1,7 @@
 package de.hybris.base;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,9 +33,18 @@ public class FrameContent extends PageObject implements Coordinatable{
 	}
 
 	@Override
-	public Point findCoord(WebElement element) {
+	public Point findCoordWithin(WebElement element) {
+		
 		Point point = element.getLocation();
-		return point;
+		Dimension size = element.getSize();
+		Point pointWithin = new Point(point.x + size.width/2-1, point.y + size.height/2-1);
+		return pointWithin;
+	}
+	
+	@Override
+	public Point findCoord(WebElement element) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -57,4 +67,7 @@ public class FrameContent extends PageObject implements Coordinatable{
 		WebElement element = driver.findElement(By.name(name));
 		return element;
 	}
+
+
+
 }

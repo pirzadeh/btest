@@ -3,22 +3,35 @@ package de.hybris.base;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 public class PageObject {
-	public WebDriver driver;
+	public static WebDriver driver;
+	public static Actions mouse;
 
 	public PageObject(final WebDriver driver, final String url) {
-		this.setDriver(driver);
 		driver.get(url);
-		PageFactory.initElements(driver, this);
+		pageSetup(driver);
+		
+	}
+
+	public PageObject(WebDriver driver) {
+		pageSetup(driver);
 	}
 	
-	public PageObject(final WebDriver driver) {
+	private void pageSetup(WebDriver driver) {
 		this.setDriver(driver);
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
+		setupMouse(driver);
 	}
 	
+	private void setupMouse(WebDriver driver) {
+
+		if (mouse == null)
+			mouse = new Actions(driver);
+	}
+
 	public WebDriver getDriver() {
 		return driver;
 	}

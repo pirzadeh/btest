@@ -1,6 +1,7 @@
 package de.hybris.base;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,8 +17,17 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 
 	@Override
 	public Point findCoord(WebElement element) {
+		putMeInContainer();
 		Point point = element.getLocation();
 		return point;
+	}
+	@Override
+	public Point findCoordWithin(WebElement element) {
+		putMeInContainer();
+		Point point = element.getLocation();
+		Dimension size = element.getSize();
+		Point pointWithin = new Point(point.x + size.width/2, point.y + size.height/2);
+		return pointWithin;
 	}
 
 	@Override
@@ -53,8 +63,11 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 	}
 
 	public WhiteRibbon selectComponetMenuTab(String tabName){
+		putMeInContainer();
 		WebElement tabElement = driver.findElement(By.cssSelector("[heading='"+tabName+"']"));
 		tabElement.click();
 		return this;
 	}
+
+	
 }
