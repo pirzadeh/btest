@@ -58,16 +58,15 @@ public class SmartEdit extends PageObject
 	
 	public void createNewComponent(String type, String slotId){
 		
-		WebElement slot = frame.findElementById(slotId);
-		Point destination = frame.findCoordWithin(slot);
+//		WebElement slot = frame.findElementById(slotId);
+//		Point destination = frame.findCoord(slot);
 		
-		
+		frame.frameIsReady();
 		WebElement typeElement  = whiteRibbon.findComponentType(type);
-		Point source = whiteRibbon.findCoordWithin(typeElement);
 		
-		Point offset = findOffset(destination, source);
+//		Point offset = findOffset(destination, source);
 		
-		dragAndDropByOffset(typeElement, offset, slot);
+		dragAndDropByOffset(typeElement, slotId);
 	}
 	
 	private Point findOffset(Point source, Point destination) {
@@ -76,54 +75,16 @@ public class SmartEdit extends PageObject
 		return offset;
 	}
 	
-	private void dragAndDropByOffset(WebElement element, Point offset, WebElement slot){
-		driver.switchTo().defaultContent();
-
+	private void dragAndDropByOffset(WebElement element, String slotId){
+		
 		mouse.clickAndHold(element).build().perform();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Point source = whiteRibbon.findCoordWithin(element);
+		mouse.moveByOffset(0 , -1).build().perform();
 
-		mouse.moveByOffset(2 , 2).build().perform();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		driver.switchTo().frame(0);
-		mouse.moveByOffset(offset.x , offset.y).build().perform();
-//		try {
-//			Thread.sleep(2000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		
-		
-//		action.moveToElement(slot).build().perform();
-		
-		
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		WebElement slot = frame.findElementById(slotId);
+		jiggleWithinUntilAttributeIsPresent(slot, "ySEDnDPlaceHolder");
 		mouse.release().build().perform();
-		
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-//		 .dragAndDropBy(element, offset.x , offset.y )
-//		 .build()
-//		 .perform();
+		delay(20000);
 	}
 	
 	public FrameContent getFrame() {

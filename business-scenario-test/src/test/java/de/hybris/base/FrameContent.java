@@ -19,7 +19,7 @@ public class FrameContent extends PageObject implements Coordinatable{
 		driver.switchTo().frame(0);
 	}
 	
-	private boolean frameIsReady(){
+	public boolean frameIsReady(){
 		putMeInMyFrame();
 		WebDriverWait wait = new WebDriverWait(driver, 30);	
 		return wait.until(ExpectedConditions.attributeToBe(By.xpath("//body"), "data-smartedit-ready", "true"));
@@ -43,8 +43,9 @@ public class FrameContent extends PageObject implements Coordinatable{
 	
 	@Override
 	public Point findCoord(WebElement element) {
-		// TODO Auto-generated method stub
-		return null;
+
+		Point point = element.getLocation();
+		return point;
 	}
 
 	@Override
