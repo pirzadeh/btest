@@ -71,7 +71,7 @@ public class PageObject {
 			e.printStackTrace();
 		}
 	}
-	public void jiggleWithinUntilAttributeIsPresent(WebElement element, String attribute){
+	public void jiggleWithinUntilAttributeIsPresent(Point source, WebElement element, String attribute){
 		Point topLeft = element.getLocation();
 		Dimension size = element.getSize();
 		Point bottomRight = new Point(topLeft.x + size.width, topLeft.y + size.height);
@@ -83,8 +83,9 @@ public class PageObject {
 			
 			int randomX = rand.nextInt(size.width/3) + topLeft.x;
 			int randomY = rand.nextInt(size.height/3) + topLeft.y;
-			mouse.moveByOffset(randomX,randomY).build().perform();
-			System.out.println("Point: "+randomX+","+randomY);
+			mouse.moveByOffset(randomX - source.x, randomY - source.y).build().perform();
+			source.x = randomX - source.x;
+			source.y = randomY - source.y;
 			delay(2000);
 			if(driver.findElements(By.className(attribute)).size() != 0)
 				break;

@@ -80,9 +80,10 @@ public class SmartEdit extends PageObject
 		mouse.clickAndHold(element).build().perform();
 		Point source = whiteRibbon.findCoordWithin(element);
 		mouse.moveByOffset(0 , -1).build().perform();
-
+//		System.out.println("Original Source: "+source.x+","+source.y);
+		
 		WebElement slot = frame.findElementById(slotId);
-		jiggleWithinUntilAttributeIsPresent(slot, "ySEDnDPlaceHolder");
+		jiggleWithinUntilAttributeIsPresent(source, slot, "ySEDnDPlaceHolder");
 		mouse.release().build().perform();
 		delay(20000);
 	}
