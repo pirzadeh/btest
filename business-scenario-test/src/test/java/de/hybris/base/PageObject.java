@@ -78,20 +78,30 @@ public class PageObject {
 		System.out.println("Top Point: "+topLeft.x+","+topLeft.y);
 		System.out.println("Bottom Point: "+bottomRight.x+","+bottomRight.y);
 
-		Random rand = new Random();
 		for (int i = 1 ; i < 15 ; i++){
 			
-			int randomX = rand.nextInt(size.width/3) + topLeft.x;
-			int randomY = rand.nextInt(size.height/3) + topLeft.y;
-			mouse.moveByOffset(randomX - source.x, randomY - source.y).build().perform();
-			source.x = randomX - source.x;
-			source.y = randomY - source.y;
+			Point randomPoint = randomPointWithin(topLeft,size);
+			Point offset = calcOffset(source,randomPoint);
+			mouse.moveByOffset(offset.x, offset.y).build().perform();
 			delay(2000);
 			if(driver.findElements(By.className(attribute)).size() != 0)
 				break;
-			mouse.moveByOffset(-1*randomX,-1*randomY).build().perform();
+			mouse.moveByOffset(-1*offset.x,-1*offset.y).build().perform();
 			if(driver.findElements(By.className(attribute)).size() != 0)
 				break;
 		}
+	}
+	
+	private Point calcOffset(Point source, Point destination) {
+		
+		Point offset = new Point(source.x - destination.x, source.y - destination.y);
+		return offset;
+	}
+	
+	private Point randomPointWithin(Point origin, Dimension size) {
+		
+		Random rand = new Random();
+		Point randomPoint = new Point(rand.nextInt(size.width/2) + origin.x, rand.nextInt(size.height/2) + origin.y);
+		return randomPoint;
 	}
 }

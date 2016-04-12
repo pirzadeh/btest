@@ -30,6 +30,7 @@ public class SmartEdit extends PageObject
 		this.leftPane = new LeftPane(driver);
 		this.blueRibbon = new BlueRibbon(driver);
 		this.whiteRibbon = new WhiteRibbon(driver);
+		frame.frameIsReady();
 	}
 
 	//Guarantees
@@ -41,46 +42,13 @@ public class SmartEdit extends PageObject
 
 	//Helpers
 
-//	
-//	public void value(){
-//		
-//		
-//		System.out.println(driver.findElement(By.xpath("//body")).getAttribute("data-smartedit-ready"));
-//	}
-
-	//Behaviours
-//	public void createNewComponent(String type, String slotId){
-//		Actions builder = new Actions(driver);
-//		 
-//		Action dragAndDrop = builder.clickAndHold(From).moveToElement(To).release(To).build();
-//		dragAndDrop.perform();
-//	}
 	
 	public void createNewComponent(String type, String slotId){
 		
-//		WebElement slot = frame.findElementById(slotId);
-//		Point destination = frame.findCoord(slot);
-		
-		frame.frameIsReady();
 		WebElement typeElement  = whiteRibbon.findComponentType(type);
-		
-//		Point offset = findOffset(destination, source);
-		
-		dragAndDropByOffset(typeElement, slotId);
-	}
-	
-	private Point findOffset(Point source, Point destination) {
-		
-		Point offset = new Point(source.x - destination.x, source.y - destination.y);
-		return offset;
-	}
-	
-	private void dragAndDropByOffset(WebElement element, String slotId){
-		
-		mouse.clickAndHold(element).build().perform();
-		Point source = whiteRibbon.findCoordWithin(element);
+		mouse.clickAndHold(typeElement).build().perform();
+		Point source = whiteRibbon.findCoordWithin(typeElement);
 		mouse.moveByOffset(0 , -1).build().perform();
-//		System.out.println("Original Source: "+source.x+","+source.y);
 		
 		WebElement slot = frame.findElementById(slotId);
 		jiggleWithinUntilAttributeIsPresent(source, slot, "ySEDnDPlaceHolder");
