@@ -25,6 +25,13 @@ public class FrameContent extends PageObject implements Coordinatable{
 		return wait.until(ExpectedConditions.attributeToBe(By.xpath("//body"), "data-smartedit-ready", "true"));
 	}
 	
+	public void moveFromPointToElement(Point source, String slotId) {
+		frameIsReady();
+		WebElement slot = findElementById(slotId);
+		jiggleWithinUntilAttributeIsPresent(source, slot, "ySEDnDPlaceHolder");
+		mouse.release().build().perform();
+	}
+	
 	@Override
 	public Point findCoordById(String id){
 		frameIsReady();

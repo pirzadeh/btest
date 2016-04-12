@@ -15,6 +15,14 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 		super(driver);
 	}
 
+	public Point startMovingComponentType(String type) {
+		WebElement typeElement  = findComponentType(type);
+		mouse.clickAndHold(typeElement).build().perform();
+		Point source = findCoordWithin(typeElement);
+		mouse.moveByOffset(0 , -1).build().perform();
+		return source;
+	}
+	
 	@Override
 	public Point findCoord(WebElement element) {
 		putMeInContainer();

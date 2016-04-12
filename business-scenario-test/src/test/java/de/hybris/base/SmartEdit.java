@@ -45,16 +45,11 @@ public class SmartEdit extends PageObject
 	
 	public void createNewComponent(String type, String slotId){
 		
-		WebElement typeElement  = whiteRibbon.findComponentType(type);
-		mouse.clickAndHold(typeElement).build().perform();
-		Point source = whiteRibbon.findCoordWithin(typeElement);
-		mouse.moveByOffset(0 , -1).build().perform();
-		
-		WebElement slot = frame.findElementById(slotId);
-		jiggleWithinUntilAttributeIsPresent(source, slot, "ySEDnDPlaceHolder");
-		mouse.release().build().perform();
+		Point source = whiteRibbon.startMovingComponentType(type);		
+		frame.moveFromPointToElement(source, slotId);
 		delay(20000);
 	}
+
 	
 	public FrameContent getFrame() {
 		
