@@ -2,6 +2,7 @@ package de.hybris.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,16 +20,15 @@ public class FrameContent extends PageObject implements Coordinatable{
 		driver.switchTo().frame(0);
 	}
 	
-	public boolean frameIsReady(){
+	public void frameIsReady(){
 		putMeInMyFrame();
-		WebDriverWait wait = new WebDriverWait(driver, 30);	
-		return wait.until(ExpectedConditions.attributeToBe(By.xpath("//body"), "data-smartedit-ready", "true"));
+		waitUntilXpathAtrributeValueAvailable("//body", "data-smartedit-ready", "true");
 	}
 	
-	public void moveFromPointToElement(Point source, String slotId) {
+	public void moveFromPointToElement(String slotId) {
 		frameIsReady();
 		WebElement slot = findElementById(slotId);
-		jiggleWithinUntilAttributeIsPresent(source, slot, "ySEDnDPlaceHolder");
+		jiggleWithinUntilAttributeIsPresent(slot, "ySEDnDPlaceHolder");
 		mouse.release().build().perform();
 	}
 	
@@ -75,6 +75,8 @@ public class FrameContent extends PageObject implements Coordinatable{
 		WebElement element = driver.findElement(By.name(name));
 		return element;
 	}
+
+
 
 
 

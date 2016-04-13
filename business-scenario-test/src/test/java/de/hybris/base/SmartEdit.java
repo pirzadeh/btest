@@ -39,20 +39,28 @@ public class SmartEdit extends PageObject
 
 	//Locators
 
-
+	@FindBy(css="iframe")
+	private WebElement origin;
 	//Helpers
 
-	
-	public void createNewComponent(String type, String slotId){
-		
-		Point source = whiteRibbon.startMovingComponentType(type);		
-		frame.moveFromPointToElement(source, slotId);
-		delay(20000);
+
+	public SmartEdit createNewComponent(String type, String slotId){
+
+		whiteRibbon.startMovingComponentType(type);	
+		prepareForDrop();
+		frame.moveFromPointToElement(slotId);
+		delay(10000);
+		return this;
 	}
 
-	
+	private void prepareForDrop() {
+
+		mouse.moveToElement(origin, 0, 0).build().perform();
+		waitUntilCssLocatorIsAvailable("body > div.UIhintDragAndDrop.top.visible");	
+	}
+
 	public FrameContent getFrame() {
-		
+
 		return frame;
 	}
 
@@ -84,5 +92,5 @@ public class SmartEdit extends PageObject
 		this.whiteRibbon = whiteRibbon;
 	}
 
-	
+
 }

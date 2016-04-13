@@ -5,6 +5,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WhiteRibbon extends PageObject implements Coordinatable{
 
@@ -16,13 +18,15 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 	}
 
 	public Point startMovingComponentType(String type) {
+		putMeInContainer();
 		WebElement typeElement  = findComponentType(type);
 		mouse.clickAndHold(typeElement).build().perform();
 		Point source = findCoordWithin(typeElement);
-		mouse.moveByOffset(0 , -1).build().perform();
 		return source;
 	}
 	
+
+
 	@Override
 	public Point findCoord(WebElement element) {
 		putMeInContainer();
@@ -59,6 +63,7 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 
 		putMeInContainer();
 		menuButton.click();
+		delay(600);
 		return this;
 	}
 
@@ -74,6 +79,7 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 		putMeInContainer();
 		WebElement tabElement = driver.findElement(By.cssSelector("[heading='"+tabName+"']"));
 		tabElement.click();
+		delay(600);
 		return this;
 	}
 
