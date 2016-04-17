@@ -17,7 +17,7 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 		super(driver);
 	}
 
-	public Point startMovingComponentType(String type) {
+	public Point prepareComponentTypeForMove(String type) {
 		putMeInContainer();
 		WebElement typeElement  = findComponentType(type);
 		mouse.clickAndHold(typeElement).build().perform();

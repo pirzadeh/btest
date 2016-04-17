@@ -1,5 +1,8 @@
 package de.hybris.base;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -25,10 +28,11 @@ public class FrameContent extends PageObject implements Coordinatable{
 		waitUntilXpathAtrributeValueAvailable("//body", "data-smartedit-ready", "true");
 	}
 	
-	public void moveFromPointToElement(String slotId) {
+	public void moveToElementAndDrop(String slotId) {
 		frameIsReady();
 		WebElement slot = findElementById(slotId);
-		jiggleWithinUntilAttributeIsPresent(slot, "ySEDnDPlaceHolder");
+		List<String> conditions = Arrays.asList("ySEDnDPlaceHolder","over-slot-enabled");
+		jiggleWithinUntilAttributeIsPresent(slot, conditions);
 		mouse.release().build().perform();
 	}
 	
@@ -70,13 +74,18 @@ public class FrameContent extends PageObject implements Coordinatable{
 		return element;
 	}
 	
+	
 	public WebElement findElementByName(String name){
 		frameIsReady();
 		WebElement element = driver.findElement(By.name(name));
 		return element;
 	}
 
-
+	public void prepareElementForMove(String componentId) {
+		frameIsReady();
+		WebElement component = findElementById(componentId);
+		mouse.clickAndHold(component).build().perform();
+	}
 
 
 

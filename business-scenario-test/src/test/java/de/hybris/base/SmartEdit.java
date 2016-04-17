@@ -1,19 +1,10 @@
 package de.hybris.base;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Point;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SmartEdit extends PageObject
 {
@@ -43,18 +34,33 @@ public class SmartEdit extends PageObject
 	private WebElement origin;
 	//Helpers
 
+	private void putMeInContainer(){
+
+		driver.switchTo().defaultContent();
+	}
 
 	public SmartEdit createNewComponent(String type, String slotId){
 
-		whiteRibbon.startMovingComponentType(type);	
+		whiteRibbon.prepareComponentTypeForMove(type);	
 		prepareForDrop();
-		frame.moveFromPointToElement(slotId);
-		delay(10000);
+		frame.moveToElementAndDrop(slotId);
+		delayForDebugging();
+		return this;
+	}
+
+	public SmartEdit moveComponentToSlot(String componentId, String slotId){
+
+		frame.prepareElementForMove(componentId);
+		prepareForDrop();
+		frame.moveToElementAndDrop(slotId);
+		delayForDebugging();
 		return this;
 	}
 
 	private void prepareForDrop() {
 
+		scrollToY(0);
+		putMeInContainer();
 		mouse.moveToElement(origin, 0, 0).build().perform();
 		waitUntilCssLocatorIsAvailable("body > div.UIhintDragAndDrop.top.visible");	
 	}
