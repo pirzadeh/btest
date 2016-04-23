@@ -39,9 +39,18 @@ public class SmartEdit extends PageObject
 		driver.switchTo().defaultContent();
 	}
 
-	public SmartEdit createNewComponent(String type, String slotId){
+	public EditorBase createNewComponent(String type, String slotId){
 
 		whiteRibbon.prepareComponentTypeForMove(type);	
+		prepareForDrop();
+		frame.moveToElementAndDrop(slotId);
+
+		return new EditorBase(getDriver());
+	}
+	
+	public SmartEdit addExistingComponent(String item, String slotId){
+
+		whiteRibbon.prepareCustomizedComponentForMove(item);	
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);
 		delayForDebugging();

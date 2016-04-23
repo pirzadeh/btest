@@ -68,6 +68,14 @@ public class PageObject {
 			e.printStackTrace();
 		}
 	}
+	
+	public void delayForAnimation(){
+		try {
+			Thread.sleep(CSS_TRANSITION_DELAY);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 	public void jiggleWithinUntilAttributeIsPresent(WebElement destinationElement, List<String> attributes){
 		Point topLeft = destinationElement.getLocation();
@@ -146,7 +154,7 @@ public class PageObject {
         }  
        finally  
        {  
-           driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);  
+           driver.manage().timeouts().implicitlyWait(DEFAULT_TIMEOUT, TimeUnit.SECONDS);  
        }  
 		
 	}

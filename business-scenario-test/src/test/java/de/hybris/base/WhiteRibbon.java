@@ -5,12 +5,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WhiteRibbon extends PageObject implements Coordinatable{
-
-	private final WebElement menuButton = driver.findElement(By.tagName("component-menu"));
 
 	
 	public WhiteRibbon(WebDriver driver) {
@@ -26,6 +22,13 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 	}
 	
 
+	public Point prepareCustomizedComponentForMove(String item) {
+		putMeInContainer();
+		WebElement itemElement  = findComponentItem(item);
+		mouse.clickAndHold(itemElement).build().perform();
+		Point source = findCoordWithin(itemElement);
+		return source;
+	}
 
 	@Override
 	public Point findCoord(WebElement element) {
@@ -61,9 +64,7 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 	
 	public WhiteRibbon openComponentMenu() {
 
-		putMeInContainer();
-		menuButton.click();
-		delay(600);
+		clickOnRibbonButton("component-menu");
 		return this;
 	}
 
@@ -75,13 +76,28 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 		return element;
 	}
 
+	public WebElement findComponentItem(String item) {
+		putMeInContainer();
+		openComponentMenu();
+		selectComponetMenuTab("Customized Components");
+		WebElement element = driver.findElement(By.cssSelector(".smartEditComponent[data-smartedit-component-id='"+item+"']"));
+		return element;
+	}
+	
 	public WhiteRibbon selectComponetMenuTab(String tabName){
 		putMeInContainer();
 		WebElement tabElement = driver.findElement(By.cssSelector("[heading='"+tabName+"']"));
 		tabElement.click();
-		delay(600);
+		delayForAnimation();
 		return this;
 	}
 
-	
+	public WhiteRibbon clickOnRibbonButton(String buttonTagName){
+		putMeInContainer();
+		WebElement button = driver.findElement(By.tagName(buttonTagName));		
+		button.click();
+		delayForAnimation();
+		return this;
+	}
+
 }

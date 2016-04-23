@@ -35,11 +35,11 @@ public class LandingPage extends PageObject
 	
 	private WebElement catalogBodyOf(String term){
 		 List<WebElement> bodies = driver.findElements(By.cssSelector(".catalog-body"));
-		 bodies.forEach(b -> {System.out.println(b); System.out.println(b.getText());});
+//		 bodies.forEach(b -> {System.out.println(b); System.out.println(b.getText());});
 
 		  Optional<WebElement> filteredBody = bodies.stream().filter(body -> body.getText().contains(term)).findFirst();
 		  
-		  System.out.println(filteredBody.get().getText());
+//		  System.out.println(filteredBody.get().getText());
 		  
 		  return filteredBody.get();
 	}

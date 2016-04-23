@@ -1,0 +1,2259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_CNCwYAjGEeauV8k-f6ZZNA" name="business_scenario_test">
+    <eAnnotations xmi:id="_CtcuwAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_CtfLAAjGEeauV8k-f6ZZNA" source="codegen">
+        <details xmi:id="_CtfLAQjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/main/java"/>
+        <details xmi:id="_D4uPEAjGEeauV8k-f6ZZNA" key="AssociatedSourceCode" value="/business-scenario-test/src/test/java/de/hybris/base/BlueRibbon.java;353138723/1;/business-scenario-test/src/test/java/de/hybris/base/BusinessTest.java;1824721729/1;/business-scenario-test/src/test/java/de/hybris/base/Coordinatable.java;2898365275/1;/business-scenario-test/src/test/java/de/hybris/base/Editor.java;3289081216/1;/business-scenario-test/src/test/java/de/hybris/base/EditorBase.java;1166810425/1;/business-scenario-test/src/test/java/de/hybris/base/FrameContent.java;1730187362/1;/business-scenario-test/src/test/java/de/hybris/base/LeftPane.java;610062179/1;/business-scenario-test/src/test/java/de/hybris/base/PageObject.java;3939580371/1;/business-scenario-test/src/test/java/de/hybris/base/Persona.java;3111854569/1;/business-scenario-test/src/test/java/de/hybris/base/SmartEdit.java;88626956/1;/business-scenario-test/src/test/java/de/hybris/base/WhiteRibbon.java;1044396690/1;/business-scenario-test/src/test/java/de/hybris/pages/GoogleSearch.java;2861196438/1;/business-scenario-test/src/test/java/de/hybris/pages/Header.java;326864226/1;/business-scenario-test/src/test/java/de/hybris/pages/LandingPage.java;2813884361/1;/business-scenario-test/src/test/java/de/hybris/pages/LoginPage.java;200057409/1;/business-scenario-test/src/test/java/de/hybris/pages/SimpleParagraphEditor.java;1215667896/1;/business-scenario-test/src/test/java/de/hybris/pages/Tom.java;422120692/1;/business-scenario-test/src/test/java/de/hybris/personas/AdminUser.java;3225569900/1;/business-scenario-test/src/test/java/de/hybris/tests/GoogleSearchTest.java;205636744/1;/business-scenario-test/src/test/java/de/hybris/tests/LandingPageTest.java;2161836498/1;/business-scenario-test/src/test/java/de/hybris/tests/LoginPageTest.java;1391923323/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_DKi6cAjGEeauV8k-f6ZZNA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_DKjhgAjGEeauV8k-f6ZZNA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_DKjhgQjGEeauV8k-f6ZZNA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_DKjhggjGEeauV8k-f6ZZNA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_DKkIkAjGEeauV8k-f6ZZNA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_DKkIkQjGEeauV8k-f6ZZNA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_DKkIkgjGEeauV8k-f6ZZNA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_DKkIkwjGEeauV8k-f6ZZNA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_DKkvoAjGEeauV8k-f6ZZNA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DHLdYAjGEeauV8k-f6ZZNA" name="de">
+      <packagedElement xmi:type="uml:Package" xmi:id="_DHLdYQjGEeauV8k-f6ZZNA" name="hybris">
+        <packagedElement xmi:type="uml:Package" xmi:id="_DHVOYAjGEeauV8k-f6ZZNA" name="base">
+          <packagedElement xmi:type="uml:Class" xmi:id="_DKZwgAjGEeauV8k-f6ZZNA" name="BlueRibbon">
+            <eAnnotations xmi:id="_DKda4AjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DKda4QjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DKda4gjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWFcEAjGEeauV8k-f6ZZNA" name="BlueRibbon" specification="_DU3UEAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWGDIAjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWGDIQjGEeauV8k-f6ZZNA" type="_DKZwgAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>// TODO Auto-generated constructor stub
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DU3UEAjGEeauV8k-f6ZZNA" name="BlueRibbon" method="_DWFcEAjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DU37IAjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DU37IQjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DU3UEQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DU37IgjGEeauV8k-f6ZZNA" type="_DKZwgAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DKny8AjGEeauV8k-f6ZZNA" name="BusinessTest">
+            <eAnnotations xmi:id="_DKpBEAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DKpBEQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DKpBEgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_DVipgAjGEeauV8k-f6ZZNA" name="driver" visibility="protected" type="_DTW4MAjGEeauV8k-f6ZZNA" association="_DWwxgAjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWJGcAjGEeauV8k-f6ZZNA" name="basesetup" specification="_DKqPMAjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>String driverPath = &quot;/Users/i839970/.m2/repository/webdriver/chromedriver/mac32/2.21/chromedriver&quot;;
+		System.setProperty(&quot;webdriver.chrome.driver&quot;, driverPath);
+ 		System.out.println(&quot;*******************&quot;);
+		System.out.println(&quot;launching chrome browser&quot;);
+		 ChromeOptions options = new ChromeOptions();
+      options.addArguments(&quot;window-size=1800,1000&quot;);
+      
+      
+      DesiredCapabilities cap = DesiredCapabilities.chrome();
+      cap.setCapability(ChromeOptions.CAPABILITY, options);
+      driver = new ChromeDriver(cap);
+ 
+      String currentWindow = driver.getWindowHandle();
+      driver.switchTo().window(currentWindow);
+//		ChromeOptions co = new ChromeOptions();
+//		//here &quot;--start-maximized&quot; argument is responsible to maximize chrome browser
+//		co.addArguments(&quot;--start-maximized&quot;);
+//		String driverPath = &quot;/Users/i839970/.m2/repository/webdriver/chromedriver/mac32/2.21/chromedriver&quot;;
+//		System.setProperty(&quot;webdriver.chrome.driver&quot;, driverPath);
+//		driver = new ChromeDriver(co);
+		
+//		driver.manage().window().maximize();	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWJtgAjGEeauV8k-f6ZZNA" name="baseclose" specification="_DKvuwQjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>driver.close();
+		if (driver != null) {
+         driver.quit();
+     }
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DKqPMAjGEeauV8k-f6ZZNA" name="basesetup" method="_DWJGcAjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DKvuwQjGEeauV8k-f6ZZNA" name="baseclose" method="_DWJtgAjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_DKyyEAjGEeauV8k-f6ZZNA" name="Coordinatable">
+            <eAnnotations xmi:id="_DK0AMAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DK0AMQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DK0AMgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedOperation xmi:id="_DK11YAjGEeauV8k-f6ZZNA" name="findCoordById">
+              <ownedParameter xmi:id="_DK2ccAjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DU5wUQjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DK4RoAjGEeauV8k-f6ZZNA" name="findCoordByName">
+              <ownedParameter xmi:id="_DK4RoQjGEeauV8k-f6ZZNA" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DU5wUgjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DU4iMAjGEeauV8k-f6ZZNA" name="findCoord">
+              <ownedParameter xmi:id="_DU5JQAjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DU5JQQjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DU5JQgjGEeauV8k-f6ZZNA" name="findCoordWithin">
+              <ownedParameter xmi:id="_DU5JQwjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DU5wUAjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_DK9KIAjGEeauV8k-f6ZZNA" name="Editor">
+            <eAnnotations xmi:id="_DK9xMAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DK9xMQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DK9xMgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedOperation xmi:id="_DK9xMwjGEeauV8k-f6ZZNA" name="fillWithNewContent">
+              <ownedParameter xmi:id="_DTuEkAjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DK_mYAjGEeauV8k-f6ZZNA" name="EditorBase">
+            <eAnnotations xmi:id="_DLANcAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DLANcQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DLANcgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DTxH4AjGEeauV8k-f6ZZNA" general="_DLq70AjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWJtgQjGEeauV8k-f6ZZNA" name="EditorBase" specification="_DU6XYAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWJtggjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWJtgwjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>super(driver);
+
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWKUkAjGEeauV8k-f6ZZNA" name="putMeInContainer" specification="_DLDQwAjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>driver.switchTo().defaultContent();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWKUkQjGEeauV8k-f6ZZNA" name="findComponentType" specification="_DLD30AjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>putMeInContainer();
+		WebElement header = driver.findElement(By.cssSelector(&quot;h4[id*='smartedit-modal-title-type']&quot;));
+		String id = header.getAttribute(&quot;id&quot;);
+		String[] parts = id.split(&quot;\\.&quot;);
+
+		System.out.println(parts[1]);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWKUkgjGEeauV8k-f6ZZNA" name="selectEditorTab" specification="_DLEe4AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWKUkwjGEeauV8k-f6ZZNA" name="tabId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWKUlAjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		WebElement tabElement = driver.findElement(By.cssSelector(&quot;[data-tab-id='&quot;+tabId+&quot;']&quot;));
+		tabElement.click();
+		delayForAnimation();
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWK7oAjGEeauV8k-f6ZZNA" name="getFieldById" specification="_DLFtAAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWK7oQjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWK7ogjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		WebElement field = driver.findElement(By.cssSelector(&quot;[id='&quot;+id+&quot;']&quot;));
+		delayForAnimation();
+		return field;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWK7owjGEeauV8k-f6ZZNA" name="setName" specification="_DLG7IAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWK7pAjGEeauV8k-f6ZZNA" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWK7pQjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		setFieldValueById(name, &quot;name-shortstring&quot;);
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWLisAjGEeauV8k-f6ZZNA" name="setLinkTo" specification="_DLIwUAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWLisQjGEeauV8k-f6ZZNA" name="link">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWLisgjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		setFieldValueById(link, &quot;urlLink-shortstring&quot;);
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWLiswjGEeauV8k-f6ZZNA" name="setFieldValueById" specification="_DLLMkAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWLitAjGEeauV8k-f6ZZNA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWLitQjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWLitgjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		WebElement field = getFieldById(id);
+		field.sendKeys(value);
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DLDQwAjGEeauV8k-f6ZZNA" name="putMeInContainer" visibility="private" isStatic="true" method="_DWKUkAjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DLD30AjGEeauV8k-f6ZZNA" name="findComponentType" isStatic="true" method="_DWKUkQjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DLEe4AjGEeauV8k-f6ZZNA" name="selectEditorTab" method="_DWKUkgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLEe4QjGEeauV8k-f6ZZNA" name="tabId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DTv5wAjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLFtAAjGEeauV8k-f6ZZNA" name="getFieldById" visibility="private" method="_DWK7oAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLFtAQjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DU6-cQjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLG7IAjGEeauV8k-f6ZZNA" name="setName" method="_DWK7owjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLG7IQjGEeauV8k-f6ZZNA" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DTwg0AjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLIwUAjGEeauV8k-f6ZZNA" name="setLinkTo" method="_DWLisAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLIwUQjGEeauV8k-f6ZZNA" name="link">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DTwg0QjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLLMkAjGEeauV8k-f6ZZNA" name="setFieldValueById" method="_DWLiswjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLLMkQjGEeauV8k-f6ZZNA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DLLMkgjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DTwg0gjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DU6XYAjGEeauV8k-f6ZZNA" name="EditorBase" method="_DWJtgQjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DU6XYgjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DU6XYwjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DU6XYQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DU6-cAjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DLRTMAjGEeauV8k-f6ZZNA" name="FrameContent">
+            <eAnnotations xmi:id="_DLR6QAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DLR6QQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DLR6QgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUC0sAjGEeauV8k-f6ZZNA" general="_DLq70AjGEeauV8k-f6ZZNA"/>
+            <interfaceRealization xmi:id="_DT_xYAjGEeauV8k-f6ZZNA" client="_DLRTMAjGEeauV8k-f6ZZNA" supplier="_DKyyEAjGEeauV8k-f6ZZNA" contract="_DKyyEAjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWMJwAjGEeauV8k-f6ZZNA" name="FrameContent" specification="_DU7lgAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWMJwQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWMJwgjGEeauV8k-f6ZZNA" type="_DLRTMAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>super(driver);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWMJwwjGEeauV8k-f6ZZNA" name="putMeInMyFrame" specification="_DLTIYAjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>driver.switchTo().defaultContent();
+		driver.switchTo().frame(0);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWMJxAjGEeauV8k-f6ZZNA" name="frameIsReady" specification="_DLTIYQjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>putMeInMyFrame();
+		waitUntilXpathAtrributeValueAvailable(&quot;//body&quot;, &quot;data-smartedit-ready&quot;, &quot;true&quot;);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWMw0AjGEeauV8k-f6ZZNA" name="moveToElementAndDrop" specification="_DLTvcAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWMw0QjGEeauV8k-f6ZZNA" name="slotId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>frameIsReady();
+		WebElement slot = findElementById(slotId);
+		List&lt;String> conditions = Arrays.asList(&quot;ySEDnDPlaceHolder&quot;,&quot;over-slot-enabled&quot;);
+		jiggleWithinUntilAttributeIsPresent(slot, conditions);
+		mouse.release().build().perform();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWMw0gjGEeauV8k-f6ZZNA" name="findCoordById" specification="_DLU9kAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWMw0wjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWMw1AjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>frameIsReady();
+		WebElement element = findElementById(id);
+		return findCoord(element);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWNX4AjGEeauV8k-f6ZZNA" name="findCoordWithin" specification="_DU8zoQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWNX4QjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWNX4gjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>Point point = element.getLocation();
+		Dimension size = element.getSize();
+		Point pointWithin = new Point(point.x + size.width/2-1, point.y + size.height/2-1);
+		return pointWithin;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWNX4wjGEeauV8k-f6ZZNA" name="findCoord" specification="_DU-o0AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWNX5AjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWNX5QjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>Point point = element.getLocation();
+		return point;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWN-8AjGEeauV8k-f6ZZNA" name="findCoordByName" specification="_DLZPAAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWN-8QjGEeauV8k-f6ZZNA" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWN-8gjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>frameIsReady();
+		WebElement element = findElementByName(name);
+		return findCoord(element);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWN-8wjGEeauV8k-f6ZZNA" name="findElementById" specification="_DLbrQAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWN-9AjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWN-9QjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>frameIsReady();
+		WebElement element = driver.findElement(By.cssSelector(&quot;.smartEditComponent[data-smartedit-component-id='&quot;+id+&quot;']&quot;));
+		return element;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWN-9gjGEeauV8k-f6ZZNA" name="findElementByName" specification="_DLdgcAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWN-9wjGEeauV8k-f6ZZNA" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWN--AjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>frameIsReady();
+		WebElement element = driver.findElement(By.name(name));
+		return element;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWN--QjGEeauV8k-f6ZZNA" name="prepareElementForMove" specification="_DLeukAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWN--gjGEeauV8k-f6ZZNA" name="componentId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>frameIsReady();
+		WebElement component = findElementById(componentId);
+		mouse.clickAndHold(component).build().perform();
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DLTIYAjGEeauV8k-f6ZZNA" name="putMeInMyFrame" visibility="private" method="_DWMJwwjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DLTIYQjGEeauV8k-f6ZZNA" name="frameIsReady" method="_DWMJxAjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DLTvcAjGEeauV8k-f6ZZNA" name="moveToElementAndDrop" method="_DWMw0AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLTvcQjGEeauV8k-f6ZZNA" name="slotId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLU9kAjGEeauV8k-f6ZZNA" name="findCoordById" method="_DWMw0gjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLU9kQjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DU8zoAjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLZPAAjGEeauV8k-f6ZZNA" name="findCoordByName" method="_DWN-8AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLZPAQjGEeauV8k-f6ZZNA" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DU_28AjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLbrQAjGEeauV8k-f6ZZNA" name="findElementById" method="_DWN-8wjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLbrQQjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DU_28QjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLdgcAjGEeauV8k-f6ZZNA" name="findElementByName" method="_DWN-9gjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLdgcQjGEeauV8k-f6ZZNA" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DU_28gjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLeukAjGEeauV8k-f6ZZNA" name="prepareElementForMove" method="_DWN--QjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLfVoAjGEeauV8k-f6ZZNA" name="componentId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DU7lgAjGEeauV8k-f6ZZNA" name="FrameContent" method="_DWMJwAjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DU8MkAjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DU8MkQjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DU7lgQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DU8MkgjGEeauV8k-f6ZZNA" type="_DLRTMAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DU8zoQjGEeauV8k-f6ZZNA" name="findCoordWithin" method="_DWNX4AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DU8zogjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DU9asAjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DU-o0AjGEeauV8k-f6ZZNA" name="findCoord" method="_DWNX4wjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DU-o0QjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DU-o0gjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DLn4gAjGEeauV8k-f6ZZNA" name="LeftPane">
+            <eAnnotations xmi:id="_DLpGoAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DLpGoQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DLpGogjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWOmAAjGEeauV8k-f6ZZNA" name="LeftPane" specification="_DVBFEAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWOmAQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWOmAgjGEeauV8k-f6ZZNA" type="_DLn4gAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>// TODO Auto-generated constructor stub
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DVBFEAjGEeauV8k-f6ZZNA" name="LeftPane" method="_DWOmAAjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVBFEgjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVBsIAjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVBFEQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVBsIQjGEeauV8k-f6ZZNA" type="_DLn4gAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DLq70AjGEeauV8k-f6ZZNA" name="PageObject">
+            <eAnnotations xmi:id="_DLri4AjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DLri4QjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DLri4gjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_DVj3oAjGEeauV8k-f6ZZNA" name="driver" isStatic="true" type="_DTW4MAjGEeauV8k-f6ZZNA" association="_DWxYkQjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVlFwAjGEeauV8k-f6ZZNA" name="mouse" isStatic="true" type="_DUHGIAjGEeauV8k-f6ZZNA" association="_DWx_oQjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVlFwgjGEeauV8k-f6ZZNA" name="CSS_TRANSITION_DELAY" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DVls0AjGEeauV8k-f6ZZNA" value="1000"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DVmT4AjGEeauV8k-f6ZZNA" name="INVESTIGATION_DELAY" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DVmT4QjGEeauV8k-f6ZZNA" value="20000"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DVm68QjGEeauV8k-f6ZZNA" name="DEFAULT_TIMEOUT" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DVm68gjGEeauV8k-f6ZZNA" value="30"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWPNEAjGEeauV8k-f6ZZNA" name="PageObject" specification="_DVCTMAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWPNEQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA">
+                <eAnnotations xmi:id="_DWPNEgjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DWPNEwjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWPNFAjGEeauV8k-f6ZZNA" name="url">
+                <eAnnotations xmi:id="_DWPNFQjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DWPNFgjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWPNFwjGEeauV8k-f6ZZNA" type="_DLq70AjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>driver.get(url);
+		pageSetup(driver);
+
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWPNGAjGEeauV8k-f6ZZNA" name="PageObject" specification="_DVC6RAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWPNGQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWPNGgjGEeauV8k-f6ZZNA" type="_DLq70AjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>pageSetup(driver);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWPNGwjGEeauV8k-f6ZZNA" name="pageSetup" specification="_DVDhVAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWPNHAjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <language>java</language>
+              <body>this.setDriver(driver);
+		PageFactory.initElements(driver, this);	
+		setupMouse(driver);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWPNHQjGEeauV8k-f6ZZNA" name="setupMouse" specification="_DVEIYAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWPNHgjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <language>java</language>
+              <body>if (mouse == null)
+			mouse = new Actions(driver);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWP0IAjGEeauV8k-f6ZZNA" name="getDriver" specification="_DLvNQAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWP0IQjGEeauV8k-f6ZZNA" type="_DTW4MAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return driver;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWP0IgjGEeauV8k-f6ZZNA" name="setDriver" specification="_DVEvcQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWP0IwjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA">
+                <eAnnotations xmi:id="_DWP0JAjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DWP0JQjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.driver = driver;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWP0JgjGEeauV8k-f6ZZNA" name="delay" specification="_DLxCcAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWP0JwjGEeauV8k-f6ZZNA" name="durationMS">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>try {
+			Thread.sleep(durationMS);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWQbMAjGEeauV8k-f6ZZNA" name="delayForDebugging" specification="_DLyQkAjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>try {
+			Thread.sleep(INVESTIGATION_DELAY);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWQbMQjGEeauV8k-f6ZZNA" name="delayForAnimation" specification="_DLyQkQjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>try {
+			Thread.sleep(CSS_TRANSITION_DELAY);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWQbMgjGEeauV8k-f6ZZNA" name="jiggleWithinUntilAttributeIsPresent" specification="_DVFWggjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWQbMwjGEeauV8k-f6ZZNA" name="destinationElement" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWQbNAjGEeauV8k-f6ZZNA" name="attributes" type="_DTyWAAjGEeauV8k-f6ZZNA"/>
+              <language>java</language>
+              <body>Point topLeft = destinationElement.getLocation();
+		Dimension size = destinationElement.getSize();
+		System.out.println(&quot;Origin Point: &quot;+topLeft.x+&quot;,&quot;+topLeft.y);
+		System.out.println(&quot;size: &quot;+size.width+&quot;,&quot;+size.height);
+		for (int i = 1 ; i &lt; 15 ; i++){			
+			Point randomPoint = randomPointBasedOn(size);
+			Point destionationPoint = new Point(topLeft.x + randomPoint.x, topLeft.y + randomPoint.y);
+			System.out.println(&quot;Random Point: &quot;+destionationPoint.x+&quot;,&quot;+destionationPoint.y);
+			mouse.moveByOffset(destionationPoint.x, destionationPoint.y).build().perform();
+			simulateUserMouseMovement(topLeft, destinationElement, randomPoint, attributes);
+			
+			if(atrributesAllAvailable(attributes))
+			{
+				System.out.println(&quot;ready to drop&quot;);
+				break;
+			}
+			mouse.moveByOffset(-1*destionationPoint.x,-1*destionationPoint.y).build().perform();
+		}
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWRCQAjGEeauV8k-f6ZZNA" name="simulateUserMouseMovement" specification="_DVHLsAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWRCQQjGEeauV8k-f6ZZNA" name="topLeft" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWRCQgjGEeauV8k-f6ZZNA" name="destinationElement" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWRCQwjGEeauV8k-f6ZZNA" name="randomPoint" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWRCRAjGEeauV8k-f6ZZNA" name="attributes" type="_DTyWAAjGEeauV8k-f6ZZNA"/>
+              <language>java</language>
+              <body>if(!atrributesAllAvailable(attributes)){
+			int absOffset = (randomPoint.x > randomPoint.y ? randomPoint.x : randomPoint.y);
+			float movetoY = 0;
+			float movetoX= 0;
+			
+			for (int i = 0; i &lt; absOffset; i++){
+				delay(10);
+				movetoY += (float) randomPoint.y / absOffset;
+				movetoX += (float) randomPoint.x / absOffset;
+				mouse.moveToElement(destinationElement, Math.round(movetoX), Math.round(movetoY)).build().perform();	
+			}
+		}
+		
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWRpUAjGEeauV8k-f6ZZNA" name="atrributesAllAvailable" specification="_DVJA4AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWRpUQjGEeauV8k-f6ZZNA" name="attributes" type="_DTyWAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWRpUgjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>for (String attribute : attributes){
+			if (!atrributeBecomesAvailable(attribute)){
+				System.out.println(attribute+&quot; is not available!&quot;);
+				return false;
+			}
+		}
+		return true;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWSQYAjGEeauV8k-f6ZZNA" name="randomPointBasedOn" specification="_DVKPAAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWSQYQjGEeauV8k-f6ZZNA" name="size" type="_DT2AYAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWSQYgjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>Random rand = new Random();
+		Point randomPoint = new Point(rand.nextInt(size.width-50), rand.nextInt(size.height-25));
+		return randomPoint;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWSQYwjGEeauV8k-f6ZZNA" name="randomPointWithin" specification="_DVK2EAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWSQZAjGEeauV8k-f6ZZNA" name="origin" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWSQZQjGEeauV8k-f6ZZNA" name="size" type="_DT2AYAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWSQZgjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>Random rand = new Random();
+		Point randomPoint = new Point(rand.nextInt(size.width) + origin.x, rand.nextInt(size.height) + origin.y);
+		return randomPoint;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWSQZwjGEeauV8k-f6ZZNA" name="atrributeBecomesAvailable" specification="_DL0s0AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWSQaAjGEeauV8k-f6ZZNA" name="attribute">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWSQaQjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>driver.manage().timeouts().implicitlyWait(CSS_TRANSITION_DELAY, TimeUnit.MILLISECONDS);  
+     try  
+     {  
+     	List&lt;WebElement> elements = driver.findElements(By.className(attribute)); 
+     	if (elements.size() > 0)
+     		return true;   
+     	else 
+     		return false;
+     		
+     }  
+     catch(NoSuchElementException e)  
+     {  
+         return false;  
+     }  
+    finally  
+    {  
+        driver.manage().timeouts().implicitlyWait(DEFAULT_TIMEOUT, TimeUnit.SECONDS);  
+    }  
+		
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWS3cAjGEeauV8k-f6ZZNA" name="waitUntilXpathAtrributeValueAvailable" specification="_DL2iAAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWS3cQjGEeauV8k-f6ZZNA" name="xpath">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWS3cgjGEeauV8k-f6ZZNA" name="attribute">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWS3cwjGEeauV8k-f6ZZNA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
+		wait.until(ExpectedConditions.attributeToBe(By.xpath(xpath), attribute, value));
+		delay(CSS_TRANSITION_DELAY);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWS3dAjGEeauV8k-f6ZZNA" name="waitUntilCssAtrributeValueAvailable" specification="_DL3wIAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWS3dQjGEeauV8k-f6ZZNA" name="selector">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWS3dgjGEeauV8k-f6ZZNA" name="attribute">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWS3dwjGEeauV8k-f6ZZNA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
+		wait.until(ExpectedConditions.attributeToBe(By.cssSelector(selector), attribute, value));
+		delay(CSS_TRANSITION_DELAY);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWTegAjGEeauV8k-f6ZZNA" name="waitUntilCssLocatorIsAvailable" specification="_DL4-QAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWTegQjGEeauV8k-f6ZZNA" name="selector">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(selector)));
+		delay(CSS_TRANSITION_DELAY);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWTeggjGEeauV8k-f6ZZNA" name="calcOffset" specification="_DVLdIAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWTegwjGEeauV8k-f6ZZNA" name="destination" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWTehAjGEeauV8k-f6ZZNA" name="source" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWTehQjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>Point offset = new Point(destination.x - source.x, destination.y - source.y);
+		return offset;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWUFkAjGEeauV8k-f6ZZNA" name="findElementByClass" specification="_DL6zcAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWUFkQjGEeauV8k-f6ZZNA" name="clazz">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWUFkgjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>WebElement element = driver.findElement(By.cssSelector(&quot;.&quot;+clazz+&quot;&quot;));
+		return element;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWUFkwjGEeauV8k-f6ZZNA" name="scrollToY" specification="_DL8ooAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWUFlAjGEeauV8k-f6ZZNA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>JavascriptExecutor js =(JavascriptExecutor)driver;
+     js.executeScript(&quot;window.scrollTo(0,&quot;+y+&quot;)&quot;);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWUFlQjGEeauV8k-f6ZZNA" name="getElementsHtml" specification="_DVMrQQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWUFlgjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWUFlwjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return (String)((JavascriptExecutor)driver).executeScript(&quot;return arguments[0].innerHTML;&quot;, element);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWUFmAjGEeauV8k-f6ZZNA" name="isClickable" specification="_DVNSUAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWUFmQjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWUFmgjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>try
+		{
+			WebDriverWait wait = new WebDriverWait(driver, 2);
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DLvNQAjGEeauV8k-f6ZZNA" name="getDriver" method="_DWP0IAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVEvcAjGEeauV8k-f6ZZNA" type="_DTW4MAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLxCcAjGEeauV8k-f6ZZNA" name="delay" method="_DWP0JgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DLxCcQjGEeauV8k-f6ZZNA" name="durationMS">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DLyQkAjGEeauV8k-f6ZZNA" name="delayForDebugging" method="_DWQbMAjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DLyQkQjGEeauV8k-f6ZZNA" name="delayForAnimation" method="_DWQbMQjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DL0s0AjGEeauV8k-f6ZZNA" name="atrributeBecomesAvailable" method="_DWSQZwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DL0s0QjGEeauV8k-f6ZZNA" name="attribute">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DL1T4AjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DL2iAAjGEeauV8k-f6ZZNA" name="waitUntilXpathAtrributeValueAvailable" method="_DWS3cAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DL2iAQjGEeauV8k-f6ZZNA" name="xpath">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DL3JEAjGEeauV8k-f6ZZNA" name="attribute">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DL3JEQjGEeauV8k-f6ZZNA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DL3wIAjGEeauV8k-f6ZZNA" name="waitUntilCssAtrributeValueAvailable" method="_DWS3dAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DL4XMAjGEeauV8k-f6ZZNA" name="selector">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DL4XMQjGEeauV8k-f6ZZNA" name="attribute">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DL4XMgjGEeauV8k-f6ZZNA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DL4-QAjGEeauV8k-f6ZZNA" name="waitUntilCssLocatorIsAvailable" method="_DWTegAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DL5lUAjGEeauV8k-f6ZZNA" name="selector">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DL6zcAjGEeauV8k-f6ZZNA" name="findElementByClass" method="_DWUFkAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DL6zcQjGEeauV8k-f6ZZNA" name="clazz">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVMrQAjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DL8ooAjGEeauV8k-f6ZZNA" name="scrollToY" method="_DWUFkwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DL8ooQjGEeauV8k-f6ZZNA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVCTMAjGEeauV8k-f6ZZNA" name="PageObject" method="_DWPNEAjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVCTMwjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVCTNAjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVCTMQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA">
+                <eAnnotations xmi:id="_DVC6QAjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DVC6QQjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVCTMgjGEeauV8k-f6ZZNA" name="url">
+                <eAnnotations xmi:id="_DVC6QgjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DVC6QwjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVCTNQjGEeauV8k-f6ZZNA" type="_DLq70AjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVC6RAjGEeauV8k-f6ZZNA" name="PageObject" method="_DWPNGAjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVDhUQjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVDhUgjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVDhUAjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVDhUwjGEeauV8k-f6ZZNA" type="_DLq70AjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVDhVAjGEeauV8k-f6ZZNA" name="pageSetup" visibility="private" method="_DWPNGwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVDhVQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVEIYAjGEeauV8k-f6ZZNA" name="setupMouse" visibility="private" method="_DWPNHQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVEIYQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVEvcQjGEeauV8k-f6ZZNA" name="setDriver" method="_DWP0IgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVEvcgjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA">
+                <eAnnotations xmi:id="_DVFWgAjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DVFWgQjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVFWggjGEeauV8k-f6ZZNA" name="jiggleWithinUntilAttributeIsPresent" method="_DWQbMgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVF9kAjGEeauV8k-f6ZZNA" name="destinationElement" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVF9kQjGEeauV8k-f6ZZNA" name="attributes" type="_DTyWAAjGEeauV8k-f6ZZNA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVHLsAjGEeauV8k-f6ZZNA" name="simulateUserMouseMovement" visibility="private" method="_DWRCQAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVHLsQjGEeauV8k-f6ZZNA" name="topLeft" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVHLsgjGEeauV8k-f6ZZNA" name="destinationElement" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVHLswjGEeauV8k-f6ZZNA" name="randomPoint" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVHywAjGEeauV8k-f6ZZNA" name="attributes" type="_DTyWAAjGEeauV8k-f6ZZNA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVJA4AjGEeauV8k-f6ZZNA" name="atrributesAllAvailable" visibility="private" method="_DWRpUAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVJA4QjGEeauV8k-f6ZZNA" name="attributes" type="_DTyWAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVJA4gjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVKPAAjGEeauV8k-f6ZZNA" name="randomPointBasedOn" visibility="private" method="_DWSQYAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVKPAQjGEeauV8k-f6ZZNA" name="size" type="_DT2AYAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVKPAgjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVK2EAjGEeauV8k-f6ZZNA" name="randomPointWithin" visibility="private" method="_DWSQYwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVK2EQjGEeauV8k-f6ZZNA" name="origin" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVK2EgjGEeauV8k-f6ZZNA" name="size" type="_DT2AYAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVK2EwjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVLdIAjGEeauV8k-f6ZZNA" name="calcOffset" visibility="private" method="_DWTeggjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVMEMAjGEeauV8k-f6ZZNA" name="destination" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVMEMQjGEeauV8k-f6ZZNA" name="source" type="_DTolAAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVMEMgjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVMrQQjGEeauV8k-f6ZZNA" name="getElementsHtml" method="_DWUFlQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVMrQgjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVMrQwjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVNSUAjGEeauV8k-f6ZZNA" name="isClickable" isStatic="true" method="_DWUFmAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVNSUQjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVNSUgjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DMSm4AjGEeauV8k-f6ZZNA" name="Persona" isAbstract="true">
+            <eAnnotations xmi:id="_DMT1AAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DMT1AQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DMT1AgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_DVowIAjGEeauV8k-f6ZZNA" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DVpXMAjGEeauV8k-f6ZZNA" name="role">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DVpXMQjGEeauV8k-f6ZZNA" name="username">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DVp-QAjGEeauV8k-f6ZZNA" name="password">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DVp-QQjGEeauV8k-f6ZZNA" name="driver" visibility="protected" type="_DTW4MAjGEeauV8k-f6ZZNA" association="_DWzNwQjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWVTsAjGEeauV8k-f6ZZNA" name="basesetup" specification="_DMWRQAjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWVTsQjGEeauV8k-f6ZZNA" name="baseclose" specification="_DMW4UgjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>driver.close();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWV6wAjGEeauV8k-f6ZZNA" name="getDriver" specification="_DMYGcgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWV6wQjGEeauV8k-f6ZZNA" type="_DTW4MAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return driver;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWV6wgjGEeauV8k-f6ZZNA" name="setDriver" specification="_DVPukAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWV6wwjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <language>java</language>
+              <body>this.driver = driver;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DMVqMAjGEeauV8k-f6ZZNA" name="reportExperience" isAbstract="true">
+              <ownedParameter xmi:id="_DMVqMQjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DMWRQAjGEeauV8k-f6ZZNA" name="basesetup" method="_DWVTsAjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DMW4UgjGEeauV8k-f6ZZNA" name="baseclose" method="_DWVTsQjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DMYGcgjGEeauV8k-f6ZZNA" name="getDriver" method="_DWV6wAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVPHgAjGEeauV8k-f6ZZNA" type="_DTW4MAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVPukAjGEeauV8k-f6ZZNA" name="setDriver" method="_DWV6wgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVPukQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DMc-8AjGEeauV8k-f6ZZNA" name="SmartEdit">
+            <eAnnotations xmi:id="_DMdmAAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DMdmAQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DMdmAgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUaoIAjGEeauV8k-f6ZZNA" general="_DLq70AjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVrMYAjGEeauV8k-f6ZZNA" name="frame" visibility="package" type="_DLRTMAjGEeauV8k-f6ZZNA" association="_DWz00QjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVrzcAjGEeauV8k-f6ZZNA" name="leftPane" visibility="package" type="_DLn4gAjGEeauV8k-f6ZZNA" association="_DW0b4QjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVsagAjGEeauV8k-f6ZZNA" name="blueRibbon" visibility="package" type="_DKZwgAjGEeauV8k-f6ZZNA" association="_DW1qAAjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVsaggjGEeauV8k-f6ZZNA" name="whiteRibbon" visibility="package" type="_DMzkQAjGEeauV8k-f6ZZNA" association="_DW2REQjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVtBkQjGEeauV8k-f6ZZNA" name="containerLoaded" visibility="private" isLeaf="true" type="_DTpzIQjGEeauV8k-f6ZZNA" isReadOnly="true" association="_DW24IQjGEeauV8k-f6ZZNA">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DVtooAjGEeauV8k-f6ZZNA" value="driver.findElement(By.id(&quot;nav-expander&quot;))"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DVuPsAjGEeauV8k-f6ZZNA" name="origin" visibility="private" type="_DTpzIQjGEeauV8k-f6ZZNA" association="_DW3fMQjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWWh0AjGEeauV8k-f6ZZNA" name="SmartEdit" specification="_DVQ8sAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWWh0QjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWWh0gjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>super(driver);
+		this.frame = new FrameContent(driver);
+		this.leftPane = new LeftPane(driver);
+		this.blueRibbon = new BlueRibbon(driver);
+		this.whiteRibbon = new WhiteRibbon(driver);
+		frame.frameIsReady();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWWh0wjGEeauV8k-f6ZZNA" name="putMeInContainer" specification="_DMgpUAjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>driver.switchTo().defaultContent();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWWh1AjGEeauV8k-f6ZZNA" name="createNewComponent" specification="_DMhQYAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWWh1QjGEeauV8k-f6ZZNA" name="type">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWWh1gjGEeauV8k-f6ZZNA" name="slotId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWWh1wjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>whiteRibbon.prepareComponentTypeForMove(type);	
+		prepareForDrop();
+		frame.moveToElementAndDrop(slotId);
+
+		return new EditorBase(getDriver());
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWXI4AjGEeauV8k-f6ZZNA" name="addExistingComponent" specification="_DMk6wAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWXI4QjGEeauV8k-f6ZZNA" name="item">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWXI4gjGEeauV8k-f6ZZNA" name="slotId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWXI4wjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>whiteRibbon.prepareCustomizedComponentForMove(item);	
+		prepareForDrop();
+		frame.moveToElementAndDrop(slotId);
+		delayForDebugging();
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWXI5AjGEeauV8k-f6ZZNA" name="moveComponentToSlot" specification="_DMmv8AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWXI5QjGEeauV8k-f6ZZNA" name="componentId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWXI5gjGEeauV8k-f6ZZNA" name="slotId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWXI5wjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>frame.prepareElementForMove(componentId);
+		prepareForDrop();
+		frame.moveToElementAndDrop(slotId);
+		delayForDebugging();
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWXv8AjGEeauV8k-f6ZZNA" name="prepareForDrop" specification="_DMnXAAjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>scrollToY(0);
+		putMeInContainer();
+		mouse.moveToElement(origin, 0, 0).build().perform();
+		waitUntilCssLocatorIsAvailable(&quot;body > div.UIhintDragAndDrop.top.visible&quot;);	
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWXv8QjGEeauV8k-f6ZZNA" name="getFrame" specification="_DMn-EAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWXv8gjGEeauV8k-f6ZZNA" type="_DLRTMAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return frame;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWXv8wjGEeauV8k-f6ZZNA" name="setFrame" specification="_DUXk0AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWXv9AjGEeauV8k-f6ZZNA" name="frame" type="_DLRTMAjGEeauV8k-f6ZZNA"/>
+              <language>java</language>
+              <body>this.frame = frame;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWXv9QjGEeauV8k-f6ZZNA" name="getLeftPane" specification="_DMolIAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWXv9gjGEeauV8k-f6ZZNA" type="_DLn4gAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return leftPane;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWYXAAjGEeauV8k-f6ZZNA" name="setLeftPane" specification="_DUYy8QjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWYXAQjGEeauV8k-f6ZZNA" name="leftPane" type="_DLn4gAjGEeauV8k-f6ZZNA"/>
+              <language>java</language>
+              <body>this.leftPane = leftPane;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWYXAgjGEeauV8k-f6ZZNA" name="getBlueRibbon" specification="_DMpMMAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWYXAwjGEeauV8k-f6ZZNA" type="_DKZwgAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return blueRibbon;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWYXBAjGEeauV8k-f6ZZNA" name="setBlueRibbon" specification="_DUZaAQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWYXBQjGEeauV8k-f6ZZNA" name="blueRibbon" type="_DKZwgAjGEeauV8k-f6ZZNA"/>
+              <language>java</language>
+              <body>this.blueRibbon = blueRibbon;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWYXBgjGEeauV8k-f6ZZNA" name="getWhiteRibbon" specification="_DMpzQAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWYXBwjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return whiteRibbon;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWY-EAjGEeauV8k-f6ZZNA" name="setWhiteRibbon" specification="_DUaBEQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWY-EQjGEeauV8k-f6ZZNA" name="whiteRibbon" type="_DMzkQAjGEeauV8k-f6ZZNA"/>
+              <language>java</language>
+              <body>this.whiteRibbon = whiteRibbon;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DMgpUAjGEeauV8k-f6ZZNA" name="putMeInContainer" visibility="private" method="_DWWh0wjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DMhQYAjGEeauV8k-f6ZZNA" name="createNewComponent" method="_DWWh1AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DMh3cAjGEeauV8k-f6ZZNA" name="type">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DMh3cQjGEeauV8k-f6ZZNA" name="slotId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUVIkAjGEeauV8k-f6ZZNA" type="_DK_mYAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DMk6wAjGEeauV8k-f6ZZNA" name="addExistingComponent" method="_DWXI4AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DMlh0AjGEeauV8k-f6ZZNA" name="item">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DMlh0QjGEeauV8k-f6ZZNA" name="slotId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUVIkQjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DMmv8AjGEeauV8k-f6ZZNA" name="moveComponentToSlot" method="_DWXI5AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DMmv8QjGEeauV8k-f6ZZNA" name="componentId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DMmv8gjGEeauV8k-f6ZZNA" name="slotId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUVIkgjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DMnXAAjGEeauV8k-f6ZZNA" name="prepareForDrop" visibility="private" method="_DWXv8AjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DMn-EAjGEeauV8k-f6ZZNA" name="getFrame" method="_DWXv8QjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUVIkwjGEeauV8k-f6ZZNA" type="_DLRTMAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DMolIAjGEeauV8k-f6ZZNA" name="getLeftPane" method="_DWXv9QjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUYy8AjGEeauV8k-f6ZZNA" type="_DLn4gAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DMpMMAjGEeauV8k-f6ZZNA" name="getBlueRibbon" method="_DWYXAgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUZaAAjGEeauV8k-f6ZZNA" type="_DKZwgAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DMpzQAjGEeauV8k-f6ZZNA" name="getWhiteRibbon" method="_DWYXBgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUaBEAjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DUXk0AjGEeauV8k-f6ZZNA" name="setFrame" method="_DWXv8wjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUYL4AjGEeauV8k-f6ZZNA" name="frame" type="_DLRTMAjGEeauV8k-f6ZZNA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DUYy8QjGEeauV8k-f6ZZNA" name="setLeftPane" method="_DWYXAAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUYy8gjGEeauV8k-f6ZZNA" name="leftPane" type="_DLn4gAjGEeauV8k-f6ZZNA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DUZaAQjGEeauV8k-f6ZZNA" name="setBlueRibbon" method="_DWYXBAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUZaAgjGEeauV8k-f6ZZNA" name="blueRibbon" type="_DKZwgAjGEeauV8k-f6ZZNA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DUaBEQjGEeauV8k-f6ZZNA" name="setWhiteRibbon" method="_DWY-EAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUaBEgjGEeauV8k-f6ZZNA" name="whiteRibbon" type="_DMzkQAjGEeauV8k-f6ZZNA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVQ8sAjGEeauV8k-f6ZZNA" name="SmartEdit" method="_DWWh0AjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVQ8sgjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVQ8swjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVQ8sQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVQ8tAjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DMzkQAjGEeauV8k-f6ZZNA" name="WhiteRibbon">
+            <eAnnotations xmi:id="_DM0LUAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DM0LUQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DM0LUgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUfgoAjGEeauV8k-f6ZZNA" general="_DLq70AjGEeauV8k-f6ZZNA"/>
+            <interfaceRealization xmi:id="_DUdrcAjGEeauV8k-f6ZZNA" client="_DMzkQAjGEeauV8k-f6ZZNA" supplier="_DKyyEAjGEeauV8k-f6ZZNA" contract="_DKyyEAjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWY-EgjGEeauV8k-f6ZZNA" name="WhiteRibbon" specification="_DVSx4AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWY-EwjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWY-FAjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>super(driver);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWY-FQjGEeauV8k-f6ZZNA" name="prepareComponentTypeForMove" specification="_DM1ZcAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWY-FgjGEeauV8k-f6ZZNA" name="type">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWY-FwjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		WebElement typeElement  = findComponentType(type);
+		mouse.clickAndHold(typeElement).build().perform();
+		Point source = findCoordWithin(typeElement);
+		return source;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWZlIAjGEeauV8k-f6ZZNA" name="prepareCustomizedComponentForMove" specification="_DM2nkAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWZlIQjGEeauV8k-f6ZZNA" name="item">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWZlIgjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		WebElement itemElement  = findComponentItem(item);
+		mouse.clickAndHold(itemElement).build().perform();
+		Point source = findCoordWithin(itemElement);
+		return source;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWZlIwjGEeauV8k-f6ZZNA" name="findCoord" specification="_DVUAAAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWZlJAjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWZlJQjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		Point point = element.getLocation();
+		return point;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWZlJgjGEeauV8k-f6ZZNA" name="findCoordWithin" specification="_DVVOIAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWZlJwjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWZlKAjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		Point point = element.getLocation();
+		Dimension size = element.getSize();
+		Point pointWithin = new Point(point.x + size.width/2, point.y + size.height/2);
+		return pointWithin;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWZlKQjGEeauV8k-f6ZZNA" name="findCoordById" specification="_DM31sAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWZlKgjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWZlKwjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return null;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWaMMAjGEeauV8k-f6ZZNA" name="findCoordByName" specification="_DM5q4gjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWaMMQjGEeauV8k-f6ZZNA" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWaMMgjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return null;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWaMMwjGEeauV8k-f6ZZNA" name="putMeInContainer" specification="_DM7gEgjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>driver.switchTo().defaultContent();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWaMNAjGEeauV8k-f6ZZNA" name="openComponentMenu" specification="_DM8HIAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWaMNQjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>clickOnRibbonButton(&quot;component-menu&quot;);
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWaMNgjGEeauV8k-f6ZZNA" name="findComponentType" specification="_DM8uMAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWaMNwjGEeauV8k-f6ZZNA" name="type">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWaMOAjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		openComponentMenu();
+		selectComponetMenuTab(&quot;Component Types&quot;);
+		WebElement element = driver.findElement(By.cssSelector(&quot;.smartEditComponent[data-smartedit-component-type='&quot;+type+&quot;']&quot;));
+		return element;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWazQAjGEeauV8k-f6ZZNA" name="findComponentItem" specification="_DM9VQAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWazQQjGEeauV8k-f6ZZNA" name="item">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWazQgjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		openComponentMenu();
+		selectComponetMenuTab(&quot;Customized Components&quot;);
+		WebElement element = driver.findElement(By.cssSelector(&quot;.smartEditComponent[data-smartedit-component-id='&quot;+item+&quot;']&quot;));
+		return element;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWazQwjGEeauV8k-f6ZZNA" name="selectComponetMenuTab" specification="_DM-jYAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWazRAjGEeauV8k-f6ZZNA" name="tabName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWazRQjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		WebElement tabElement = driver.findElement(By.cssSelector(&quot;[heading='&quot;+tabName+&quot;']&quot;));
+		tabElement.click();
+		delayForAnimation();
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWbaUAjGEeauV8k-f6ZZNA" name="clickOnRibbonButton" specification="_DM_KcAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWbaUQjGEeauV8k-f6ZZNA" name="buttonTagName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWbaUgjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInContainer();
+		WebElement button = driver.findElement(By.tagName(buttonTagName));		
+		button.click();
+		delayForAnimation();
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DM1ZcAjGEeauV8k-f6ZZNA" name="prepareComponentTypeForMove" method="_DWY-FQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DM2AgAjGEeauV8k-f6ZZNA" name="type">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVTY8gjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DM2nkAjGEeauV8k-f6ZZNA" name="prepareCustomizedComponentForMove" method="_DWZlIAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DM2nkQjGEeauV8k-f6ZZNA" name="item">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVTY8wjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DM31sAjGEeauV8k-f6ZZNA" name="findCoordById" method="_DWZlKQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DM31sQjGEeauV8k-f6ZZNA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVWcQgjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DM5q4gjGEeauV8k-f6ZZNA" name="findCoordByName" method="_DWaMMAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DM6R8AjGEeauV8k-f6ZZNA" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVXDUAjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DM7gEgjGEeauV8k-f6ZZNA" name="putMeInContainer" visibility="private" method="_DWaMMwjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DM8HIAjGEeauV8k-f6ZZNA" name="openComponentMenu" method="_DWaMNAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUe5kAjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DM8uMAjGEeauV8k-f6ZZNA" name="findComponentType" method="_DWaMNgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DM8uMQjGEeauV8k-f6ZZNA" name="type">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVXqYAjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DM9VQAjGEeauV8k-f6ZZNA" name="findComponentItem" method="_DWazQAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DM9VQQjGEeauV8k-f6ZZNA" name="item">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVXqYQjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DM-jYAjGEeauV8k-f6ZZNA" name="selectComponetMenuTab" method="_DWazQwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DM-jYQjGEeauV8k-f6ZZNA" name="tabName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUe5kQjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DM_KcAjGEeauV8k-f6ZZNA" name="clickOnRibbonButton" method="_DWbaUAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DM_KcQjGEeauV8k-f6ZZNA" name="buttonTagName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUe5kgjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVSx4AjGEeauV8k-f6ZZNA" name="WhiteRibbon" method="_DWY-EgjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVSx4gjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVTY8AjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVSx4QjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVTY8QjGEeauV8k-f6ZZNA" type="_DMzkQAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVUAAAjGEeauV8k-f6ZZNA" name="findCoord" method="_DWZlIwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVUAAQjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVUAAgjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVVOIAjGEeauV8k-f6ZZNA" name="findCoordWithin" method="_DWZlJgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DVVOIQjGEeauV8k-f6ZZNA" name="element" type="_DTpzIQjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVV1MAjGEeauV8k-f6ZZNA" type="_DTolAAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DWwxgAjGEeauV8k-f6ZZNA" name="" memberEnd="_DWwxgQjGEeauV8k-f6ZZNA _DVipgAjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DWwxgQjGEeauV8k-f6ZZNA" name="" type="_DKny8AjGEeauV8k-f6ZZNA" association="_DWwxgAjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DWxYkQjGEeauV8k-f6ZZNA" name="" memberEnd="_DWxYkgjGEeauV8k-f6ZZNA _DVj3oAjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DWxYkgjGEeauV8k-f6ZZNA" name="" type="_DLq70AjGEeauV8k-f6ZZNA" association="_DWxYkQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DWx_oQjGEeauV8k-f6ZZNA" name="" memberEnd="_DWx_ogjGEeauV8k-f6ZZNA _DVlFwAjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DWx_ogjGEeauV8k-f6ZZNA" name="" type="_DLq70AjGEeauV8k-f6ZZNA" association="_DWx_oQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DWzNwQjGEeauV8k-f6ZZNA" name="" memberEnd="_DWzNwgjGEeauV8k-f6ZZNA _DVp-QQjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DWzNwgjGEeauV8k-f6ZZNA" name="" type="_DMSm4AjGEeauV8k-f6ZZNA" association="_DWzNwQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DWz00QjGEeauV8k-f6ZZNA" name="" memberEnd="_DWz00gjGEeauV8k-f6ZZNA _DVrMYAjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DWz00gjGEeauV8k-f6ZZNA" name="" type="_DMc-8AjGEeauV8k-f6ZZNA" association="_DWz00QjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW0b4QjGEeauV8k-f6ZZNA" name="" memberEnd="_DW0b4gjGEeauV8k-f6ZZNA _DVrzcAjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW0b4gjGEeauV8k-f6ZZNA" name="" type="_DMc-8AjGEeauV8k-f6ZZNA" association="_DW0b4QjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW1qAAjGEeauV8k-f6ZZNA" name="" memberEnd="_DW1qAQjGEeauV8k-f6ZZNA _DVsagAjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW1qAQjGEeauV8k-f6ZZNA" name="" type="_DMc-8AjGEeauV8k-f6ZZNA" association="_DW1qAAjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW2REQjGEeauV8k-f6ZZNA" name="" memberEnd="_DW2REgjGEeauV8k-f6ZZNA _DVsaggjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW2REgjGEeauV8k-f6ZZNA" name="" type="_DMc-8AjGEeauV8k-f6ZZNA" association="_DW2REQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW24IQjGEeauV8k-f6ZZNA" name="" memberEnd="_DW24IgjGEeauV8k-f6ZZNA _DVtBkQjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW24IgjGEeauV8k-f6ZZNA" name="" type="_DMc-8AjGEeauV8k-f6ZZNA" association="_DW24IQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW3fMQjGEeauV8k-f6ZZNA" name="" memberEnd="_DW3fMgjGEeauV8k-f6ZZNA _DVuPsAjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW3fMgjGEeauV8k-f6ZZNA" name="" type="_DMc-8AjGEeauV8k-f6ZZNA" association="_DW3fMQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_DI_bQAjGEeauV8k-f6ZZNA" name="pages">
+          <packagedElement xmi:type="uml:Class" xmi:id="_DNGfMAjGEeauV8k-f6ZZNA" name="GoogleSearch">
+            <eAnnotations xmi:id="_DNHGQAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DNHGQQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DNHGQgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUh84QjGEeauV8k-f6ZZNA" general="_DLq70AjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVvd0AjGEeauV8k-f6ZZNA" name="url" visibility="private" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DVvd0QjGEeauV8k-f6ZZNA" value="&quot;https://google.ca/&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DVwE4QjGEeauV8k-f6ZZNA" name="searchButton" visibility="private" type="_DTpzIQjGEeauV8k-f6ZZNA" association="_DW4GQQjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVwr8wjGEeauV8k-f6ZZNA" name="searchField" visibility="private" type="_DTpzIQjGEeauV8k-f6ZZNA" association="_DW4tUQjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVxTAwjGEeauV8k-f6ZZNA" name="header" type="_DNL-wAjGEeauV8k-f6ZZNA" association="_DW5UYQjGEeauV8k-f6ZZNA">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DVxTBAjGEeauV8k-f6ZZNA" value="new Header(driver)"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWbaUwjGEeauV8k-f6ZZNA" name="GoogleSearch" specification="_DVY4gAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWbaVAjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWbaVQjGEeauV8k-f6ZZNA" type="_DNGfMAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>super(driver, url);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWbaVgjGEeauV8k-f6ZZNA" name="clickOnSearchButton" specification="_DNIUYAjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>searchButton.click();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWcBYAjGEeauV8k-f6ZZNA" name="enterQuery" specification="_DNI7cAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWcBYQjGEeauV8k-f6ZZNA" name="query">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWcBYgjGEeauV8k-f6ZZNA" type="_DNGfMAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>searchField.sendKeys(query);&#xD;
+		return this;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DNIUYAjGEeauV8k-f6ZZNA" name="clickOnSearchButton" method="_DWbaVgjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DNI7cAjGEeauV8k-f6ZZNA" name="enterQuery" method="_DWcBYAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNI7cQjGEeauV8k-f6ZZNA" name="query">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUh84AjGEeauV8k-f6ZZNA" type="_DNGfMAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVY4gAjGEeauV8k-f6ZZNA" name="GoogleSearch" method="_DWbaUwjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVY4ggjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVY4gwjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVY4gQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVY4hAjGEeauV8k-f6ZZNA" type="_DNGfMAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DNL-wAjGEeauV8k-f6ZZNA" name="Header">
+            <eAnnotations xmi:id="_DNMl0AjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DNMl0QjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DNMl0gjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUjyEAjGEeauV8k-f6ZZNA" general="_DLq70AjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVyhIAjGEeauV8k-f6ZZNA" name="appsSign" visibility="private" type="_DTpzIQjGEeauV8k-f6ZZNA" association="_DW6igAjGEeauV8k-f6ZZNA">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DVyhIQjGEeauV8k-f6ZZNA" value="getDriver().findElement(By.xpath(&quot;//a[contains(@title,'Google apps')]&quot;))"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWcBYwjGEeauV8k-f6ZZNA" name="Header" specification="_DVaGoAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWcBZAjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWcBZQjGEeauV8k-f6ZZNA" type="_DNL-wAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>super(driver);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWcocAjGEeauV8k-f6ZZNA" name="clickAppsSign" specification="_DNNz8AjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>appsSign.click();
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DNNz8AjGEeauV8k-f6ZZNA" name="clickAppsSign" method="_DWcocAjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DVaGoAjGEeauV8k-f6ZZNA" name="Header" method="_DWcBYwjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVaGogjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVatsAjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVaGoQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVatsQjGEeauV8k-f6ZZNA" type="_DNL-wAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DNPCEAjGEeauV8k-f6ZZNA" name="LandingPage">
+            <eAnnotations xmi:id="_DNQQMAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DNQQMQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DNQQMgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUm1YAjGEeauV8k-f6ZZNA" general="_DLq70AjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVzIMQjGEeauV8k-f6ZZNA" name="url" visibility="private" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DVzIMgjGEeauV8k-f6ZZNA" value="&quot;https://e2e3.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/#/&quot;"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWcocQjGEeauV8k-f6ZZNA" name="LandingPage" specification="_DVbUwAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWcocgjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA">
+                <eAnnotations xmi:id="_DWcocwjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DWcodAjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWcodQjGEeauV8k-f6ZZNA" type="_DNPCEAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>super(driver);
+
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWcodgjGEeauV8k-f6ZZNA" name="getCatalogs" specification="_DNReUAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWcodwjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" isOrdered="true" direction="return">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DWcoeAjGEeauV8k-f6ZZNA" value="*"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return driver.findElements(By.cssSelector(&quot;.catalog-container&quot;));
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWdPgAjGEeauV8k-f6ZZNA" name="catalogBodyOf" specification="_DNSscAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWdPgQjGEeauV8k-f6ZZNA" name="term">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWdPggjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>List&lt;WebElement> bodies = driver.findElements(By.cssSelector(&quot;.catalog-body&quot;));
+		 bodies.forEach(b -> {System.out.println(b); System.out.println(b.getText());});
+
+		  Optional&lt;WebElement> filteredBody = bodies.stream().filter(body -> body.getText().contains(term)).findFirst();
+		  
+		  System.out.println(filteredBody.get().getText());
+		  
+		  return filteredBody.get();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWdPgwjGEeauV8k-f6ZZNA" name="findCatalogVersion" specification="_DNT6kAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWdPhAjGEeauV8k-f6ZZNA" name="catalog">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWdPhQjGEeauV8k-f6ZZNA" name="catalogVersion">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWdPhgjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return catalogBodyOf(catalog).findElement(By.xpath(&quot;//div[contains(text(),'&quot;+catalogVersion+&quot;')]&quot;));
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWdPhwjGEeauV8k-f6ZZNA" name="gotoCatalogVersion" specification="_DNVIsAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWdPiAjGEeauV8k-f6ZZNA" name="catalog">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWdPiQjGEeauV8k-f6ZZNA" name="catalogVersion">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWdPigjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>findCatalogVersion(catalog, catalogVersion).click();
+		return (new SmartEdit(driver));
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWd2kAjGEeauV8k-f6ZZNA" name="catalogVersionOf" specification="_DNVvwAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWd2kQjGEeauV8k-f6ZZNA" name="term">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWd2kgjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>List&lt;WebElement> bodies = driver.findElements(By.cssSelector(&quot;.catalog-thumbnail&quot;));
+		  Optional&lt;WebElement> filteredVersion = bodies.stream().filter(body -> body.getText().contains(term)).findFirst();
+		  return filteredVersion.get();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWd2kwjGEeauV8k-f6ZZNA" name="selectCatalogPageNumber" specification="_DNWW0AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWd2lAjGEeauV8k-f6ZZNA" name="index">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWd2lQjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>int STARTING_INDEX = 2;
+		index =+ STARTING_INDEX;
+		return driver.findElement(By.cssSelector(&quot;.pagination-container .pagination li:nth-child(&quot; + index + &quot;) a&quot;));
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DNReUAjGEeauV8k-f6ZZNA" name="getCatalogs" visibility="private" method="_DWcodgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNReUQjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" isOrdered="true" direction="return">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DNSFYAjGEeauV8k-f6ZZNA" value="*"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DNSscAjGEeauV8k-f6ZZNA" name="catalogBodyOf" visibility="private" method="_DWdPgAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNSscQjGEeauV8k-f6ZZNA" name="term">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVb70gjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DNT6kAjGEeauV8k-f6ZZNA" name="findCatalogVersion" method="_DWdPgwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNT6kQjGEeauV8k-f6ZZNA" name="catalog">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DNT6kgjGEeauV8k-f6ZZNA" name="catalogVersion">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVci4AjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DNVIsAjGEeauV8k-f6ZZNA" name="gotoCatalogVersion" method="_DWdPhwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNVIsQjGEeauV8k-f6ZZNA" name="catalog">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DNVIsgjGEeauV8k-f6ZZNA" name="catalogVersion">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUmOUAjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DNVvwAjGEeauV8k-f6ZZNA" name="catalogVersionOf" visibility="private" method="_DWd2kAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNVvwQjGEeauV8k-f6ZZNA" name="term">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVci4QjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DNWW0AjGEeauV8k-f6ZZNA" name="selectCatalogPageNumber" method="_DWd2kwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNW94AjGEeauV8k-f6ZZNA" name="index">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVci4gjGEeauV8k-f6ZZNA" type="_DTpzIQjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVbUwAjGEeauV8k-f6ZZNA" name="LandingPage" method="_DWcocQjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVbUwgjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVbUwwjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVbUwQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA">
+                <eAnnotations xmi:id="_DVb70AjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DVb70QjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVbUxAjGEeauV8k-f6ZZNA" type="_DNPCEAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DNZaIAjGEeauV8k-f6ZZNA" name="LoginPage">
+            <eAnnotations xmi:id="_DNaBMAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DNaBMQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DNaBMgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUpRoQjGEeauV8k-f6ZZNA" general="_DLq70AjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DVzvQQjGEeauV8k-f6ZZNA" name="url" visibility="private" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DV0WUAjGEeauV8k-f6ZZNA" value="&quot;https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/#/&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DV0WUgjGEeauV8k-f6ZZNA" name="username" visibility="private" isLeaf="true" type="_DTpzIQjGEeauV8k-f6ZZNA" isReadOnly="true" association="_DW7JkQjGEeauV8k-f6ZZNA">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DV09YAjGEeauV8k-f6ZZNA" value="driver.findElement(By.xpath(&quot;//input[contains(@placeholder, 'Username')]&quot;))"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DV09YgjGEeauV8k-f6ZZNA" name="password" visibility="private" isLeaf="true" type="_DTpzIQjGEeauV8k-f6ZZNA" isReadOnly="true" association="_DW7woQjGEeauV8k-f6ZZNA">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DV1kcAjGEeauV8k-f6ZZNA" value="driver.findElement(By.xpath(&quot;//input[contains(@placeholder, 'Password')]&quot;))"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DV1kcgjGEeauV8k-f6ZZNA" name="signin" visibility="private" type="_DTpzIQjGEeauV8k-f6ZZNA" association="_DW8-wQjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWedoAjGEeauV8k-f6ZZNA" name="LoginPage" specification="_DVdJ8AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWedoQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA">
+                <eAnnotations xmi:id="_DWedogjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DWedowjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWedpAjGEeauV8k-f6ZZNA" type="_DNZaIAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>super(driver, url);
+
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWedpQjGEeauV8k-f6ZZNA" name="enterUsername" specification="_DNb2YAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWedpgjGEeauV8k-f6ZZNA" name="name">
+                <eAnnotations xmi:id="_DWedpwjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DWedqAjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWedqQjGEeauV8k-f6ZZNA" type="_DNZaIAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>username.sendKeys(name);
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWfEsAjGEeauV8k-f6ZZNA" name="enterPassword" specification="_DNdEgAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWfEsQjGEeauV8k-f6ZZNA" name="pass">
+                <eAnnotations xmi:id="_DWfEsgjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DWfEswjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWfEtAjGEeauV8k-f6ZZNA" type="_DNZaIAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>password.sendKeys(pass);
+		return this;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWfEtQjGEeauV8k-f6ZZNA" name="signin" specification="_DNdrkAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWfEtgjGEeauV8k-f6ZZNA" type="_DNPCEAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>signin.click();
+		
+		return (new LandingPage(driver));
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DNb2YAjGEeauV8k-f6ZZNA" name="enterUsername" method="_DWedpQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNb2YQjGEeauV8k-f6ZZNA" name="name">
+                <eAnnotations xmi:id="_DNcdcAjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DNcdcQjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUoqkAjGEeauV8k-f6ZZNA" type="_DNZaIAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DNdEgAjGEeauV8k-f6ZZNA" name="enterPassword" method="_DWfEsAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNdEgQjGEeauV8k-f6ZZNA" name="pass">
+                <eAnnotations xmi:id="_DNdEggjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DNdEgwjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUoqkQjGEeauV8k-f6ZZNA" type="_DNZaIAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DNdrkAjGEeauV8k-f6ZZNA" name="signin" method="_DWfEtQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUpRoAjGEeauV8k-f6ZZNA" type="_DNPCEAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVdJ8AjGEeauV8k-f6ZZNA" name="LoginPage" method="_DWedoAjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVdJ8gjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVdJ8wjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVdJ8QjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA">
+                <eAnnotations xmi:id="_DVdJ9QjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DVdxAAjGEeauV8k-f6ZZNA" key="final"/>
+                </eAnnotations>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DVdJ9AjGEeauV8k-f6ZZNA" type="_DNZaIAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DNh9AAjGEeauV8k-f6ZZNA" name="SimpleParagraphEditor">
+            <eAnnotations xmi:id="_DNjLIAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DNjyMAjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DNjyMQjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUrG0gjGEeauV8k-f6ZZNA" general="_DK_mYAjGEeauV8k-f6ZZNA"/>
+            <interfaceRealization xmi:id="_DUqfwAjGEeauV8k-f6ZZNA" client="_DNh9AAjGEeauV8k-f6ZZNA" supplier="_DK9KIAjGEeauV8k-f6ZZNA" contract="_DK9KIAjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWfEtwjGEeauV8k-f6ZZNA" name="SimpleParagraphEditor" specification="_DVeYEAjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWfEuAjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DWfEuQjGEeauV8k-f6ZZNA" type="_DNh9AAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>super(driver);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWfrwAjGEeauV8k-f6ZZNA" name="putMeInMyEditorFrame" specification="_DNlAUAjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>driver.switchTo().defaultContent();
+		driver.switchTo().frame(0);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWfrwQjGEeauV8k-f6ZZNA" name="fillWithNewContent" specification="_DNlAUQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWfrwgjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>return null;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWfrwwjGEeauV8k-f6ZZNA" name="setEditorContent" specification="_DNmOcgjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWfrxAjGEeauV8k-f6ZZNA" name="content">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DWfrxQjGEeauV8k-f6ZZNA" type="_DNh9AAjGEeauV8k-f6ZZNA" direction="return"/>
+              <language>java</language>
+              <body>putMeInMyEditorFrame();
+		driver.findElement(By.cssSelector(&quot;[data-id='&quot; + dataId + &quot;']&quot;))
+		return this;
+		
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DNlAUAjGEeauV8k-f6ZZNA" name="putMeInMyEditorFrame" visibility="private" method="_DWfrwAjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DNlAUQjGEeauV8k-f6ZZNA" name="fillWithNewContent" method="_DWfrwQjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DUrG0AjGEeauV8k-f6ZZNA" type="_DMc-8AjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DNmOcgjGEeauV8k-f6ZZNA" name="setEditorContent" method="_DWfrwwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNm1gAjGEeauV8k-f6ZZNA" name="content">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_DUrG0QjGEeauV8k-f6ZZNA" type="_DNh9AAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_DVeYEAjGEeauV8k-f6ZZNA" name="SimpleParagraphEditor" method="_DWfEtwjGEeauV8k-f6ZZNA">
+              <eAnnotations xmi:id="_DVeYEgjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_DVeYEwjGEeauV8k-f6ZZNA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_DVeYEQjGEeauV8k-f6ZZNA" name="driver" type="_DTW4MAjGEeauV8k-f6ZZNA"/>
+              <ownedParameter xmi:id="_DVeYFAjGEeauV8k-f6ZZNA" type="_DNh9AAjGEeauV8k-f6ZZNA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DNoqsAjGEeauV8k-f6ZZNA" name="Tom">
+            <eAnnotations xmi:id="_DNpRwAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DNpRwQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DNpRwgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUrt4AjGEeauV8k-f6ZZNA" general="_DMSm4AjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWgS0AjGEeauV8k-f6ZZNA" name="reportExperience" specification="_DNpRwwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWgS0QjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return null;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DNpRwwjGEeauV8k-f6ZZNA" name="reportExperience" method="_DWgS0AjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNp40AjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW4GQQjGEeauV8k-f6ZZNA" name="" memberEnd="_DW4GQgjGEeauV8k-f6ZZNA _DVwE4QjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW4GQgjGEeauV8k-f6ZZNA" name="" type="_DNGfMAjGEeauV8k-f6ZZNA" association="_DW4GQQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW4tUQjGEeauV8k-f6ZZNA" name="" memberEnd="_DW4tUgjGEeauV8k-f6ZZNA _DVwr8wjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW4tUgjGEeauV8k-f6ZZNA" name="" type="_DNGfMAjGEeauV8k-f6ZZNA" association="_DW4tUQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW5UYQjGEeauV8k-f6ZZNA" name="" memberEnd="_DW5UYgjGEeauV8k-f6ZZNA _DVxTAwjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW5UYgjGEeauV8k-f6ZZNA" name="" type="_DNGfMAjGEeauV8k-f6ZZNA" association="_DW5UYQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW6igAjGEeauV8k-f6ZZNA" name="" memberEnd="_DW6igQjGEeauV8k-f6ZZNA _DVyhIAjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW6igQjGEeauV8k-f6ZZNA" name="" type="_DNL-wAjGEeauV8k-f6ZZNA" association="_DW6igAjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW7JkQjGEeauV8k-f6ZZNA" name="" memberEnd="_DW7JkgjGEeauV8k-f6ZZNA _DV0WUgjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW7JkgjGEeauV8k-f6ZZNA" name="" type="_DNZaIAjGEeauV8k-f6ZZNA" association="_DW7JkQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW7woQjGEeauV8k-f6ZZNA" name="" memberEnd="_DW7wogjGEeauV8k-f6ZZNA _DV09YgjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW7wogjGEeauV8k-f6ZZNA" name="" type="_DNZaIAjGEeauV8k-f6ZZNA" association="_DW7woQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW8-wQjGEeauV8k-f6ZZNA" name="" memberEnd="_DW8-wgjGEeauV8k-f6ZZNA _DV1kcgjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW8-wgjGEeauV8k-f6ZZNA" name="" type="_DNZaIAjGEeauV8k-f6ZZNA" association="_DW8-wQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_DJWAkAjGEeauV8k-f6ZZNA" name="tests">
+          <packagedElement xmi:type="uml:Class" xmi:id="_DNybsAjGEeauV8k-f6ZZNA" name="GoogleSearchTest">
+            <eAnnotations xmi:id="_DNzCwAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DNzCwQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DNzCwgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUuKIAjGEeauV8k-f6ZZNA" general="_DKny8AjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DV514AjGEeauV8k-f6ZZNA" name="page" visibility="package" type="_DNGfMAjGEeauV8k-f6ZZNA" association="_DW-M4QjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWg54AjGEeauV8k-f6ZZNA" name="setup" specification="_DNzCwwjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>page = new GoogleSearch(driver);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWg54QjGEeauV8k-f6ZZNA" name="searchForSomething" specification="_DN0Q4gjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>String query = &quot;selenium page object&quot;;&#xD;
+		page.enterQuery(query).clickOnSearchButton();&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWg54gjGEeauV8k-f6ZZNA" name="gotoAccount" specification="_DN038wjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>page.header.clickAppsSign();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DNzCwwjGEeauV8k-f6ZZNA" name="setup" method="_DWg54AjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DN0Q4gjGEeauV8k-f6ZZNA" name="searchForSomething" method="_DWg54QjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DN038wjGEeauV8k-f6ZZNA" name="gotoAccount" method="_DWg54gjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DN3UMAjGEeauV8k-f6ZZNA" name="LandingPageTest">
+            <eAnnotations xmi:id="_DN37QAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DN37QQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DN37QgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUvYQAjGEeauV8k-f6ZZNA" general="_DKny8AjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DV6c8AjGEeauV8k-f6ZZNA" name="page" visibility="package" type="_DNPCEAjGEeauV8k-f6ZZNA" association="_DW_bAAjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWg54wjGEeauV8k-f6ZZNA" name="setup" specification="_DN37QwjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>page = new LandingPage(driver);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWhg8AjGEeauV8k-f6ZZNA" name="clickOnApparelDeStaged" specification="_DN5JYgjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>page.gotoCatalogVersion(&quot;Apparel DE&quot;, &quot;Staged&quot;);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DN37QwjGEeauV8k-f6ZZNA" name="setup" method="_DWg54wjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DN5JYgjGEeauV8k-f6ZZNA" name="clickOnApparelDeStaged" method="_DWhg8AjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DN7loAjGEeauV8k-f6ZZNA" name="LoginPageTest">
+            <eAnnotations xmi:id="_DN7loQjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DN7logjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DN8MsAjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUv_UAjGEeauV8k-f6ZZNA" general="_DKny8AjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DV7EAAjGEeauV8k-f6ZZNA" name="page" visibility="package" type="_DNZaIAjGEeauV8k-f6ZZNA" association="_DXACEQjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWhg8QjGEeauV8k-f6ZZNA" name="setup" specification="_DN8MsQjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>page = new LoginPage(driver);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWhg8gjGEeauV8k-f6ZZNA" name="Login" specification="_DN9a0AjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>final String username = &quot;admin&quot;;&#xD;
+		final String password = &quot;nimda&quot;;&#xD;
+		&#xD;
+//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion(&quot;APPAREL DE&quot;, &quot;Staged&quot;).moveComponentToSlot(&quot;ApparelDEHompageWomenStreetBannerComponent&quot;, &quot;Section2BSlot-Homepage&quot;);&#xD;
+//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion(&quot;APPAREL DE&quot;, &quot;Staged&quot;).createNewComponent(&quot;CMSParagraphComponent&quot;, &quot;Section4Slot-Homepage&quot;);&#xD;
+		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion(&quot;APPAREL DE&quot;, &quot;Staged&quot;).createNewComponent(&quot;CMSParagraphComponent&quot;, &quot;Section1Slot-ApparelDEHomepage&quot;).findComponentType();&#xD;
+//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion(&quot;APPAREL DE&quot;, &quot;Staged&quot;).addExistingComponent(&quot;ApparelDEHompageWomenStreetBannerComponent&quot;, &quot;Section1Slot-ApparelDEHomepage&quot;);&#xD;
+//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion(&quot;APPAREL DE&quot;, &quot;Staged&quot;).createNewComponent(&quot;CMSParagraphComponent&quot;, &quot;Section2ASlot-ApparelDEHomepage&quot;);&#xD;
+&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DN8MsQjGEeauV8k-f6ZZNA" name="setup" method="_DWhg8QjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DN9a0AjGEeauV8k-f6ZZNA" name="Login" method="_DWhg8gjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW-M4QjGEeauV8k-f6ZZNA" name="" memberEnd="_DW-M4gjGEeauV8k-f6ZZNA _DV514AjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW-M4gjGEeauV8k-f6ZZNA" name="" type="_DNybsAjGEeauV8k-f6ZZNA" association="_DW-M4QjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW_bAAjGEeauV8k-f6ZZNA" name="" memberEnd="_DW_bAQjGEeauV8k-f6ZZNA _DV6c8AjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW_bAQjGEeauV8k-f6ZZNA" name="" type="_DN3UMAjGEeauV8k-f6ZZNA" association="_DW_bAAjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DXACEQjGEeauV8k-f6ZZNA" name="" memberEnd="_DXACEgjGEeauV8k-f6ZZNA _DV7EAAjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DXACEgjGEeauV8k-f6ZZNA" name="" type="_DN7loAjGEeauV8k-f6ZZNA" association="_DXACEQjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_DJaSAAjGEeauV8k-f6ZZNA" name="personas">
+          <packagedElement xmi:type="uml:Class" xmi:id="_DNruAAjGEeauV8k-f6ZZNA" name="AdminUser">
+            <eAnnotations xmi:id="_DNsVEAjGEeauV8k-f6ZZNA" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_DNsVEQjGEeauV8k-f6ZZNA" source="codegen">
+                <details xmi:id="_DNsVEgjGEeauV8k-f6ZZNA" key="codegenDirectory" value="/business-scenario-test/src/test/java"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_DUs8AAjGEeauV8k-f6ZZNA" general="_DMSm4AjGEeauV8k-f6ZZNA"/>
+            <ownedAttribute xmi:id="_DV2ykAjGEeauV8k-f6ZZNA" name="name" visibility="package">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DV2ykQjGEeauV8k-f6ZZNA" value="&quot;cmsAdmin&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DV3ZoQjGEeauV8k-f6ZZNA" name="role" visibility="package">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DV3ZogjGEeauV8k-f6ZZNA" value="&quot;Admin&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DV4AsQjGEeauV8k-f6ZZNA" name="username" visibility="package">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DV4AsgjGEeauV8k-f6ZZNA" value="&quot;admin&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DV4nwQjGEeauV8k-f6ZZNA" name="password" visibility="package">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_DV4nwgjGEeauV8k-f6ZZNA" value="&quot;nimda&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DV5O0QjGEeauV8k-f6ZZNA" name="page" visibility="private" type="_DNybsAjGEeauV8k-f6ZZNA" association="_DW9l0QjGEeauV8k-f6ZZNA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWgS0gjGEeauV8k-f6ZZNA" name="setup" specification="_DNtjMgjGEeauV8k-f6ZZNA">
+              <language>java</language>
+              <body>page = new GoogleSearchTest();
+		page.setup();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DWgS0wjGEeauV8k-f6ZZNA" name="reportExperience" specification="_DNvYYwjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DWgS1AjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return null;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_DNtjMAjGEeauV8k-f6ZZNA" name="login"/>
+            <ownedOperation xmi:id="_DNtjMgjGEeauV8k-f6ZZNA" name="setup" method="_DWgS0gjGEeauV8k-f6ZZNA"/>
+            <ownedOperation xmi:id="_DNuxUgjGEeauV8k-f6ZZNA" name="scenario"/>
+            <ownedOperation xmi:id="_DNvYYwjGEeauV8k-f6ZZNA" name="reportExperience" method="_DWgS0wjGEeauV8k-f6ZZNA">
+              <ownedParameter xmi:id="_DNv_cAjGEeauV8k-f6ZZNA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DW9l0QjGEeauV8k-f6ZZNA" name="" memberEnd="_DW9l0gjGEeauV8k-f6ZZNA _DV5O0QjGEeauV8k-f6ZZNA">
+            <ownedEnd xmi:id="_DW9l0gjGEeauV8k-f6ZZNA" name="" type="_DNruAAjGEeauV8k-f6ZZNA" association="_DW9l0QjGEeauV8k-f6ZZNA"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DHQV4AjGEeauV8k-f6ZZNA" name="org">
+      <packagedElement xmi:type="uml:Package" xmi:id="_DHQ88AjGEeauV8k-f6ZZNA" name="openqa">
+        <packagedElement xmi:type="uml:Package" xmi:id="_DHQ88QjGEeauV8k-f6ZZNA" name="selenium">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_DTW4MAjGEeauV8k-f6ZZNA" name="WebDriver"/>
+          <packagedElement xmi:type="uml:Package" xmi:id="_DHY4wAjGEeauV8k-f6ZZNA" name="chrome">
+            <packagedElement xmi:type="uml:Class" xmi:id="_DThQQQjGEeauV8k-f6ZZNA" name="ChromeDriver"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_DTieYQjGEeauV8k-f6ZZNA" name="ChromeOptions"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_DHY4wQjGEeauV8k-f6ZZNA" name="firefox">
+            <packagedElement xmi:type="uml:Class" xmi:id="_DTjsgQjGEeauV8k-f6ZZNA" name="FirefoxDriver"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_DHZf0AjGEeauV8k-f6ZZNA" name="remote">
+            <packagedElement xmi:type="uml:Class" xmi:id="_DTk6oQjGEeauV8k-f6ZZNA" name="DesiredCapabilities"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_DHx6UAjGEeauV8k-f6ZZNA" name="support">
+            <packagedElement xmi:type="uml:Class" xmi:id="_DUIUQQjGEeauV8k-f6ZZNA" name="PageFactory"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_DHyhYAjGEeauV8k-f6ZZNA" name="ui">
+              <packagedElement xmi:type="uml:Class" xmi:id="_DT5DsQjGEeauV8k-f6ZZNA" name="ExpectedConditions"/>
+              <packagedElement xmi:type="uml:Class" xmi:id="_DT6R0QjGEeauV8k-f6ZZNA" name="WebDriverWait"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_DUSsUAjGEeauV8k-f6ZZNA" name="FindBy"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_DIDnIAjGEeauV8k-f6ZZNA" name="interactions">
+            <packagedElement xmi:type="uml:Class" xmi:id="_DUHGIAjGEeauV8k-f6ZZNA" name="Actions"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DTolAAjGEeauV8k-f6ZZNA" name="Point"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_DTpzIQjGEeauV8k-f6ZZNA" name="WebElement"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DTuEkQjGEeauV8k-f6ZZNA" name="By"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DT2AYAjGEeauV8k-f6ZZNA" name="Dimension"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_DT3OgQjGEeauV8k-f6ZZNA" name="JavascriptExecutor"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DUF4AAjGEeauV8k-f6ZZNA" name="NoSuchElementException"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_DHYRsAjGEeauV8k-f6ZZNA" name="junit">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_DTc-0QjGEeauV8k-f6ZZNA" name="After"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_DTe0AAjGEeauV8k-f6ZZNA" name="Before"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_DTgCIQjGEeauV8k-f6ZZNA" name="BeforeClass"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_DUrt4QjGEeauV8k-f6ZZNA" name="Test"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DHXDkAjGEeauV8k-f6ZZNA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_DHXqoAjGEeauV8k-f6ZZNA" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_DTaikAjGEeauV8k-f6ZZNA" name="Arrays"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_DHXqoQjGEeauV8k-f6ZZNA" name="concurrent">
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_DTbwsQjGEeauV8k-f6ZZNA" name="TimeUnit"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_DJETwAjGEeauV8k-f6ZZNA" name="stream">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_DUlAMQjGEeauV8k-f6ZZNA" name="Stream"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_DTyWAAjGEeauV8k-f6ZZNA" name="List"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_DUEp4AjGEeauV8k-f6ZZNA" name="Random"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_DUkZIAjGEeauV8k-f6ZZNA" name="Optional"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DHZf0QjGEeauV8k-f6ZZNA" name="io">
+      <packagedElement xmi:type="uml:Package" xmi:id="_DHZf0gjGEeauV8k-f6ZZNA" name="github">
+        <packagedElement xmi:type="uml:Package" xmi:id="_DHaG4AjGEeauV8k-f6ZZNA" name="bonigarcia">
+          <packagedElement xmi:type="uml:Package" xmi:id="_DHaG4QjGEeauV8k-f6ZZNA" name="wdm">
+            <packagedElement xmi:type="uml:Class" xmi:id="_DTmIwQjGEeauV8k-f6ZZNA" name="ChromeDriverManager"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_CthnQAjGEeauV8k-f6ZZNA">
+      <eAnnotations xmi:id="_CtkqkAjGEeauV8k-f6ZZNA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_Cto8AAjGEeauV8k-f6ZZNA" base_Package="_CNCwYAjGEeauV8k-f6ZZNA">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DKsEYAjGEeauV8k-f6ZZNA" base_Element="_DKqPMAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DKvHsAjGEeauV8k-f6ZZNA" base_Element="_DKqPMAjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DKvuwAjGEeauV8k-f6ZZNA" name="Before"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DKw84AjGEeauV8k-f6ZZNA" base_Element="_DKvuwQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DKw84QjGEeauV8k-f6ZZNA" base_Element="_DKvuwQjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DKw84gjGEeauV8k-f6ZZNA" name="After"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DLVkoAjGEeauV8k-f6ZZNA" base_Element="_DLU9kAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DLXZ0AjGEeauV8k-f6ZZNA" base_Element="_DLU9kAjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DLYA4AjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DLZ2EAjGEeauV8k-f6ZZNA" base_Element="_DLZPAAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DLadIAjGEeauV8k-f6ZZNA" base_Element="_DLZPAAjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DLadIQjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DMWRQQjGEeauV8k-f6ZZNA" base_Element="_DMWRQAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DMW4UAjGEeauV8k-f6ZZNA" base_Element="_DMWRQAjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DMW4UQjGEeauV8k-f6ZZNA" name="Before"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DMXfYAjGEeauV8k-f6ZZNA" base_Element="_DMW4UgjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DMYGcAjGEeauV8k-f6ZZNA" base_Element="_DMW4UgjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DMYGcQjGEeauV8k-f6ZZNA" name="After"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DM5D0AjGEeauV8k-f6ZZNA" base_Element="_DM31sAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DM5q4AjGEeauV8k-f6ZZNA" base_Element="_DM31sAjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DM5q4QjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DM65AAjGEeauV8k-f6ZZNA" base_Element="_DM5q4gjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DM7gEAjGEeauV8k-f6ZZNA" base_Element="_DM5q4gjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DM7gEQjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DNlnYAjGEeauV8k-f6ZZNA" base_Element="_DNlAUQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DNmOcAjGEeauV8k-f6ZZNA" base_Element="_DNlAUQjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DNmOcQjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DNqf4AjGEeauV8k-f6ZZNA" base_Element="_DNpRwwjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DNrG8AjGEeauV8k-f6ZZNA" base_Element="_DNpRwwjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DNrG8QjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DNtjMQjGEeauV8k-f6ZZNA" base_Element="_DNtjMAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DNuKQAjGEeauV8k-f6ZZNA" base_Element="_DNtjMgjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DNuxUAjGEeauV8k-f6ZZNA" base_Element="_DNtjMgjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DNuxUQjGEeauV8k-f6ZZNA" name="Before"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DNvYYAjGEeauV8k-f6ZZNA" base_Element="_DNuxUgjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DNvYYQjGEeauV8k-f6ZZNA" base_Element="_DNuxUgjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DNvYYgjGEeauV8k-f6ZZNA" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DNv_cQjGEeauV8k-f6ZZNA" base_Element="_DNvYYwjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DNwmgAjGEeauV8k-f6ZZNA" base_Element="_DNvYYwjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DNwmgQjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DNzp0AjGEeauV8k-f6ZZNA" base_Element="_DNzCwwjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DN0Q4AjGEeauV8k-f6ZZNA" base_Element="_DNzCwwjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DN0Q4QjGEeauV8k-f6ZZNA" name="Before"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DN038AjGEeauV8k-f6ZZNA" base_Element="_DN0Q4gjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DN038QjGEeauV8k-f6ZZNA" base_Element="_DN0Q4gjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DN038gjGEeauV8k-f6ZZNA" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DN1fAAjGEeauV8k-f6ZZNA" base_Element="_DN038wjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DN2GEAjGEeauV8k-f6ZZNA" base_Element="_DN038wjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DN2GEQjGEeauV8k-f6ZZNA" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DN4iUAjGEeauV8k-f6ZZNA" base_Element="_DN37QwjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DN5JYAjGEeauV8k-f6ZZNA" base_Element="_DN37QwjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DN5JYQjGEeauV8k-f6ZZNA" name="Before"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DN5JYwjGEeauV8k-f6ZZNA" base_Element="_DN5JYgjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DN6XgAjGEeauV8k-f6ZZNA" base_Element="_DN5JYgjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DN6XgQjGEeauV8k-f6ZZNA" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DN8zwAjGEeauV8k-f6ZZNA" base_Element="_DN8MsQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DN8zwQjGEeauV8k-f6ZZNA" base_Element="_DN8MsQjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DN8zwgjGEeauV8k-f6ZZNA" name="Before"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DN9a0QjGEeauV8k-f6ZZNA" base_Element="_DN9a0AjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DN-B4AjGEeauV8k-f6ZZNA" base_Element="_DN9a0AjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DN-B4QjGEeauV8k-f6ZZNA" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_DTYGUAjGEeauV8k-f6ZZNA" base_Element="_DTW4MAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTbwsAjGEeauV8k-f6ZZNA" base_Element="_DTaikAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTc-0AjGEeauV8k-f6ZZNA" base_Element="_DTbwsQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTeM8AjGEeauV8k-f6ZZNA" base_Element="_DTc-0QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTgCIAjGEeauV8k-f6ZZNA" base_Element="_DTe0AAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DThQQAjGEeauV8k-f6ZZNA" base_Element="_DTgCIQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTieYAjGEeauV8k-f6ZZNA" base_Element="_DThQQQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTjsgAjGEeauV8k-f6ZZNA" base_Element="_DTieYQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTk6oAjGEeauV8k-f6ZZNA" base_Element="_DTjsgQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTmIwAjGEeauV8k-f6ZZNA" base_Element="_DTk6oQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTnW4AjGEeauV8k-f6ZZNA" base_Element="_DTmIwQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTpzIAjGEeauV8k-f6ZZNA" base_Element="_DTolAAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTrBQAjGEeauV8k-f6ZZNA" base_Element="_DTpzIQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DTvSsAjGEeauV8k-f6ZZNA" base_Element="_DTuEkQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DT1ZUAjGEeauV8k-f6ZZNA" base_Element="_DTyWAAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DT3OgAjGEeauV8k-f6ZZNA" base_Element="_DT2AYAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DT5DsAjGEeauV8k-f6ZZNA" base_Element="_DT3OgQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DT6R0AjGEeauV8k-f6ZZNA" base_Element="_DT5DsQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DT7f8AjGEeauV8k-f6ZZNA" base_Element="_DT6R0QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DUFQ8AjGEeauV8k-f6ZZNA" base_Element="_DUEp4AjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DUGfEAjGEeauV8k-f6ZZNA" base_Element="_DUF4AAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DUIUQAjGEeauV8k-f6ZZNA" base_Element="_DUHGIAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DUI7UAjGEeauV8k-f6ZZNA" base_Element="_DUIUQQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DUT6cAjGEeauV8k-f6ZZNA" base_Element="_DUSsUAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DUlAMAjGEeauV8k-f6ZZNA" base_Element="_DUkZIAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DUlnQAjGEeauV8k-f6ZZNA" base_Element="_DUlAMQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DUsU8AjGEeauV8k-f6ZZNA" base_Element="_DUrt4QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DU9asQjGEeauV8k-f6ZZNA" base_Element="_DU8zoQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DU-BwAjGEeauV8k-f6ZZNA" base_Element="_DU8zoQjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DU-BwQjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DU_P4AjGEeauV8k-f6ZZNA" base_Element="_DU-o0AjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DU_P4QjGEeauV8k-f6ZZNA" base_Element="_DU-o0AjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DU_P4gjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Generics xmi:id="_DVGkoAjGEeauV8k-f6ZZNA" genericsValue="String" base_Element="_DVF9kQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Generics xmi:id="_DVIZ0AjGEeauV8k-f6ZZNA" genericsValue="String" base_Element="_DVHywAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Generics xmi:id="_DVJn8AjGEeauV8k-f6ZZNA" genericsValue="String" base_Element="_DVJA4QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVUnEAjGEeauV8k-f6ZZNA" base_Element="_DVUAAAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DVUnEQjGEeauV8k-f6ZZNA" base_Element="_DVUAAAjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DVUnEgjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVV1MQjGEeauV8k-f6ZZNA" base_Element="_DVVOIAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DVWcQAjGEeauV8k-f6ZZNA" base_Element="_DVVOIAjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DVWcQQjGEeauV8k-f6ZZNA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVjQkAjGEeauV8k-f6ZZNA" base_Element="_DVipgAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVkesAjGEeauV8k-f6ZZNA" base_Element="_DVj3oAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVlFwQjGEeauV8k-f6ZZNA" base_Element="_DVlFwAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVls0QjGEeauV8k-f6ZZNA" base_Element="_DVlFwgjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVm68AjGEeauV8k-f6ZZNA" base_Element="_DVmT4AjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVniAAjGEeauV8k-f6ZZNA" base_Element="_DVm68QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVqlUAjGEeauV8k-f6ZZNA" base_Element="_DVp-QQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVrMYQjGEeauV8k-f6ZZNA" base_Element="_DVrMYAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVrzcQjGEeauV8k-f6ZZNA" base_Element="_DVrzcAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVsagQjGEeauV8k-f6ZZNA" base_Element="_DVsagAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVtBkAjGEeauV8k-f6ZZNA" base_Element="_DVsaggjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVtooQjGEeauV8k-f6ZZNA" base_Element="_DVtBkQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVuPsQjGEeauV8k-f6ZZNA" base_Element="_DVuPsAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DVu2wAjGEeauV8k-f6ZZNA" base_Element="_DVuPsAjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DVu2wQjGEeauV8k-f6ZZNA" name="FindBy">
+      <annotationParameters xmi:id="_DVu2wgjGEeauV8k-f6ZZNA" name="css" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DWj9MAjGEeauV8k-f6ZZNA" value="&quot;iframe&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVwE4AjGEeauV8k-f6ZZNA" base_Element="_DVvd0AjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVwE4gjGEeauV8k-f6ZZNA" base_Element="_DVwE4QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DVwr8AjGEeauV8k-f6ZZNA" base_Element="_DVwE4QjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DVwr8QjGEeauV8k-f6ZZNA" name="FindBy">
+      <annotationParameters xmi:id="_DVwr8gjGEeauV8k-f6ZZNA" name="name" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DWkkQAjGEeauV8k-f6ZZNA" value="&quot;btnG&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVwr9AjGEeauV8k-f6ZZNA" base_Element="_DVwr8wjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DVxTAAjGEeauV8k-f6ZZNA" base_Element="_DVwr8wjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DVxTAQjGEeauV8k-f6ZZNA" name="FindBy">
+      <annotationParameters xmi:id="_DVxTAgjGEeauV8k-f6ZZNA" name="name" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DWkkQQjGEeauV8k-f6ZZNA" value="&quot;q&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVx6EAjGEeauV8k-f6ZZNA" base_Element="_DVxTAwjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVzIMAjGEeauV8k-f6ZZNA" base_Element="_DVyhIAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DVzvQAjGEeauV8k-f6ZZNA" base_Element="_DVzIMQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV0WUQjGEeauV8k-f6ZZNA" base_Element="_DVzvQQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV09YQjGEeauV8k-f6ZZNA" base_Element="_DV0WUgjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV1kcQjGEeauV8k-f6ZZNA" base_Element="_DV09YgjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV2LgAjGEeauV8k-f6ZZNA" base_Element="_DV1kcgjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Annotations xmi:id="_DV2LgQjGEeauV8k-f6ZZNA" base_Element="_DV1kcgjGEeauV8k-f6ZZNA">
+    <annotations xmi:id="_DV2LggjGEeauV8k-f6ZZNA" name="FindBy">
+      <annotationParameters xmi:id="_DV2LgwjGEeauV8k-f6ZZNA" name="name" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DWkkQgjGEeauV8k-f6ZZNA" value="&quot;submit&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV3ZoAjGEeauV8k-f6ZZNA" base_Element="_DV2ykAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV4AsAjGEeauV8k-f6ZZNA" base_Element="_DV3ZoQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV4nwAjGEeauV8k-f6ZZNA" base_Element="_DV4AsQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV5O0AjGEeauV8k-f6ZZNA" base_Element="_DV4nwQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV5O0gjGEeauV8k-f6ZZNA" base_Element="_DV5O0QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV514QjGEeauV8k-f6ZZNA" base_Element="_DV514AjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV6c8QjGEeauV8k-f6ZZNA" base_Element="_DV6c8AjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DV7rEAjGEeauV8k-f6ZZNA" base_Element="_DV7EAAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DWxYkAjGEeauV8k-f6ZZNA" base_Element="_DWwxgAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DWx_oAjGEeauV8k-f6ZZNA" base_Element="_DWxYkQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DWzNwAjGEeauV8k-f6ZZNA" base_Element="_DWx_oQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DWz00AjGEeauV8k-f6ZZNA" base_Element="_DWzNwQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW0b4AjGEeauV8k-f6ZZNA" base_Element="_DWz00QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW1C8AjGEeauV8k-f6ZZNA" base_Element="_DW0b4QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW2REAjGEeauV8k-f6ZZNA" base_Element="_DW1qAAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW24IAjGEeauV8k-f6ZZNA" base_Element="_DW2REQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW3fMAjGEeauV8k-f6ZZNA" base_Element="_DW24IQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW4GQAjGEeauV8k-f6ZZNA" base_Element="_DW3fMQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW4tUAjGEeauV8k-f6ZZNA" base_Element="_DW4GQQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW5UYAjGEeauV8k-f6ZZNA" base_Element="_DW4tUQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW57cAjGEeauV8k-f6ZZNA" base_Element="_DW5UYQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW7JkAjGEeauV8k-f6ZZNA" base_Element="_DW6igAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW7woAjGEeauV8k-f6ZZNA" base_Element="_DW7JkQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW8-wAjGEeauV8k-f6ZZNA" base_Element="_DW7woQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW9l0AjGEeauV8k-f6ZZNA" base_Element="_DW8-wQjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW-M4AjGEeauV8k-f6ZZNA" base_Element="_DW9l0QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DW-z8AjGEeauV8k-f6ZZNA" base_Element="_DW-M4QjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DXACEAjGEeauV8k-f6ZZNA" base_Element="_DW_bAAjGEeauV8k-f6ZZNA"/>
+  <UMLLabProfile:Reference xmi:id="_DXApIAjGEeauV8k-f6ZZNA" base_Element="_DXACEQjGEeauV8k-f6ZZNA"/>
+</xmi:XMI>
