@@ -1,4 +1,4 @@
-package de.hybris.pages;
+package de.hybris.pages.cms;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import de.hybris.base.Editor;
 import de.hybris.base.EditorBase;
-import de.hybris.base.SmartEdit;
+import de.hybris.pages.framework.SmartEdit;
 
 
 public class SimpleParagraphEditor extends EditorBase implements Editor {

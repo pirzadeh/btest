@@ -1,10 +1,10 @@
-package de.hybris.pages;
+package de.hybris.pages.cms;
 
 import org.openqa.selenium.WebDriver;
 
 import de.hybris.base.Editor;
 import de.hybris.base.EditorBase;
-import de.hybris.base.SmartEdit;
+import de.hybris.pages.framework.SmartEdit;
 
 public class SimpleResponsiveBannerEditor extends EditorBase implements Editor {
 

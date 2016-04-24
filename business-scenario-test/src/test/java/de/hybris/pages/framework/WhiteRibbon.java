@@ -1,10 +1,13 @@
-package de.hybris.base;
+package de.hybris.pages.framework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import de.hybris.base.Coordinatable;
+import de.hybris.base.PageObject;
 
 public class WhiteRibbon extends PageObject implements Coordinatable{
 

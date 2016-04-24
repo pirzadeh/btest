@@ -1,4 +1,4 @@
-package de.hybris.base;
+package de.hybris.pages.framework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -6,7 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import de.hybris.pages.SimpleParagraphEditor;
+import de.hybris.base.Editor;
+import de.hybris.base.EditorBase;
+import de.hybris.base.EditorFactory;
+import de.hybris.base.FrameContent;
+import de.hybris.base.PageObject;
+import de.hybris.pages.cms.SimpleParagraphEditor;
 
 public class SmartEdit extends PageObject
 {
@@ -40,15 +45,6 @@ public class SmartEdit extends PageObject
 
 		driver.switchTo().defaultContent();
 	}
-
-//	public EditorBase createNewComponent(String type, String slotId){
-//
-//		whiteRibbon.prepareComponentTypeForMove(type);	
-//		prepareForDrop();
-//		frame.moveToElementAndDrop(slotId);
-//
-//		return new EditorBase(getDriver());
-//	}
 	
 	public Editor createNewComponent(String type, String slotId){
 

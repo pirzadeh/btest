@@ -2,9 +2,9 @@ package de.hybris.base;
 
 import org.openqa.selenium.WebDriver;
 
-import de.hybris.pages.SimpleBannerEditor;
-import de.hybris.pages.SimpleParagraphEditor;
-import de.hybris.pages.SimpleResponsiveBannerEditor;
+import de.hybris.pages.cms.SimpleBannerEditor;
+import de.hybris.pages.cms.SimpleParagraphEditor;
+import de.hybris.pages.cms.SimpleResponsiveBannerEditor;
 
 public class EditorFactory{
 

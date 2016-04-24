@@ -1,4 +1,4 @@
-package de.hybris.base;
+package de.hybris.pages.framework;
 
 import org.openqa.selenium.WebDriver;
 
