@@ -14,47 +14,68 @@ import de.hybris.base.SmartEdit;
 
 public class SimpleParagraphEditor extends EditorBase implements Editor {
 
-	
+
 
 	public SimpleParagraphEditor(WebDriver driver) {
 		super(driver);
 	}
-	
+
+	private void putMeInContainer(){
+
+		driver.switchTo().defaultContent();
+	}
+
 	private void putMeInEditorOf(String language){
 		driver.switchTo().defaultContent();
 		List<WebElement> richTextElements = driver.findElements(By.tagName("se-rich-text-field"));
-		Optional<WebElement> richText = richTextElements.stream().filter(el -> (el.findElements(By.xpath("//*[@name='content-"+language+"']"))).size()>0).findFirst();
-		driver.switchTo().frame(richText.get());
+		Optional<WebElement> richTextElement = richTextElements.stream().filter(el -> (el.findElements(By.xpath(".//*[@name='content-"+language+"']"))).size()>0).findFirst();
+		
+		WebElement frame = richTextElement.get().findElement(By.xpath(".//iframe"));
+		driver.switchTo().frame(frame);
 	}
 
-	
+
+	private String findDefaultLanguage(){
+		putMeInContainer();
+		List<WebElement> languageTabElements = driver.findElements(By.xpath("//*[@id='content']//li"));
+		Optional<WebElement> defaultLanguageElement = languageTabElements.stream().filter(el -> getElementsHtml(el).contains("*")).findFirst();
+		String lang = defaultLanguageElement.get().getAttribute("data-tab-id");
+		return lang;
+	}
+
 	public SimpleParagraphEditor selectLocalizedTab(String language){
-//		if (isHidden) {
-//	        element.all(by.xpath("//*[@id='" + qualifier + "']//*[@data-toggle='dropdown']")).click();
-//	    }
-//
-//	    element.all(by.xpath('//*[@id="content"]//li[@data-tab-id="' + language + '"]')).click();
+		//[TODO] support More menu
 		
-		driver.findElement(By.xpath("//*[@id='content']//li[@data-tab-id='" + language + "']")).click();
+		putMeInContainer();
+		WebElement tab = driver.findElement(By.xpath("//*[@id='content']//li[@data-tab-id='" + language + "']"));
+		tab.click();
 		return this;
 	}
 	@Override
 	public SmartEdit fillWithNewContent() {
-		setEditorContent("en","This is a sample content");
+		setEditorContent("This is a sample content");
 		return new SmartEdit(driver);
 	}
 
 	//methods specific to simple paragraph
-	
-//	browser.switchTo().frame(element(by.css(iframeId)).getWebElement(''));
-//    browser.driver.findElement(by.tagName('body')).sendKeys(content);
+
+	public SimpleParagraphEditor setEditorContent(String content) {
+
+		String language = findDefaultLanguage();
+		setEditorContent(language, content);
+		return this;
+	}
+
+
 	public SimpleParagraphEditor setEditorContent(String language, String content){
-		
+
 		selectLocalizedTab(language);
 		putMeInEditorOf(language);
-		driver.findElement(By.tagName("body")).sendKeys(content);
+		WebElement body = driver.findElement(By.cssSelector("body"));
+		body.sendKeys(content);
+		save();
 		return this;
-		
+
 	}
-	
+
 }

@@ -195,7 +195,9 @@ public class PageObject {
 	}
 	
 	public String getElementsHtml(WebElement element){
-		return (String)((JavascriptExecutor)driver).executeScript("return arguments[0].innerHTML;", element);
+		String html = (String)((JavascriptExecutor)driver).executeScript("return arguments[0].innerHTML;", element);
+		System.out.println(html);
+		return html;
 	}
 	public static boolean isClickable(WebElement element)      
 	{

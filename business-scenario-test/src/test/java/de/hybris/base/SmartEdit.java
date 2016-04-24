@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import de.hybris.pages.SimpleParagraphEditor;
+
 public class SmartEdit extends PageObject
 {
 
@@ -39,13 +41,23 @@ public class SmartEdit extends PageObject
 		driver.switchTo().defaultContent();
 	}
 
-	public EditorBase createNewComponent(String type, String slotId){
+//	public EditorBase createNewComponent(String type, String slotId){
+//
+//		whiteRibbon.prepareComponentTypeForMove(type);	
+//		prepareForDrop();
+//		frame.moveToElementAndDrop(slotId);
+//
+//		return new EditorBase(getDriver());
+//	}
+	
+	public Editor createNewComponent(String type, String slotId){
 
 		whiteRibbon.prepareComponentTypeForMove(type);	
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);
-
-		return new EditorBase(getDriver());
+		EditorFactory editorFactory = new EditorFactory();
+		Editor editor = editorFactory.getEditor(EditorBase.findComponentType(), driver);
+		return editor;
 	}
 	
 	public SmartEdit addExistingComponent(String item, String slotId){

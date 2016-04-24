@@ -18,13 +18,13 @@ public class EditorBase extends PageObject {
 		driver.switchTo().defaultContent();
 	}
 
-	public static void findComponentType(){
+	public static String findComponentType(){
 		putMeInContainer();
 		WebElement header = driver.findElement(By.cssSelector("h4[id*='smartedit-modal-title-type']"));
 		String id = header.getAttribute("id");
 		String[] parts = id.split("\\.");
 
-		System.out.println(parts[1]);
+		return parts[1];
 	}
 	
 	public EditorBase selectEditorTab(String tabId){
@@ -59,5 +59,15 @@ public class EditorBase extends PageObject {
 		WebElement field = getFieldById(id);
 		field.sendKeys(value);
 		return this;
+	}
+	
+	public void save(){
+		putMeInContainer();
+		driver.findElement(By.id("save")).click();
+	}
+	
+	public void cancel(){
+		putMeInContainer();
+		driver.findElement(By.id("cancel")).click();
 	}
 }

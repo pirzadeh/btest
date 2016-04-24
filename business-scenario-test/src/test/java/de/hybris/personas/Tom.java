@@ -1,4 +1,4 @@
-package de.hybris.pages;
+package de.hybris.personas;
 
 import de.hybris.base.Persona;
 
