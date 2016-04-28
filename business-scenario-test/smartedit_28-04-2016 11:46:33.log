@@ -1,0 +1,12 @@
+2016-04-28 11:46:33 INFO  BusinessScenarioLogger:100 - *******************
+2016-04-28 11:46:33 INFO  BusinessScenarioLogger:100 - launching chrome browser
+2016-04-28 11:46:33 INFO  BusinessScenarioLogger:100 - *******************
+2016-04-28 11:46:57 INFO  BusinessScenarioLogger:287 - STEP: Jiggle the mouse within null until [ySEDnDPlaceHolder, over-slot-enabled]is fulfilled
+2016-04-28 11:46:57 INFO  BusinessScenarioLogger:297 - DETAIL: Origin Point: 900,1287
+2016-04-28 11:46:57 INFO  BusinessScenarioLogger:297 - DETAIL: size: 690,425
+2016-04-28 11:46:57 INFO  BusinessScenarioLogger:297 - DETAIL: Random Point: 1332,1336
+2016-04-28 11:46:58 INFO  BusinessScenarioLogger:297 - DETAIL: over-slot-enabled is not available!
+2016-04-28 11:47:10 INFO  BusinessScenarioLogger:297 - DETAIL: ready to drop
+2016-04-28 11:47:30 ERROR BusinessScenarioLogger:95 - Thu Apr 28 11:46:35 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/static-resources/thirdparties/angular-bind-html-compile/angular-bind-html-compile.min.js 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)
+2016-04-28 11:47:30 ERROR BusinessScenarioLogger:95 - Thu Apr 28 11:46:37 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/configuration 0:0 Failed to load resource: the server responded with a status of 401 (Unauthorized)
+2016-04-28 11:47:30 ERROR BusinessScenarioLogger:95 - Thu Apr 28 11:46:37 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)

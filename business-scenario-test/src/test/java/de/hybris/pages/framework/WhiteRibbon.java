@@ -67,10 +67,33 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 	
 	public WhiteRibbon openComponentMenu() {
 
+		logDetail("Open the component menu");
+		
+		putMeInContainer();
 		clickOnRibbonButton("component-menu");
 		return this;
 	}
 
+	public WhiteRibbon openPerspectiveMenu(){
+
+		logDetail("Open the perspective menu");
+		
+		putMeInContainer();
+		clickOnRibbonButton("perspective-selector");
+		return this;
+	}
+	
+	public WhiteRibbon selectPerspective(String perspectiveName){
+		
+		logDetail("Select the \""+perspectiveName+"\" view");
+		
+		putMeInContainer();
+		openPerspectiveMenu();
+		WebElement scope = findElementByClass("ySEPerspectiveList--item");
+		findElementByText(scope,perspectiveName).click();
+		return this;
+	}
+	
 	public WebElement findComponentType(String type) {
 		putMeInContainer();
 		openComponentMenu();
@@ -88,6 +111,9 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 	}
 	
 	public WhiteRibbon selectComponetMenuTab(String tabName){
+		
+		logDetail("Select the \""+tabName+"\" tab");
+		
 		putMeInContainer();
 		WebElement tabElement = driver.findElement(By.cssSelector("[heading='"+tabName+"']"));
 		tabElement.click();
@@ -96,6 +122,9 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 	}
 
 	public WhiteRibbon clickOnRibbonButton(String buttonTagName){
+		
+		logDetail("Click on the \""+buttonTagName+"\" button");
+		
 		putMeInContainer();
 		WebElement button = driver.findElement(By.tagName(buttonTagName));		
 		button.click();

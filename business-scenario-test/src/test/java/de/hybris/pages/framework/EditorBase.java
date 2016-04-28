@@ -1,8 +1,10 @@
-package de.hybris.base;
+package de.hybris.pages.framework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import de.hybris.base.PageObject;
 
 public class EditorBase extends PageObject {
 
@@ -10,8 +12,6 @@ public class EditorBase extends PageObject {
 		super(driver);
 
 	}
-
-	//data-tab-id
 
 	private static void putMeInContainer(){
 

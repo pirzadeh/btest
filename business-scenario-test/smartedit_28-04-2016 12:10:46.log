@@ -1,0 +1,25 @@
+2016-04-28 12:10:46 INFO  BusinessScenarioLogger:100 - *******************
+2016-04-28 12:10:46 INFO  BusinessScenarioLogger:100 - launching chrome browser
+2016-04-28 12:10:46 INFO  BusinessScenarioLogger:100 - *******************
+2016-04-28 12:10:53 INFO  BusinessScenarioLogger:288 - STEP: Enter username: admin
+2016-04-28 12:10:53 INFO  BusinessScenarioLogger:288 - STEP: Enter password: nimda
+2016-04-28 12:10:53 INFO  BusinessScenarioLogger:288 - STEP: Press the Sign In
+2016-04-28 12:10:53 INFO  BusinessScenarioLogger:288 - STEP: From APPAREL DE, select the Staged version
+2016-04-28 12:11:07 INFO  BusinessScenarioLogger:288 - STEP: Drag and Drop component "ApparelDEHompageWomenStreetBannerComponent" to slot "Section2BSlot-Homepage"
+2016-04-28 12:11:07 INFO  BusinessScenarioLogger:298 - 	DETAIL: Select the "Basic CMS" view
+2016-04-28 12:11:07 INFO  BusinessScenarioLogger:298 - 	DETAIL: Open the perspective menu
+2016-04-28 12:11:07 INFO  BusinessScenarioLogger:298 - 	DETAIL: Click on the "perspective-selector" button
+2016-04-28 12:11:14 INFO  BusinessScenarioLogger:288 - STEP: Jiggle the mouse within null until [ySEDnDPlaceHolder, over-slot-enabled] are fulfilled
+2016-04-28 12:11:14 INFO  BusinessScenarioLogger:298 - 	DETAIL: Origin Point: 900,1287
+2016-04-28 12:11:14 INFO  BusinessScenarioLogger:298 - 	DETAIL: size: 690,425
+2016-04-28 12:11:14 INFO  BusinessScenarioLogger:298 - 	DETAIL: Random Point: 950,1535
+2016-04-28 12:11:14 INFO  BusinessScenarioLogger:298 - 	DETAIL: ySEDnDPlaceHolder is available!
+2016-04-28 12:11:15 INFO  BusinessScenarioLogger:298 - 	DETAIL: over-slot-enabled is not available!
+2016-04-28 12:11:22 INFO  BusinessScenarioLogger:298 - 	DETAIL: ySEDnDPlaceHolder is available!
+2016-04-28 12:11:22 INFO  BusinessScenarioLogger:298 - 	DETAIL: over-slot-enabled is available!
+2016-04-28 12:11:22 INFO  BusinessScenarioLogger:298 - 	DETAIL: ready to drop
+2016-04-28 12:11:42 ERROR BusinessScenarioLogger:95 - Thu Apr 28 12:10:49 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/static-resources/thirdparties/angular-bind-html-compile/angular-bind-html-compile.min.js 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)
+2016-04-28 12:11:42 ERROR BusinessScenarioLogger:95 - Thu Apr 28 12:10:51 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/configuration 0:0 Failed to load resource: the server responded with a status of 401 (Unauthorized)
+2016-04-28 12:11:42 ERROR BusinessScenarioLogger:95 - Thu Apr 28 12:10:51 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)
+2016-04-28 12:11:42 ERROR BusinessScenarioLogger:95 - Thu Apr 28 12:11:21 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/cmswebservices/v1/catalogs/apparel-deContentCatalog/versions/Staged/pages/homepage/contentslots/Section2CSlot-Homepage/typerestrictions 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)
+2016-04-28 12:11:42 ERROR BusinessScenarioLogger:95 - Thu Apr 28 12:11:21 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/static-resources/thirdparties/angular/angular.js 12204:24 failed to retrieve slot details for slot 

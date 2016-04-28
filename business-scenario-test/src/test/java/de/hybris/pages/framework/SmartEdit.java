@@ -6,10 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import de.hybris.base.Editor;
-import de.hybris.base.EditorBase;
-import de.hybris.base.EditorFactory;
-import de.hybris.base.FrameContent;
 import de.hybris.base.PageObject;
 import de.hybris.pages.cms.SimpleParagraphEditor;
 
@@ -22,6 +18,7 @@ public class SmartEdit extends PageObject
 	WhiteRibbon whiteRibbon;
 
 
+	
 	public SmartEdit(WebDriver driver) {
 		super(driver);
 		this.frame = new FrameContent(driver);
@@ -48,7 +45,9 @@ public class SmartEdit extends PageObject
 	
 	public Editor createNewComponent(String type, String slotId){
 
-		whiteRibbon.prepareComponentTypeForMove(type);	
+		logInteraction("Drag and Drop the component type \""+type+"\" from the component menu to slot \""+slotId+"\" to create a new customized component");
+		
+		whiteRibbon.selectPerspective(PerspectiveChoices.BASIC).prepareComponentTypeForMove(type);	
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);
 		EditorFactory editorFactory = new EditorFactory();
@@ -58,7 +57,9 @@ public class SmartEdit extends PageObject
 	
 	public SmartEdit addExistingComponent(String item, String slotId){
 
-		whiteRibbon.prepareCustomizedComponentForMove(item);	
+		logInteraction("Drag and Drop the customized component \""+item+"\" from the component menu to slot \""+slotId+"\"");
+		
+		whiteRibbon.selectPerspective(PerspectiveChoices.BASIC).prepareCustomizedComponentForMove(item);	
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);
 		delayForDebugging();
@@ -66,7 +67,10 @@ public class SmartEdit extends PageObject
 	}
 
 	public SmartEdit moveComponentToSlot(String componentId, String slotId){
-
+		
+		logInteraction("Drag and Drop component \""+componentId+"\" to slot \""+slotId+"\"");
+		
+		whiteRibbon.selectPerspective(PerspectiveChoices.BASIC);
 		frame.prepareElementForMove(componentId);
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);

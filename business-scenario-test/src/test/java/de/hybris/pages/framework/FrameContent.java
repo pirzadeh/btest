@@ -1,4 +1,4 @@
-package de.hybris.base;
+package de.hybris.pages.framework;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,6 +11,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import de.hybris.base.Coordinatable;
+import de.hybris.base.PageObject;
 
 public class FrameContent extends PageObject implements Coordinatable{
 

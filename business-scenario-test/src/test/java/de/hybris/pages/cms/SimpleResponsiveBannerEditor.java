@@ -2,8 +2,8 @@ package de.hybris.pages.cms;
 
 import org.openqa.selenium.WebDriver;
 
-import de.hybris.base.Editor;
-import de.hybris.base.EditorBase;
+import de.hybris.pages.framework.Editor;
+import de.hybris.pages.framework.EditorBase;
 import de.hybris.pages.framework.SmartEdit;
 
 public class SimpleResponsiveBannerEditor extends EditorBase implements Editor {
@@ -14,7 +14,7 @@ public class SimpleResponsiveBannerEditor extends EditorBase implements Editor {
 	}
 
 	@Override
-	public SmartEdit fillWithNewContent() {
+	public SmartEdit fillWithPredefinedContent() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -1,0 +1,11 @@
+2016-04-28 11:01:56 ERROR LogClass:95 - *******************
+2016-04-28 11:01:56 ERROR LogClass:95 - launching chrome browser
+2016-04-28 11:01:56 ERROR LogClass:95 - *******************
+2016-04-28 11:02:36 INFO  LogClass:109 - Origin Point: 900,1287
+2016-04-28 11:02:36 INFO  LogClass:109 - size: 690,425
+2016-04-28 11:02:36 INFO  LogClass:109 - Random Point: 1375,1424
+2016-04-28 11:02:37 INFO  LogClass:109 - over-slot-enabled is not available!
+2016-04-28 11:02:51 INFO  LogClass:109 - ready to drop
+2016-04-28 11:03:11 ERROR LogClass:95 - Thu Apr 28 11:01:59 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/static-resources/thirdparties/angular-bind-html-compile/angular-bind-html-compile.min.js 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)
+2016-04-28 11:03:11 ERROR LogClass:95 - Thu Apr 28 11:02:05 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/configuration 0:0 Failed to load resource: the server responded with a status of 401 (Unauthorized)
+2016-04-28 11:03:11 ERROR LogClass:95 - Thu Apr 28 11:02:05 EDT 2016 SEVERE https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)

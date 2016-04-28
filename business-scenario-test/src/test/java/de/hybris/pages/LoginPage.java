@@ -33,18 +33,21 @@ public class LoginPage extends PageObject
 
 	public LoginPage enterUsername(final String name)
 	{
+		logInteraction("Enter username: "+ name);
 		username.sendKeys(name);
 		return this;
 	}
 
 	public LoginPage enterPassword(final String pass)
 	{
+		logInteraction("Enter password: "+ pass);
 		password.sendKeys(pass);
 		return this;
 	}
 
 	public LandingPage signin()
 	{
+		logInteraction("Press the Sign In");
 		signin.click();
 		
 		return (new LandingPage(driver));

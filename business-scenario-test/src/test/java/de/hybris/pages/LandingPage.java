@@ -46,6 +46,7 @@ public class LandingPage extends PageObject
 	
 	public SmartEdit gotoCatalogVersion(String catalog, String catalogVersion){
 		
+		logInteraction("From "+catalog+", select the "+catalogVersion+" version");
 		findCatalogVersion(catalog, catalogVersion).click();
 		return (new SmartEdit(driver));
 	}	

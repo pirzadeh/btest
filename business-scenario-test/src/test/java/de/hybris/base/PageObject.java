@@ -1,8 +1,10 @@
 package de.hybris.base;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -12,6 +14,9 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,6 +43,8 @@ public class PageObject {
 		PageFactory.initElements(driver, this);	
 		setupMouse(driver);
 	}
+
+
 
 	private void setupMouse(WebDriver driver) {
 
@@ -68,7 +75,7 @@ public class PageObject {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void delayForAnimation(){
 		try {
 			Thread.sleep(CSS_TRANSITION_DELAY);
@@ -78,20 +85,25 @@ public class PageObject {
 	}
 
 	public void jiggleWithinUntilAttributeIsPresent(WebElement destinationElement, List<String> attributes){
+
+		logInteraction("Jiggle the mouse within "+destinationElement.getAttribute("id")+ " until "+ attributes.toString() +" are fulfilled");
+
 		Point topLeft = destinationElement.getLocation();
 		Dimension size = destinationElement.getSize();
-		System.out.println("Origin Point: "+topLeft.x+","+topLeft.y);
-		System.out.println("size: "+size.width+","+size.height);
+		
+		logDetail("Origin Point: "+topLeft.x+","+topLeft.y);
+		logDetail("size: "+size.width+","+size.height);
+		
 		for (int i = 1 ; i < 15 ; i++){			
 			Point randomPoint = randomPointBasedOn(size);
 			Point destionationPoint = new Point(topLeft.x + randomPoint.x, topLeft.y + randomPoint.y);
-			System.out.println("Random Point: "+destionationPoint.x+","+destionationPoint.y);
+			logDetail("Random Point: "+destionationPoint.x+","+destionationPoint.y);
 			mouse.moveByOffset(destionationPoint.x, destionationPoint.y).build().perform();
 			simulateUserMouseMovement(topLeft, destinationElement, randomPoint, attributes);
-			
+
 			if(atrributesAllAvailable(attributes))
 			{
-				System.out.println("ready to drop");
+				logDetail("ready to drop");
 				break;
 			}
 			mouse.moveByOffset(-1*destionationPoint.x,-1*destionationPoint.y).build().perform();
@@ -103,7 +115,7 @@ public class PageObject {
 			int absOffset = (randomPoint.x > randomPoint.y ? randomPoint.x : randomPoint.y);
 			float movetoY = 0;
 			float movetoX= 0;
-			
+
 			for (int i = 0; i < absOffset; i++){
 				delay(10);
 				movetoY += (float) randomPoint.y / absOffset;
@@ -111,15 +123,16 @@ public class PageObject {
 				mouse.moveToElement(destinationElement, Math.round(movetoX), Math.round(movetoY)).build().perform();	
 			}
 		}
-		
+
 	}
 
 	private boolean atrributesAllAvailable(List<String> attributes) {
 		for (String attribute : attributes){
 			if (!atrributeBecomesAvailable(attribute)){
-				System.out.println(attribute+" is not available!");
+				logDetail(attribute+" is not available!");
 				return false;
 			}
+			logDetail(attribute+" is available!");
 		}
 		return true;
 	}
@@ -129,7 +142,7 @@ public class PageObject {
 		Point randomPoint = new Point(rand.nextInt(size.width-50), rand.nextInt(size.height-25));
 		return randomPoint;
 	}
-	
+
 	private Point randomPointWithin(Point origin, Dimension size) {
 
 		Random rand = new Random();
@@ -139,24 +152,24 @@ public class PageObject {
 
 	public boolean atrributeBecomesAvailable(String attribute){
 		driver.manage().timeouts().implicitlyWait(CSS_TRANSITION_DELAY, TimeUnit.MILLISECONDS);  
-        try  
-        {  
-        	List<WebElement> elements = driver.findElements(By.className(attribute)); 
-        	if (elements.size() > 0)
-        		return true;   
-        	else 
-        		return false;
-        		
-        }  
-        catch(NoSuchElementException e)  
-        {  
-            return false;  
-        }  
-       finally  
-       {  
-           driver.manage().timeouts().implicitlyWait(DEFAULT_TIMEOUT, TimeUnit.SECONDS);  
-       }  
-		
+		try  
+		{  
+			List<WebElement> elements = driver.findElements(By.className(attribute)); 
+			if (elements.size() > 0)
+				return true;   
+			else 
+				return false;
+
+		}  
+		catch(NoSuchElementException e)  
+		{  
+			return false;  
+		}  
+		finally  
+		{  
+			driver.manage().timeouts().implicitlyWait(DEFAULT_TIMEOUT, TimeUnit.SECONDS);  
+		}  
+
 	}
 
 	public void waitUntilXpathAtrributeValueAvailable(String xpath, String attribute, String value){
@@ -182,18 +195,71 @@ public class PageObject {
 		return offset;
 	}
 
-	
+	public WebElement findElementByText(String text){
 
-	public WebElement findElementByClass(String clazz){
-		WebElement element = driver.findElement(By.cssSelector("."+clazz+""));
+		return findElementByText(null,text);
+	}
+
+	public List<WebElement> findElementsByText(String text){
+
+		return findElementsByText(null, text);
+	}
+
+	public WebElement findElementByText(WebElement scope, String text){
+
+		WebElement element = null;
+		if (scope == null)
+			element = driver.findElement(By.xpath("//*[contains(text(), '"+text+"')]"));
+		else
+			element = scope.findElement(By.xpath("//*[contains(text(), '"+text+"')]"));
 		return element;
 	}
-	
+
+	public List<WebElement> findElementsByText(WebElement scope, String text){
+
+		List<WebElement> elements = null;
+		if (scope == null)
+			elements = driver.findElements(By.xpath("//*[contains(text(), '"+text+"')]"));
+		else
+			elements = scope.findElements(By.xpath("//*[contains(text(), '"+text+"')]"));
+		return elements;
+	}
+
+	public WebElement findElementByClass(String clazz){
+
+		return findElementByClass(null, clazz);
+	}
+
+	public List<WebElement> findElementsByClass(String clazz){
+
+		return findElementsByClass (null, clazz);
+	}
+
+	public WebElement findElementByClass(WebElement scope, String clazz){
+
+		WebElement element = null;
+		if (scope == null)
+			element = driver.findElement(By.cssSelector("."+clazz+""));
+		else
+			element = scope.findElement(By.cssSelector("."+clazz+""));
+		return element;
+	}
+
+	public List<WebElement> findElementsByClass(WebElement scope, String clazz){
+
+		List<WebElement> elements = null;
+		if (scope == null)
+			elements = driver.findElements(By.cssSelector("."+clazz+""));
+		else
+			elements = scope.findElements(By.cssSelector("."+clazz+""));
+		return elements;
+	}
+
 	public void scrollToY(int y){
 		JavascriptExecutor js =(JavascriptExecutor)driver;
-        js.executeScript("window.scrollTo(0,"+y+")");
+		js.executeScript("window.scrollTo(0,"+y+")");
 	}
-	
+
 	public String getElementsHtml(WebElement element){
 		String html = (String)((JavascriptExecutor)driver).executeScript("return arguments[0].innerHTML;", element);
 		System.out.println(html);
@@ -211,5 +277,31 @@ public class PageObject {
 		{
 			return false;
 		}
+	}
+
+
+	public void logError(String log){
+
+		BusinessScenarioLogger.getLogger().error(log);
+	}
+
+	public void logInteraction(String log){
+
+		BusinessScenarioLogger.getLogger().info("STEP: "+log);
+	}
+
+	public void logInfo(String log){
+
+		BusinessScenarioLogger.getLogger().info(log);
+	}
+
+	public void logDetail(String log){
+
+		BusinessScenarioLogger.getLogger().info("\tDETAIL: "+log);
+	}
+
+	public void logDebug(String log){
+
+		BusinessScenarioLogger.getLogger().debug(log);
 	}
 }
