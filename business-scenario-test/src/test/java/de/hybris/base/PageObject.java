@@ -19,14 +19,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * @author i839970
  *
  */
-/**
- * @author i839970
- *
- */
-/**
- * @author i839970
- *
- */
 public class PageObject {
 	public static WebDriver driver;
 	public static Actions mouse;
