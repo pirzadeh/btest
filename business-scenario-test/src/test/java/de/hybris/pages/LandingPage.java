@@ -1,7 +1,7 @@
 package de.hybris.pages;
 
 import de.hybris.base.PageObject;
-import de.hybris.base.SmartEdit;
+import de.hybris.pages.framework.SmartEdit;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,59 +15,54 @@ import org.openqa.selenium.support.FindBy;
 public class LandingPage extends PageObject
 {
 
-	//Page URL
-	private static String url = "https://e2e3.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/#/";
+	@FindBy(css = ".catalog-container")
+	private List<WebElement> catalogs;
+
+	@FindBy(css = ".catalog-body")
+	private List<WebElement> catalogBodies;
 
 	public LandingPage(final WebDriver driver)
 	{
 		super(driver);
-
 	}
 
-	//Locators
-
-	
-	//helpers
-	
-	private List<WebElement> getCatalogs(){
-		return driver.findElements(By.cssSelector(".catalog-container"));
-	}
-	
-	private WebElement catalogBodyOf(String term){
-		 List<WebElement> bodies = driver.findElements(By.cssSelector(".catalog-body"));
-		 bodies.forEach(b -> {System.out.println(b); System.out.println(b.getText());});
-
-		  Optional<WebElement> filteredBody = bodies.stream().filter(body -> body.getText().contains(term)).findFirst();
-		  
-		  System.out.println(filteredBody.get().getText());
-		  
-		  return filteredBody.get();
-	}
-	
-	public WebElement findCatalogVersion(String catalog, String catalogVersion){
-		
-		return catalogBodyOf(catalog).findElement(By.xpath("//div[contains(text(),'"+catalogVersion+"')]"));
-	}
-	
 	public SmartEdit gotoCatalogVersion(String catalog, String catalogVersion){
-		
+
+		logInteraction("From "+catalog+", select the "+catalogVersion+" version");
+
 		findCatalogVersion(catalog, catalogVersion).click();
 		return (new SmartEdit(driver));
+	}	
+
+	//helpers
+
+	private List<WebElement> getCatalogs(){
+		//		return driver.findElements(By.cssSelector(".catalog-container"));
+		return catalogs;
 	}
-	
-	
-	
-	private WebElement catalogVersionOf(String term){
-		 List<WebElement> bodies = driver.findElements(By.cssSelector(".catalog-thumbnail"));
-		  Optional<WebElement> filteredVersion = bodies.stream().filter(body -> body.getText().contains(term)).findFirst();
-		  return filteredVersion.get();
+
+	private WebElement catalogBodyOf(String term){
+		//		List<WebElement> bodies = driver.findElements(By.cssSelector(".catalog-body"));
+		Optional<WebElement> filteredBody = catalogBodies.stream().filter(body -> body.getText().contains(term)).findFirst();		  
+		return filteredBody.get();
 	}
-	
-	public WebElement selectCatalogPageNumber(int index){
-		
+
+	private WebElement findCatalogVersion(String catalog, String catalogVersion){
+
+		return catalogBodyOf(catalog).findElement(By.xpath("//div[contains(text(),'"+catalogVersion+"')]"));
+	}
+
+	//	private WebElement catalogVersionOf(String term){
+	//		List<WebElement> bodies = driver.findElements(By.cssSelector(".catalog-thumbnail"));
+	//		Optional<WebElement> filteredVersion = bodies.stream().filter(body -> body.getText().contains(term)).findFirst();
+	//		return filteredVersion.get();
+	//	}
+
+	private WebElement selectCatalogPageNumber(int index){
+
 		int STARTING_INDEX = 2;
 		index =+ STARTING_INDEX;
 		return driver.findElement(By.cssSelector(".pagination-container .pagination li:nth-child(" + index + ") a"));
 	}
-	
+
 }

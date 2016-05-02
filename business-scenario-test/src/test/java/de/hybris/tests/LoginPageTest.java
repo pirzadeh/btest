@@ -18,8 +18,14 @@ public class LoginPageTest extends BusinessTest{
 	@Test
 	public void Login() {
 
-		final String username = "admin";
-		final String password = "nimda";
-		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").createNewComponent("CMSParagraphComponent", "Section1Slot-ApparelDEHomepage");
+		final String username = "cmsmanager";
+		final String password = "1234";
+		
+		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").moveComponentToSlot("ApparelDEHompageWomenStreetBannerComponent", "Section2BSlot-Homepage");
+//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").createNewComponent("CMSParagraphComponent", "Section1Slot-ApparelDEHomepage").fillWithPredefinedContent();
+//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").addExistingComponent("ApparelDEHompageWomenStreetBannerComponent", "Section1Slot-ApparelDEHomepage");
+//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").createNewComponent("CMSParagraphComponent", "Section2ASlot-ApparelDEHomepage");
+
+
 	}
 }
