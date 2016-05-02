@@ -1,5 +1,7 @@
 package de.hybris.pages.framework;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -7,9 +9,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import de.hybris.base.PageObject;
+import de.hybris.pages.LoginPage;
+import de.hybris.pages.cms.Component;
 import de.hybris.pages.cms.SimpleParagraphEditor;
+import de.hybris.pages.framework.enums.PerspectiveEnum;
 
-public class SmartEdit extends PageObject
+public class SmartEdit extends Container
 {
 
 	FrameContent frame;
@@ -40,17 +45,21 @@ public class SmartEdit extends PageObject
 	private WebElement origin;
 	
 	//Helpers
+	
+	public SmartEdit createNewComponentAndFillIt(Component component) {
 
-	private void putMeInContainer(){
-
-		driver.switchTo().defaultContent();
+		Editor editor = createNewComponent(component.getType(), component.getSlotId());
+		editor.fillWithOptionalContent(component.getContentList());
+		component.setId(editor.getComponentId());
+		editor.save();
+		return this;
 	}
 	
 	public Editor createNewComponent(String type, String slotId){
 
 		logInteraction("Drag and Drop the component type \""+type+"\" from the component menu to slot \""+slotId+"\" to create a new customized component");
 		
-		whiteRibbon.selectPerspective(PerspectiveChoices.BASIC).prepareComponentTypeForMove(type);	
+		whiteRibbon.selectPerspective(PerspectiveEnum.BASIC).prepareComponentTypeForMove(type);	
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);
 		EditorFactory editorFactory = new EditorFactory();
@@ -62,7 +71,7 @@ public class SmartEdit extends PageObject
 
 		logInteraction("Drag and Drop the customized component \""+item+"\" from the component menu to slot \""+slotId+"\"");
 		
-		whiteRibbon.selectPerspective(PerspectiveChoices.BASIC).prepareCustomizedComponentForMove(item);	
+		whiteRibbon.selectPerspective(PerspectiveEnum.BASIC).prepareCustomizedComponentForMove(item);	
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);
 		delayForDebugging();
@@ -73,7 +82,7 @@ public class SmartEdit extends PageObject
 		
 		logInteraction("Drag and Drop component \""+componentId+"\" to slot \""+slotId+"\"");
 		
-		whiteRibbon.selectPerspective(PerspectiveChoices.BASIC);
+		whiteRibbon.selectPerspective(PerspectiveEnum.BASIC);
 		frame.prepareElementForMove(componentId);
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);
@@ -81,6 +90,11 @@ public class SmartEdit extends PageObject
 		return this;
 	}
 
+	public LoginPage logout() {
+		
+		return blueRibbon.openHamburgerMenu().logout();
+	}
+	
 	public SmartEdit assertComponentContentInSlot(String componentId, String Content, String slotId){
 		
 		//[TODO] assert that the specified component has the specified content.
@@ -126,6 +140,16 @@ public class SmartEdit extends PageObject
 	public void setWhiteRibbon(WhiteRibbon whiteRibbon) {
 		this.whiteRibbon = whiteRibbon;
 	}
+
+	public void validateExistence(List<Component> validationList) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	
+
+
 
 
 }

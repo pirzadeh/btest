@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import de.hybris.base.PageObject;
+import de.hybris.pages.framework.enums.EditorFiledEnum;
+import de.hybris.pages.framework.enums.EditorTabEnum;
 
 public class EditorBase extends PageObject {
 
@@ -44,13 +46,13 @@ public class EditorBase extends PageObject {
 
 	public EditorBase setName(String name){
 		putMeInContainer();
-		setFieldValueById(name, "name-shortstring");
+		setFieldValueById(name, EditorFiledEnum.NAME);
 		return this;
 	}
 
 	public EditorBase setLinkTo(String link){
 		putMeInContainer();
-		setFieldValueById(link, "urlLink-shortstring");
+		setFieldValueById(link, EditorFiledEnum.LINK_TO);
 		return this;
 	}
 
@@ -61,13 +63,22 @@ public class EditorBase extends PageObject {
 		return this;
 	}
 	
-	public void save(){
+	public String getComponentId(){
 		putMeInContainer();
-		driver.findElement(By.id("save")).click();
+		selectEditorTab(EditorTabEnum.ADMIN);
+		String componentId = getFieldById(EditorFiledEnum.ID).getAttribute("value");
+		return componentId;
 	}
 	
-	public void cancel(){
+	public SmartEdit save(){
+		putMeInContainer();
+		driver.findElement(By.id("save")).click();
+		return new SmartEdit(driver);
+	}
+	
+	public SmartEdit cancel(){
 		putMeInContainer();
 		driver.findElement(By.id("cancel")).click();
+		return new SmartEdit(driver);
 	}
 }

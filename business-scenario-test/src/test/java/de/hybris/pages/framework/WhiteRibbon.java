@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import de.hybris.base.Coordinatable;
 import de.hybris.base.PageObject;
 
-public class WhiteRibbon extends PageObject implements Coordinatable{
+public class WhiteRibbon extends Container implements Coordinatable{
 
 	
 	public WhiteRibbon(WebDriver driver) {
@@ -58,11 +58,6 @@ public class WhiteRibbon extends PageObject implements Coordinatable{
 	public Point findCoordByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	private void putMeInContainer(){
-		
-		driver.switchTo().defaultContent();
 	}
 	
 	public WhiteRibbon openComponentMenu() {

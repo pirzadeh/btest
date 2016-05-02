@@ -53,36 +53,34 @@ public class SimpleParagraphEditor extends EditorBase implements Editor {
 	}
 	
 	@Override
-	public SmartEdit fillWithPredefinedContent() {
+	public void fillWithOptionalContent(List<Content> contents) {
 		
 		logInteraction("Fill the editor with predefined content");
 		
-		setEditorContent("This is a sample content");
-		return new SmartEdit(driver);
+		setEditorContent(contents);
+
 	}
 
 	//methods specific to simple paragraph
 
-	public SimpleParagraphEditor setEditorContent(String content) {
+	public void setEditorContent(List<Content> contents){
 
-		logDetail("Inputting \""+content+"\" into the editor");
+		for (Content content:contents){
+			
+			//if the language is not set, set it with default language
+			if (content.getLanguage() == null){
+				content.setLanguage(findDefaultLanguage());
+			}
+			
+		logDetail("Inputting \""+content.getTextualContent()+"\" into the editor for \""+content.getLanguage()+" language");
 		
-		String language = findDefaultLanguage();
-		setEditorContent(language, content);
-		return this;
-	}
-
-
-	public SimpleParagraphEditor setEditorContent(String language, String content){
-
-		logDetail("Inputting \""+content+"\" into the editor for \""+language+" language");
-		
-		selectLocalizedTab(language);
-		putMeInEditorOf(language);
+		selectLocalizedTab(content.getLanguage());
+		putMeInEditorOf(content.getLanguage());
 		WebElement body = driver.findElement(By.cssSelector("body"));
-		body.sendKeys(content);
-		save();
-		return this;
+		body.sendKeys(content.getTextualContent());
+		}
+	
+
 
 	}
 

@@ -1,5 +1,7 @@
 package de.hybris.pages.cms;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 
 import de.hybris.pages.framework.Editor;
@@ -14,9 +16,9 @@ public class SimpleResponsiveBannerEditor extends EditorBase implements Editor {
 	}
 
 	@Override
-	public SmartEdit fillWithPredefinedContent() {
+	public void fillWithOptionalContent(List<Content> contents) {
 		// TODO Auto-generated method stub
-		return null;
+
 	}
 
 }
