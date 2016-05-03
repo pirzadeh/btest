@@ -1,10 +1,11 @@
-package de.hybris.pages.framework;
+package de.hybris.pages.cms.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import de.hybris.base.PageObject;
+import de.hybris.pages.framework.SmartEdit;
 import de.hybris.pages.framework.enums.EditorFiledEnum;
 import de.hybris.pages.framework.enums.EditorTabEnum;
 

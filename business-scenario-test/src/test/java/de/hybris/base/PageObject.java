@@ -194,6 +194,38 @@ public class PageObject {
 
 	}
 
+	/**
+	 * @param cssSelector the css selector of an element for which the existence will be checked under the specified scope against the current page
+	 * @param scope the scope (WebElement) under which the css selector will be evaluated. If scope is null the css selector will be evaluated against the whole page
+	 * @return true if the the css selector is available on the page, otherwise false
+	 */
+	public boolean cssSelectorIsAvailable(WebElement scope, String cssSelector){
+		setDriverImpliciteWait(CSS_TRANSITION_DELAY, TimeUnit.MILLISECONDS);  
+		List<WebElement> elements;
+		try  
+		{  
+			if (scope == null){
+				elements = driver.findElements(By.cssSelector(cssSelector)); 
+			}
+			else{
+				elements = scope.findElements(By.cssSelector(cssSelector)); 
+			}
+			if (elements.size() > 0)
+				return true;   
+			else 
+				return false;
+
+		}  
+		catch(NoSuchElementException e)  
+		{  
+			return false;  
+		}  
+		finally  
+		{  
+			setDriverImpliciteWait(DEFAULT_TIMEOUT, TimeUnit.SECONDS);  
+		}  
+
+	}
 	private void setDriverImpliciteWait(int delay, TimeUnit unit) {
 		driver.manage().timeouts().implicitlyWait(delay, unit);
 	}
@@ -351,6 +383,63 @@ public class PageObject {
 			elements = driver.findElements(By.cssSelector("."+clazz+""));
 		else
 			elements = scope.findElements(By.cssSelector("."+clazz+""));
+		return elements;
+	}
+
+
+	/**
+	 * @param cssSelector the cssSelector by which the driver tries to find an element
+	 * @return an element based on the specified cssSelector
+	 * 
+	 * tries to find an element based on the provided cssSelector on the page
+	 */
+	public WebElement findElementByCssSelector(String cssSelector){
+
+		return findElementByCssSelector(null, cssSelector);
+	}
+
+	/**
+	 * @param cssSelector the cssSelector by which the driver tries to find an element
+	 * @return list of elements found based on the specified cssSelector
+	 * 
+	 * tries to find a list of elements based on the specified cssSelector on the page
+	 */
+	public List<WebElement> findElementsByCssSelector(String cssSelector){
+
+		return findElementsByCssSelector(null, cssSelector);
+	}
+
+	/**
+	 * @param scope in which the search for cssSelector will happen
+	 * @param cssSelector the cssSelector by which the driver tries to find an element
+	 * @return an element based on the cssSelector
+	 * 
+	 * tries to find an element based on the cssSelector on the provided scope
+	 */
+	public WebElement findElementByCssSelector(WebElement scope, String cssSelector){
+
+		WebElement element = null;
+		if (scope == null)
+			element = driver.findElement(By.cssSelector(cssSelector));
+		else
+			element = scope.findElement(By.cssSelector(cssSelector));
+		return element;
+	}
+
+	/**
+	 * @param scope in which the search for cssSelector will happen
+	 * @param cssSelector the cssSelector by which the driver tries to find an element
+	 * @return a list of elements based on the cssSelector
+	 * 
+	 * tries to find a list of elements based on the cssSelector on the provided scope
+	 */
+	public List<WebElement> findElementsByCssSelector(WebElement scope, String cssSelector){
+
+		List<WebElement> elements = null;
+		if (scope == null)
+			elements = driver.findElements(By.cssSelector(cssSelector));
+		else
+			elements = scope.findElements(By.cssSelector(cssSelector));
 		return elements;
 	}
 

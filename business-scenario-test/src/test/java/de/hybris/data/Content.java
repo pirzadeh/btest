@@ -1,4 +1,4 @@
-package de.hybris.pages.cms;
+package de.hybris.data;
 
 
 import de.hybris.pages.framework.enums.EditorLanguageEnum;

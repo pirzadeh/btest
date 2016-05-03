@@ -9,10 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import de.hybris.base.PageObject;
+import de.hybris.data.Component;
 import de.hybris.pages.LoginPage;
-import de.hybris.pages.cms.Component;
 import de.hybris.pages.cms.SimpleParagraphEditor;
+import de.hybris.pages.cms.base.Editor;
+import de.hybris.pages.cms.base.EditorBase;
+import de.hybris.pages.cms.base.EditorFactory;
 import de.hybris.pages.framework.enums.PerspectiveEnum;
+import junit.framework.Assert;
 
 public class SmartEdit extends Container
 {
@@ -141,10 +145,12 @@ public class SmartEdit extends Container
 		this.whiteRibbon = whiteRibbon;
 	}
 
-	public void validateExistence(List<Component> validationList) {
-		// TODO Auto-generated method stub
+	public void validateExistence(List<Component> components) {
 		
-		
+		for (Component component:components){
+			WebElement slot = frame.findFrameElementById(component.getSlotId());
+			 Assert.assertTrue(frame.elementIsAvailable(slot, component.getId()));
+		}		
 	}
 
 	

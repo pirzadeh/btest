@@ -7,8 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import de.hybris.pages.framework.Editor;
-import de.hybris.pages.framework.EditorBase;
+import de.hybris.data.Content;
+import de.hybris.pages.cms.base.Editor;
+import de.hybris.pages.cms.base.EditorBase;
 import de.hybris.pages.framework.SmartEdit;
 
 

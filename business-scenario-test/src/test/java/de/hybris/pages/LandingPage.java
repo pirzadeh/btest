@@ -1,6 +1,7 @@
 package de.hybris.pages;
 
 import de.hybris.base.PageObject;
+import de.hybris.data.Component;
 import de.hybris.pages.framework.SmartEdit;
 
 import java.util.List;
@@ -63,6 +64,11 @@ public class LandingPage extends PageObject
 		int STARTING_INDEX = 2;
 		index =+ STARTING_INDEX;
 		return driver.findElement(By.cssSelector(".pagination-container .pagination li:nth-child(" + index + ") a"));
+	}
+
+	public SmartEdit gotoCatalogVersion(Component component) {
+
+		return gotoCatalogVersion(component.getCatalogVersion(),component.getCatalogId());
 	}
 
 }

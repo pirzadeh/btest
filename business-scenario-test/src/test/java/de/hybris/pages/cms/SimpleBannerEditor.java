@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
-import de.hybris.pages.framework.Editor;
-import de.hybris.pages.framework.EditorBase;
+import de.hybris.data.Content;
+import de.hybris.pages.cms.base.Editor;
+import de.hybris.pages.cms.base.EditorBase;
 import de.hybris.pages.framework.SmartEdit;
 
 public class SimpleBannerEditor extends EditorBase implements Editor {

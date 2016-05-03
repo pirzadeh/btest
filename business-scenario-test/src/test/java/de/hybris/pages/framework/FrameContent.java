@@ -5,12 +5,9 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import de.hybris.base.Coordinatable;
 import de.hybris.base.PageObject;
@@ -74,15 +71,30 @@ public class FrameContent extends PageObject implements Coordinatable{
 	//helper
 	
 	public WebElement findFrameElementById(String id){
+		return findFrameElementById(null, id);
+	}
+
+		
+	public WebElement findFrameElementById(WebElement scope, String smartEditId){
 		frameIsReady();
-		WebElement element = driver.findElement(By.cssSelector(".smartEditComponent[data-smartedit-component-id='"+id+"']"));
-		return element;
+		String cssSelector = ".smartEditComponent[data-smartedit-component-id='"+smartEditId+"']";	
+		return findElementByCssSelector(scope, cssSelector);
 	}
 	
-	
 	private WebElement findFrameElementByName(String name){
+		return findFrameElementByName(null, name);
+	}
+	
+	private WebElement findFrameElementByName(WebElement scope, String name){
 		frameIsReady();
-		WebElement element = driver.findElement(By.name(name));
+		WebElement element = null;
+		
+		if (scope == null){
+			element = driver.findElement(By.name(name));
+		}
+		else{
+			element = scope.findElement(By.name(name));
+		}
 		return element;
 	}
 
@@ -90,6 +102,12 @@ public class FrameContent extends PageObject implements Coordinatable{
 		frameIsReady();
 		WebElement component = findFrameElementById(componentId);
 		mouse.clickAndHold(component).build().perform();
+	}
+
+	public boolean elementIsAvailable(WebElement scope, String smartEditId) {
+
+		String cssSelector = ".smartEditComponent[data-smartedit-component-id='"+smartEditId+"']";
+		return cssSelectorIsAvailable(scope, cssSelector);
 	}
 
 
