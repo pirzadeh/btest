@@ -21,4 +21,10 @@ public class SimpleBannerEditor extends EditorBase implements Editor {
 		// TODO Auto-generated method stub
 	}
 
+	@Override
+	public void fillWithPredefinedContent() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

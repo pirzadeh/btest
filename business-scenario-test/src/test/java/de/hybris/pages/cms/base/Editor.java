@@ -16,5 +16,7 @@ public interface Editor {
 	SmartEdit save();
 
 	String getComponentId();
+
+	void fillWithPredefinedContent();
 	
 }

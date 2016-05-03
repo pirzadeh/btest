@@ -3,6 +3,7 @@ package de.hybris.pages.framework;
 import org.openqa.selenium.WebDriver;
 
 import de.hybris.pages.LoginPage;
+import de.hybris.pages.framework.base.Container;
 
 public class LeftPane extends Container{
 

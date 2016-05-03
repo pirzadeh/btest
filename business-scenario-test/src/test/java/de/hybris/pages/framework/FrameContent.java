@@ -110,6 +110,10 @@ public class FrameContent extends PageObject implements Coordinatable{
 		return cssSelectorIsAvailable(scope, cssSelector);
 	}
 
+	public boolean elementIsAvailable(String smartEditId) {
 
+		String cssSelector = ".smartEditComponent[data-smartedit-component-id='"+smartEditId+"']";
+		return cssSelectorIsAvailable(cssSelector);
+	}
 
 }

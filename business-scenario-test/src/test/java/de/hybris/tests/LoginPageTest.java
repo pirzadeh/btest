@@ -5,6 +5,8 @@ import de.hybris.data.Component;
 import de.hybris.data.Content;
 import de.hybris.pages.LoginPage;
 import de.hybris.pages.framework.enums.EditorLanguageEnum;
+import de.hybris.personas.Strategy;
+import de.hybris.personas.Tom;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,24 +23,79 @@ public class LoginPageTest extends BusinessTest{
 		page = new LoginPage(driver);
 	}
 
+	
+	
 	@Test
-	public void Login() {
+	public void scenario4() {
+
+		final String username = "cmsmanager";
+		final String password = "1234";
+		
+		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").moveComponentToSlot("ApparelDEHompageWomenStreetBannerComponent", "Section2BSlot-Homepage");
+	}
+		
+	@Test
+	public void scenario2() {
+
+		final String username = "cmsmanager";
+		final String password = "1234";
+		
+		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").addExistingComponent("ApparelDEHompageWomenStreetBannerComponent", "Section1Slot-ApparelDEHomepage");
+
+
+	}
+	
+	@Test
+	public void scenario3() {
+
+		final String username = "cmsmanager";
+		final String password = "1234";
+		
+		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged")
+			.createNewComponent("CMSParagraphComponent", "Section2ASlot-ApparelDEHomepage").fillWithPredefinedContent();
+
+	}
+	
+	
+	
+
+	@Test
+	public void scenario1() {
 
 		final String username = "cmsmanager";
 		final String password = "1234";
 		List<Component> validationList = new ArrayList<>();
 		
 		Component paragraphComponent = defaultParagraphComponent(); 
-		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion(paragraphComponent).createNewComponentAndFillIt(paragraphComponent).logout();
+		
+		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion(paragraphComponent)
+			.createNewComponentAndFillIt(paragraphComponent).logout();
+		
 		validationList.add(paragraphComponent);
 		
 		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion(paragraphComponent).validateExistence(validationList);
-//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").addExistingComponent("ApparelDEHompageWomenStreetBannerComponent", "Section1Slot-ApparelDEHomepage");
-//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").createNewComponent("CMSParagraphComponent", "Section2ASlot-ApparelDEHomepage");
-//		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").moveComponentToSlot("ApparelDEHompageWomenStreetBannerComponent", "Section2BSlot-Homepage");
-
 
 	}
+	
+	
+	
+	
+	
+	@Test
+	public void contentManagement(){
+		Tom tom = new Tom();
+		
+		tom.predifinedScenario();
+		
+		tom.explore();
+		
+		tom.explore(Strategy.RECENTLY_CREATED);
+		
+		tom.reportExperience();
+		
+	}
+	
+	
 
 	private Component defaultParagraphComponent() {
 	

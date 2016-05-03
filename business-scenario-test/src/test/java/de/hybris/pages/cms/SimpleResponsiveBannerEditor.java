@@ -22,4 +22,10 @@ public class SimpleResponsiveBannerEditor extends EditorBase implements Editor {
 
 	}
 
+	@Override
+	public void fillWithPredefinedContent() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

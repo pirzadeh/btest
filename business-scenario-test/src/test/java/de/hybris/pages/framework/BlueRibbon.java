@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import de.hybris.pages.framework.base.Container;
+
 public class BlueRibbon extends Container{
 
 	@FindBy(id="nav-expander")
@@ -25,7 +27,7 @@ public class BlueRibbon extends Container{
 	}
 
 
-	public BlueRibbon clickOnRibbonButton(String buttonTagName){
+	private BlueRibbon clickOnRibbonButton(String buttonTagName){
 		
 		logDetail("Click on the \""+buttonTagName+"\" button");
 		

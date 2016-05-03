@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import de.hybris.base.Coordinatable;
 import de.hybris.base.PageObject;
+import de.hybris.pages.framework.base.Container;
 
 public class WhiteRibbon extends Container implements Coordinatable{
 
@@ -116,7 +117,7 @@ public class WhiteRibbon extends Container implements Coordinatable{
 		return this;
 	}
 
-	public WhiteRibbon clickOnRibbonButton(String buttonTagName){
+	private WhiteRibbon clickOnRibbonButton(String buttonTagName){
 		
 		logDetail("Click on the \""+buttonTagName+"\" button");
 		

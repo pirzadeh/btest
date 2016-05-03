@@ -1,5 +1,6 @@
 package de.hybris.pages.cms;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -56,9 +57,20 @@ public class SimpleParagraphEditor extends EditorBase implements Editor {
 	@Override
 	public void fillWithOptionalContent(List<Content> contents) {
 		
-		logInteraction("Fill the editor with predefined content");
+		logInteraction("Fill the editor with the provided content");
 		
 		setEditorContent(contents);
+
+	}
+	@Override
+	public void fillWithPredefinedContent() {
+		
+		logInteraction("Fill the editor with predefined content");
+		
+		List<Content> contents = new ArrayList<Content>();
+		Content content = new Content(null, "Predefined", null, null);
+		contents.add(content);
+		setEditorContent(contents );
 
 	}
 

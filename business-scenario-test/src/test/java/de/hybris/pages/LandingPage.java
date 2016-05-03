@@ -68,7 +68,7 @@ public class LandingPage extends PageObject
 
 	public SmartEdit gotoCatalogVersion(Component component) {
 
-		return gotoCatalogVersion(component.getCatalogVersion(),component.getCatalogId());
+		return gotoCatalogVersion(component.getCatalogId(), component.getCatalogVersion());
 	}
 
 }

@@ -195,6 +195,15 @@ public class PageObject {
 	}
 
 	/**
+	 * @param cssSelector the css selector of an element for which the existence will be checked against the current page
+	 * @return true if the the css selector is available on the page, otherwise false
+	 */
+	public boolean cssSelectorIsAvailable(String cssSelector){
+		 
+		return cssSelectorIsAvailable(null, cssSelector);
+	}
+	
+	/**
 	 * @param cssSelector the css selector of an element for which the existence will be checked under the specified scope against the current page
 	 * @param scope the scope (WebElement) under which the css selector will be evaluated. If scope is null the css selector will be evaluated against the whole page
 	 * @return true if the the css selector is available on the page, otherwise false
@@ -226,6 +235,8 @@ public class PageObject {
 		}  
 
 	}
+	
+	
 	private void setDriverImpliciteWait(int delay, TimeUnit unit) {
 		driver.manage().timeouts().implicitlyWait(delay, unit);
 	}

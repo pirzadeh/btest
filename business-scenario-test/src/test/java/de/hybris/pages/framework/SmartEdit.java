@@ -15,6 +15,7 @@ import de.hybris.pages.cms.SimpleParagraphEditor;
 import de.hybris.pages.cms.base.Editor;
 import de.hybris.pages.cms.base.EditorBase;
 import de.hybris.pages.cms.base.EditorFactory;
+import de.hybris.pages.framework.base.Container;
 import de.hybris.pages.framework.enums.PerspectiveEnum;
 import junit.framework.Assert;
 
@@ -78,7 +79,6 @@ public class SmartEdit extends Container
 		whiteRibbon.selectPerspective(PerspectiveEnum.BASIC).prepareCustomizedComponentForMove(item);	
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);
-		delayForDebugging();
 		return this;
 	}
 
@@ -90,7 +90,6 @@ public class SmartEdit extends Container
 		frame.prepareElementForMove(componentId);
 		prepareForDrop();
 		frame.moveToElementAndDrop(slotId);
-		delayForDebugging();
 		return this;
 	}
 
@@ -146,10 +145,17 @@ public class SmartEdit extends Container
 	}
 
 	public void validateExistence(List<Component> components) {
-		
+		logInteraction("Start validating the changes");
 		for (Component component:components){
-			WebElement slot = frame.findFrameElementById(component.getSlotId());
-			 Assert.assertTrue(frame.elementIsAvailable(slot, component.getId()));
+			if (component.getSlotId() == null){ //validation deletion
+				Assert.assertFalse(frame.elementIsAvailable(component.getId()));
+			}
+			else{//move
+				logDetail("Validate that component \""+component.getId()+"\" exists under slot \""+component.getSlotId()+"\"");
+				WebElement slot = frame.findFrameElementById(component.getSlotId());
+				 Assert.assertTrue(frame.elementIsAvailable(slot, component.getId()));			 
+			}
+			
 		}		
 	}
 
