@@ -12,8 +12,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.base.Predicate;
 
 /**
  * @author i839970
@@ -56,41 +61,41 @@ public class PageObject {
 		PageObject.driver = driver;
 	}
 
-	
-	/**
-	 * @param durationMS the duration in millisecond
-	 * causes the driver to wait for the specified duration
-	 */
-	public void delay(int durationMS){
-		try {
-			Thread.sleep(durationMS);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * causes an extended delay that could be used for debugging
-	 */
-	public void delayForDebugging(){
-		try {
-			Thread.sleep(INVESTIGATION_DELAY);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
-	
-	/**
-	 * causes the driver to wait for a default duration. This method could be used to delay the next action during interactions where an animation or transition is going to happen
-	 */
-	public void delayForAnimation(){
-		try {
-			Thread.sleep(CSS_TRANSITION_DELAY);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
+//
+//	/**
+//	 * @param durationMS the duration in millisecond
+//	 * causes the driver to wait for the specified duration
+//	 */
+//	public void delay(int durationMS){
+//		try {
+//			Thread.sleep(durationMS);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//	}
+//
+//	/**
+//	 * causes an extended delay that could be used for debugging
+//	 */
+//	public void delayForDebugging(){
+//		try {
+//			Thread.sleep(INVESTIGATION_DELAY);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//	}
+//
+//
+//	/**
+//	 * causes the driver to wait for a default duration. This method could be used to delay the next action during interactions where an animation or transition is going to happen
+//	 */
+//	public void delayForAnimation(){
+//		try {
+//			Thread.sleep(CSS_TRANSITION_DELAY);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 	/**
 	 * @param destinationElement this is the web element within which boundaries the mouse is going to jiggle
@@ -104,10 +109,10 @@ public class PageObject {
 
 		Point topLeft = destinationElement.getLocation();
 		Dimension size = destinationElement.getSize();
-		
+
 		logDetail("Origin Point: "+topLeft.x+","+topLeft.y);
 		logDetail("size: "+size.width+","+size.height);
-		
+
 		for (int i = 1 ; i < 15 ; i++){			
 			Point randomPoint = randomPointBasedOn(size);
 			Point destionationPoint = new Point(topLeft.x + randomPoint.x, topLeft.y + randomPoint.y);
@@ -131,7 +136,7 @@ public class PageObject {
 			float movetoX= 0;
 
 			for (int i = 0; i < absOffset; i++){
-				delay(10);
+//				delay(10);
 				movetoY += (float) randomPoint.y / absOffset;
 				movetoX += (float) randomPoint.x / absOffset;
 				mouse.moveToElement(destinationElement, Math.round(movetoX), Math.round(movetoY)).build().perform();	
@@ -199,10 +204,10 @@ public class PageObject {
 	 * @return true if the the css selector is available on the page, otherwise false
 	 */
 	public boolean cssSelectorIsAvailable(String cssSelector){
-		 
+
 		return cssSelectorIsAvailable(null, cssSelector);
 	}
-	
+
 	/**
 	 * @param cssSelector the css selector of an element for which the existence will be checked under the specified scope against the current page
 	 * @param scope the scope (WebElement) under which the css selector will be evaluated. If scope is null the css selector will be evaluated against the whole page
@@ -235,8 +240,8 @@ public class PageObject {
 		}  
 
 	}
-	
-	
+
+
 	private void setDriverImpliciteWait(int delay, TimeUnit unit) {
 		driver.manage().timeouts().implicitlyWait(delay, unit);
 	}
@@ -251,7 +256,7 @@ public class PageObject {
 	public void waitUntilXpathAtrributeValueAvailable(String xpath, String attribute, String value){
 		WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
 		wait.until(ExpectedConditions.attributeToBe(By.xpath(xpath), attribute, value));
-		delay(CSS_TRANSITION_DELAY);
+//		delay(CSS_TRANSITION_DELAY);
 	}
 
 	/**
@@ -264,7 +269,7 @@ public class PageObject {
 	public void waitUntilCssAtrributeValueAvailable(String cssSelector, String attribute, String value){
 		WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
 		wait.until(ExpectedConditions.attributeToBe(By.cssSelector(cssSelector), attribute, value));
-		delay(CSS_TRANSITION_DELAY);
+//		delay(CSS_TRANSITION_DELAY);
 	}
 
 	/**
@@ -275,16 +280,16 @@ public class PageObject {
 	public void waitUntilCssLocatorIsAvailable(String cssSelector){
 		WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(cssSelector)));
-		delay(CSS_TRANSITION_DELAY);
+//		delay(CSS_TRANSITION_DELAY);
 	}
-	
+
 	private Point calcOffset(Point destination, Point source) {
 
 		Point offset = new Point(destination.x - source.x, destination.y - source.y);
 		return offset;
 	}
 
-	
+
 	/**
 	 * @param visualText the visual text by which the driver tries to find an element
 	 * @return an element based on the visual text
@@ -316,12 +321,7 @@ public class PageObject {
 	 */
 	public WebElement findElementByText(WebElement scope, String text){
 
-		WebElement element = null;
-		if (scope == null)
-			element = driver.findElement(By.xpath("//*[contains(text(), '"+text+"')]"));
-		else
-			element = scope.findElement(By.xpath("//*[contains(text(), '"+text+"')]"));
-		return element;
+		return findElement(scope, By.xpath("//*[contains(text(), '"+text+"')]"));
 	}
 
 	/**
@@ -333,12 +333,7 @@ public class PageObject {
 	 */
 	public List<WebElement> findElementsByText(WebElement scope, String text){
 
-		List<WebElement> elements = null;
-		if (scope == null)
-			elements = driver.findElements(By.xpath("//*[contains(text(), '"+text+"')]"));
-		else
-			elements = scope.findElements(By.xpath("//*[contains(text(), '"+text+"')]"));
-		return elements;
+		return findElements(scope, By.xpath("//*[contains(text(), '"+text+"')]"));
 	}
 
 	/**
@@ -372,12 +367,7 @@ public class PageObject {
 	 */
 	public WebElement findElementByClass(WebElement scope, String clazz){
 
-		WebElement element = null;
-		if (scope == null)
-			element = driver.findElement(By.cssSelector("."+clazz+""));
-		else
-			element = scope.findElement(By.cssSelector("."+clazz+""));
-		return element;
+		return findElement(scope, By.cssSelector("."+clazz+""));
 	}
 
 	/**
@@ -389,12 +379,7 @@ public class PageObject {
 	 */
 	public List<WebElement> findElementsByClass(WebElement scope, String clazz){
 
-		List<WebElement> elements = null;
-		if (scope == null)
-			elements = driver.findElements(By.cssSelector("."+clazz+""));
-		else
-			elements = scope.findElements(By.cssSelector("."+clazz+""));
-		return elements;
+		return findElements(scope, By.cssSelector("."+clazz+""));
 	}
 
 
@@ -429,12 +414,7 @@ public class PageObject {
 	 */
 	public WebElement findElementByCssSelector(WebElement scope, String cssSelector){
 
-		WebElement element = null;
-		if (scope == null)
-			element = driver.findElement(By.cssSelector(cssSelector));
-		else
-			element = scope.findElement(By.cssSelector(cssSelector));
-		return element;
+		return findElement(scope, By.cssSelector(cssSelector));
 	}
 
 	/**
@@ -446,35 +426,9 @@ public class PageObject {
 	 */
 	public List<WebElement> findElementsByCssSelector(WebElement scope, String cssSelector){
 
-		List<WebElement> elements = null;
-		if (scope == null)
-			elements = driver.findElements(By.cssSelector(cssSelector));
-		else
-			elements = scope.findElements(By.cssSelector(cssSelector));
-		return elements;
+		return findElements(scope, By.cssSelector(cssSelector));
 	}
 
-	
-	/**
-	 * @param y a position on the Y axes of the page
-	 * 
-	 * vertically scrolls the page to the position specified by y
-	 */
-	public void scrollToY(int y){
-		JavascriptExecutor js =(JavascriptExecutor)driver;
-		js.executeScript("window.scrollTo(0,"+y+")");
-	}
-
-	
-	/**
-	 * @param element the web element for which the inner html is returned
-	 * @return the inner html content of the specified element
-	 */
-	public String getElementsHtml(WebElement element){
-		String html = (String)((JavascriptExecutor)driver).executeScript("return arguments[0].innerHTML;", element);
-		return html;
-	}
-	
 	/**
 	 * @param element the web element for which the clickability is going to be checked
 	 * @return true of the specified element is clickable, otherwise false
@@ -493,6 +447,112 @@ public class PageObject {
 		}
 	}
 
+//	public WebElement findElement(By by) {
+//		final Wait<WebDriver> wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);
+//		final WebElement element = wait.until(visibilityOfElementLocated(by));
+//		return element;
+//	}
+	
+	public WebElement findElement(By by) {
+		return findElement(null, by);
+	}
+
+	public WebElement findElement(WebElement scope, By by) {
+		final Wait<WebDriver> wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);
+		final WebElement element = wait.until(visibilityOfElementLocated(scope, by));
+		return element;
+	}
+	
+	private ExpectedCondition<WebElement> visibilityOfElementLocated(WebElement scope, final By by) {
+		return new ExpectedCondition<WebElement>() {
+			@Override
+			public WebElement apply(final WebDriver driver) {
+				WebElement element = null;
+				if (scope == null)
+					element = driver.findElement(by);
+				else
+					element = scope.findElement(by);
+				return element.isDisplayed() ? element : null;
+			}
+		};
+	}
+
+	
+	
+	public List<WebElement> findElements(By by) {
+		return findElements(null, by);
+	}
+
+	public List<WebElement> findElements(WebElement scope, By by) {
+		final Wait<WebDriver> wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);
+		final List<WebElement> elements = wait.until(visibilityOfElementsLocated(scope, by));
+		return elements;
+	}
+	
+	private ExpectedCondition<List<WebElement>> visibilityOfElementsLocated(WebElement scope, final By by) {
+		return new ExpectedCondition<List<WebElement>>() {
+			@Override
+			public List<WebElement> apply(final WebDriver driver) {
+				List<WebElement> elements = null;
+				if (scope == null)
+					elements = driver.findElements(by);
+				else
+					elements = scope.findElements(by);
+				return elements.stream().anyMatch(p -> p.isDisplayed()) ? elements : null;
+			}
+		};
+	}
+	
+	/**
+	 * @param y a position on the Y axes of the page
+	 * 
+	 * vertically scrolls the page to the position specified by y
+	 */
+	public void scrollToY(int y){
+		JavascriptExecutor js =(JavascriptExecutor)driver;
+		js.executeScript("window.scrollTo(0,"+y+")");
+	}
+
+
+	/**
+	 * @param element the web element for which the inner html is returned
+	 * @return the inner html content of the specified element
+	 */
+	public String getElementsHtml(WebElement element){
+		String html = (String)((JavascriptExecutor)driver).executeScript("return arguments[0].innerHTML;", element);
+		return html;
+	}
+
+	
+//	public WebElement findElementPredicateWait(By by) {
+//		final FluentWait<By> fluentWait = new FluentWait<By>(by);
+//		fluentWait.pollingEvery(100, TimeUnit.MILLISECONDS);
+//		fluentWait.withTimeout(15, TimeUnit.SECONDS);
+//		fluentWait.until(new PredicateWait(driver));
+//
+//		return driver.findElement(by);
+//	}
+//
+//	private class PredicateWait implements Predicate<By> {
+//
+//		private final WebDriver driver;
+//
+//		public PredicateWait(final WebDriver driver) {
+//			this.driver = driver;
+//		}
+//
+//		@Override
+//		public boolean apply(final By by) {
+//			try {
+//				return driver.findElement(by).isDisplayed();
+//			} catch (final NoSuchElementException ex) {
+//				return false;
+//			}
+//		}
+//	}
+	
+	
+	
 	public void logError(String log){
 
 		BusinessScenarioLogger.getLogger().error(log);
