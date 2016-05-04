@@ -113,7 +113,7 @@ public class WhiteRibbon extends Container implements Coordinatable{
 		putMeInContainer();
 		WebElement tabElement = driver.findElement(By.cssSelector("[heading='"+tabName+"']"));
 		tabElement.click();
-		delayForAnimation();
+//		delayForAnimation();
 		return this;
 	}
 
@@ -124,7 +124,7 @@ public class WhiteRibbon extends Container implements Coordinatable{
 		putMeInContainer();
 		WebElement button = driver.findElement(By.tagName(buttonTagName));		
 		button.click();
-		delayForAnimation();
+//		delayForAnimation();
 		return this;
 	}
 

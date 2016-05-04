@@ -61,19 +61,19 @@ public class PageObject {
 		PageObject.driver = driver;
 	}
 
-//
-//	/**
-//	 * @param durationMS the duration in millisecond
-//	 * causes the driver to wait for the specified duration
-//	 */
-//	public void delay(int durationMS){
-//		try {
-//			Thread.sleep(durationMS);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
+
+	/**
+	 * @param durationMS the duration in millisecond
+	 * causes the driver to wait for the specified duration
+	 */
+	public void delay(int durationMS){
+		try {
+			Thread.sleep(durationMS);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
 //	/**
 //	 * causes an extended delay that could be used for debugging
 //	 */
@@ -86,16 +86,16 @@ public class PageObject {
 //	}
 //
 //
-//	/**
-//	 * causes the driver to wait for a default duration. This method could be used to delay the next action during interactions where an animation or transition is going to happen
-//	 */
-//	public void delayForAnimation(){
-//		try {
-//			Thread.sleep(CSS_TRANSITION_DELAY);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//	}
+	/**
+	 * causes the driver to wait for a default duration. This method could be used to delay the next action during interactions where an animation or transition is going to happen
+	 */
+	public void delayForAnimation(){
+		try {
+			Thread.sleep(CSS_TRANSITION_DELAY);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 	/**
 	 * @param destinationElement this is the web element within which boundaries the mouse is going to jiggle
@@ -136,7 +136,6 @@ public class PageObject {
 			float movetoX= 0;
 
 			for (int i = 0; i < absOffset; i++){
-//				delay(10);
 				movetoY += (float) randomPoint.y / absOffset;
 				movetoX += (float) randomPoint.x / absOffset;
 				mouse.moveToElement(destinationElement, Math.round(movetoX), Math.round(movetoY)).build().perform();	
@@ -256,7 +255,6 @@ public class PageObject {
 	public void waitUntilXpathAtrributeValueAvailable(String xpath, String attribute, String value){
 		WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
 		wait.until(ExpectedConditions.attributeToBe(By.xpath(xpath), attribute, value));
-//		delay(CSS_TRANSITION_DELAY);
 	}
 
 	/**
@@ -269,7 +267,6 @@ public class PageObject {
 	public void waitUntilCssAtrributeValueAvailable(String cssSelector, String attribute, String value){
 		WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
 		wait.until(ExpectedConditions.attributeToBe(By.cssSelector(cssSelector), attribute, value));
-//		delay(CSS_TRANSITION_DELAY);
 	}
 
 	/**
@@ -280,7 +277,19 @@ public class PageObject {
 	public void waitUntilCssLocatorIsAvailable(String cssSelector){
 		WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(cssSelector)));
-//		delay(CSS_TRANSITION_DELAY);
+	}
+	
+	/**
+	 * @param clazz is the class that if becomes available on the current page the wait will be over
+	 * 
+	 * waits until the element specified by the class  becomes available
+	 */
+	public void waitUntilClassIsNotAvailable(String clazz){
+		setDriverImpliciteWait(0, TimeUnit.MILLISECONDS); 
+		WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);
+		wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.className(clazz),1));
+		setDriverImpliciteWait(DEFAULT_TIMEOUT, TimeUnit.SECONDS); 
+		
 	}
 
 	private Point calcOffset(Point destination, Point source) {
@@ -289,6 +298,53 @@ public class PageObject {
 		return offset;
 	}
 
+	/**
+	 * @param id the id by which the driver tries to find an element
+	 * @return an element based on the id
+	 * 
+	 * tries to find an element by the visual text on the page
+	 */
+	public WebElement findElementById(String id){
+
+		return findElementById(null,id);
+	}
+
+	/**
+	 * @param id the id by which the driver tries to find an element
+	 * @return list of elements found based on the specified id
+	 * 
+	 * tries to find a list of elements by the specified id on the page
+	 */
+	public List<WebElement> findElementsById(String id){
+
+		return findElementsById(null, id);
+	}
+
+	/**
+	 * @param scope in which the search for id will happen
+	 * @param id the id by which the driver tries to find an element
+	 * @return an element based on the id
+	 * 
+	 * tries to find an element based on the id on the provided scope
+	 */
+	public WebElement findElementById(WebElement scope, String id){
+
+		return findElement(scope, By.id(id));
+	}
+
+	/**
+	 * @param scope in which the search for visual text will happen
+	 * @param id the visual text by which the driver tries to find an element
+	 * @return a list of elements based on the visual text
+	 * 
+	 * tries to find a list of elements based on the visual text on the provided scope
+	 */
+	public List<WebElement> findElementsById(WebElement scope, String id){
+
+		return findElements(scope, By.id(id));
+	}
+
+	
 
 	/**
 	 * @param visualText the visual text by which the driver tries to find an element
@@ -437,14 +493,25 @@ public class PageObject {
 	{
 		try
 		{
-			WebDriverWait wait = new WebDriverWait(driver, 2);
+			WebDriverWait wait = new WebDriverWait(driver, CSS_TRANSITION_DELAY);
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			return true;
 		}
 		catch (Exception e)
 		{
+			System.out.println("element not clickable");
 			return false;
 		}
+	}
+	
+	/**
+	 * @param element the web element for which the clickability is going to be checked
+	 * @return true of the specified element is clickable, otherwise false
+	 */
+	public void clickOn(WebElement element)      
+	{
+		if (isClickable(element))
+			element.click();
 	}
 
 //	public WebElement findElement(By by) {

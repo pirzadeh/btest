@@ -9,8 +9,7 @@ import de.hybris.pages.framework.base.Container;
 
 public class BlueRibbon extends Container{
 
-	@FindBy(id="nav-expander")
-	private WebElement hamburgaerMenu;
+
 	
 	public BlueRibbon(WebDriver driver) {
 		super(driver);
@@ -21,8 +20,8 @@ public class BlueRibbon extends Container{
 		logDetail("Open the Hamburger menu");
 		
 		putMeInContainer();
-		hamburgaerMenu.click();	
-		delayForAnimation();
+		WebElement hamburgaerMenu = findElementById("nav-expander");
+		clickOn(hamburgaerMenu);
 		return new LeftPane(driver);
 	}
 
@@ -32,9 +31,8 @@ public class BlueRibbon extends Container{
 		logDetail("Click on the \""+buttonTagName+"\" button");
 		
 		putMeInContainer();
-		WebElement button = driver.findElement(By.tagName(buttonTagName));		
+		WebElement button = findElement(By.tagName(buttonTagName));		
 		button.click();
-		delayForAnimation();
 		return this;
 	}
 }

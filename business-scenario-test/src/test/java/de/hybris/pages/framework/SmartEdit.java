@@ -17,6 +17,7 @@ import de.hybris.pages.cms.base.EditorBase;
 import de.hybris.pages.cms.base.EditorFactory;
 import de.hybris.pages.framework.base.Container;
 import de.hybris.pages.framework.enums.PerspectiveEnum;
+import de.hybris.personas.Interaction;
 import junit.framework.Assert;
 
 public class SmartEdit extends Container
@@ -51,6 +52,7 @@ public class SmartEdit extends Container
 	
 	//Helpers
 	
+	@Interaction
 	public SmartEdit createNewComponentAndFillIt(Component component) {
 
 		Editor editor = createNewComponent(component.getType(), component.getSlotId());
@@ -60,6 +62,7 @@ public class SmartEdit extends Container
 		return this;
 	}
 	
+	@Interaction
 	public Editor createNewComponent(String type, String slotId){
 
 		logInteraction("Drag and Drop the component type \""+type+"\" from the component menu to slot \""+slotId+"\" to create a new customized component");
@@ -72,6 +75,7 @@ public class SmartEdit extends Container
 		return editor;
 	}
 	
+	@Interaction
 	public SmartEdit addExistingComponent(String item, String slotId){
 
 		logInteraction("Drag and Drop the customized component \""+item+"\" from the component menu to slot \""+slotId+"\"");
@@ -82,6 +86,7 @@ public class SmartEdit extends Container
 		return this;
 	}
 
+	@Interaction
 	public SmartEdit moveComponentToSlot(String componentId, String slotId){
 		
 		logInteraction("Drag and Drop component \""+componentId+"\" to slot \""+slotId+"\"");

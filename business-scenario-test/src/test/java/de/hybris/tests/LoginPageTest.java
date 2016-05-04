@@ -85,13 +85,14 @@ public class LoginPageTest extends BusinessTest{
 	public void contentManagement(){
 		Tom tom = new Tom();
 		
-		tom.predifinedScenario();
-		
-		tom.explore();
-		
-		tom.explore(Strategy.RECENTLY_CREATED);
-		
-		tom.reportExperience();
+		tom.getListOfAvailableInteractions();
+//		tom.predifinedScenario();
+//		
+//		tom.explore();
+//		
+//		tom.explore(Strategy.RECENTLY_CREATED);
+//		
+//		tom.reportExperience();
 		
 	}
 	

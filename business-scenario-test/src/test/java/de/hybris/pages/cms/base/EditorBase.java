@@ -34,14 +34,14 @@ public class EditorBase extends PageObject {
 		putMeInContainer();
 		WebElement tabElement = driver.findElement(By.cssSelector("[data-tab-id='"+tabId+"']"));
 		tabElement.click();
-		delayForAnimation();
+//		delayForAnimation();
 		return this;
 	}
 
 	private WebElement getFieldById(String id){
 		putMeInContainer();
 		WebElement field = driver.findElement(By.cssSelector("[id='"+id+"']"));
-		delayForAnimation();
+//		delayForAnimation();
 		return field;
 	}
 
@@ -72,6 +72,8 @@ public class EditorBase extends PageObject {
 	}
 	
 	public SmartEdit save(){
+		logDetail("Press the Save button");
+		
 		putMeInContainer();
 		driver.findElement(By.id("save")).click();
 		return new SmartEdit(driver);

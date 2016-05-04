@@ -16,11 +16,11 @@ import org.openqa.selenium.support.FindBy;
 public class LandingPage extends PageObject
 {
 
-	@FindBy(css = ".catalog-container")
-	private List<WebElement> catalogs;
-
-	@FindBy(css = ".catalog-body")
-	private List<WebElement> catalogBodies;
+//	@FindBy(css = ".catalog-container")
+//	private List<WebElement> catalogs;
+//
+//	@FindBy(css = ".catalog-body")
+//	private List<WebElement> catalogBodies;
 
 	public LandingPage(final WebDriver driver)
 	{
@@ -38,12 +38,12 @@ public class LandingPage extends PageObject
 	//helpers
 
 	private List<WebElement> getCatalogs(){
-		//		return driver.findElements(By.cssSelector(".catalog-container"));
-		return catalogs;
+		return findElementsByClass("catalog-container");
+		//		return catalogs;
 	}
 
 	private WebElement catalogBodyOf(String term){
-		//		List<WebElement> bodies = driver.findElements(By.cssSelector(".catalog-body"));
+		List<WebElement> catalogBodies = findElementsByClass("catalog-body");
 		Optional<WebElement> filteredBody = catalogBodies.stream().filter(body -> body.getText().contains(term)).findFirst();		  
 		return filteredBody.get();
 	}
@@ -63,7 +63,7 @@ public class LandingPage extends PageObject
 
 		int STARTING_INDEX = 2;
 		index =+ STARTING_INDEX;
-		return driver.findElement(By.cssSelector(".pagination-container .pagination li:nth-child(" + index + ") a"));
+		return findElementByCssSelector(".pagination-container .pagination li:nth-child(" + index + ") a");
 	}
 
 	public SmartEdit gotoCatalogVersion(Component component) {

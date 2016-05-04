@@ -15,5 +15,6 @@ public class Container extends PageObject{
 	public void putMeInContainer(){
 		
 		driver.switchTo().defaultContent();
+		waitUntilClassIsNotAvailable("modal-open");
 	}
 }
