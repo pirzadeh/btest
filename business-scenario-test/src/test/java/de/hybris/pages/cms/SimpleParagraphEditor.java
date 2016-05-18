@@ -22,11 +22,7 @@ public class SimpleParagraphEditor extends EditorBase implements Editor {
 		super(driver);
 	}
 
-	private void putMeInContainer(){
-
-		driver.switchTo().defaultContent();
-	}
-
+	
 	private void putMeInEditorOf(String language){
 		putMeInContainer();
 		List<WebElement> richTextElements = driver.findElements(By.tagName("se-rich-text-field"));

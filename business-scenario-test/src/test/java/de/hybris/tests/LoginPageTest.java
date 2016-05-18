@@ -43,21 +43,7 @@ public class LoginPageTest extends BusinessTest{
 		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged").addExistingComponent("ApparelDEHompageWomenStreetBannerComponent", "Section1Slot-ApparelDEHomepage");
 
 
-	}
-	
-	@Test
-	public void scenario3() {
-
-		final String username = "cmsmanager";
-		final String password = "1234";
-		
-		page.enterUsername(username).enterPassword(password).signin().gotoCatalogVersion("APPAREL DE", "Staged")
-			.createNewComponent("CMSParagraphComponent", "Section2ASlot-ApparelDEHomepage").fillWithPredefinedContent();
-
-	}
-	
-	
-	
+	}	
 
 	@Test
 	public void scenario1() {

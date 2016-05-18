@@ -70,6 +70,12 @@ public class FrameContent extends PageObject implements Coordinatable{
 	
 	//helper
 	
+	
+	public WebElement findContextualMenuOfElementById(String id){
+		frameIsReady();
+		String cssSelector = ".movebutton[smartedit-id='"+id+"']";	
+		return findElementByCssSelector(cssSelector);
+	}
 	public WebElement findFrameElementById(String id){
 		return findFrameElementById(null, id);
 	}
@@ -101,7 +107,10 @@ public class FrameContent extends PageObject implements Coordinatable{
 	public void prepareElementForMove(String componentId) {
 		frameIsReady();
 		WebElement component = findFrameElementById(componentId);
-		mouse.clickAndHold(component).build().perform();
+		scrollToY(component.getLocation().y);
+		jiggleWithinUntilAttributeIsPresent(component, Arrays.asList("decorative-border"));
+		WebElement componentMoveButton = findContextualMenuOfElementById(componentId);
+		mouse.clickAndHold(componentMoveButton).build().perform();
 	}
 
 	public boolean elementIsAvailable(WebElement scope, String smartEditId) {

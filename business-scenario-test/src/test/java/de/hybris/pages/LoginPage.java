@@ -11,7 +11,8 @@ public class LoginPage extends PageObject
 {
 
 	//Page URL
-	private static String url = "https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/#/";
+//	private static String url = "https://e2e4.prod.wcms.b2c.ydev.hybris.com:9002/smartedit/#/";
+	private static String url = "https://127.0.0.1:9002/smartedit/#/";
 
 	public LoginPage(final WebDriver driver)
 	{

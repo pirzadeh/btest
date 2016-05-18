@@ -9,21 +9,21 @@ import de.hybris.pages.framework.SmartEdit;
 import de.hybris.pages.framework.enums.EditorFiledEnum;
 import de.hybris.pages.framework.enums.EditorTabEnum;
 
-public class EditorBase extends PageObject {
+public abstract class EditorBase extends PageObject {
 
 	public EditorBase(WebDriver driver) {
 		super(driver);
 
 	}
 
-	private static void putMeInContainer(){
+	public static void putMeInContainer(){
 
 		driver.switchTo().defaultContent();
 	}
 
-	public static String findComponentType(){
+	public static  String findComponentType(){
 		putMeInContainer();
-		WebElement header = driver.findElement(By.cssSelector("h4[id*='smartedit-modal-title-type']"));
+		WebElement header = findElementByCssSelector("h4[id*='smartedit-modal-title-type']");
 		String id = header.getAttribute("id");
 		String[] parts = id.split("\\.");
 
@@ -32,7 +32,7 @@ public class EditorBase extends PageObject {
 	
 	public EditorBase selectEditorTab(String tabId){
 		putMeInContainer();
-		WebElement tabElement = driver.findElement(By.cssSelector("[data-tab-id='"+tabId+"']"));
+		WebElement tabElement =  findElementByCssSelector("[data-tab-id='"+tabId+"']");
 		tabElement.click();
 //		delayForAnimation();
 		return this;
@@ -40,7 +40,7 @@ public class EditorBase extends PageObject {
 
 	private WebElement getFieldById(String id){
 		putMeInContainer();
-		WebElement field = driver.findElement(By.cssSelector("[id='"+id+"']"));
+		WebElement field = findElementByCssSelector("[id='"+id+"']");
 //		delayForAnimation();
 		return field;
 	}
@@ -75,13 +75,13 @@ public class EditorBase extends PageObject {
 		logDetail("Press the Save button");
 		
 		putMeInContainer();
-		driver.findElement(By.id("save")).click();
+		clickOn(findElementById("save"));
 		return new SmartEdit(driver);
 	}
 	
 	public SmartEdit cancel(){
 		putMeInContainer();
-		driver.findElement(By.id("cancel")).click();
+		clickOn(findElementById("cancel"));
 		return new SmartEdit(driver);
 	}
 }

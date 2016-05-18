@@ -24,7 +24,7 @@ import com.google.common.base.Predicate;
  * @author i839970
  *
  */
-public class PageObject {
+public abstract class PageObject {
 	public static WebDriver driver;
 	public static Actions mouse;
 
@@ -74,18 +74,18 @@ public class PageObject {
 		}
 	}
 
-//	/**
-//	 * causes an extended delay that could be used for debugging
-//	 */
-//	public void delayForDebugging(){
-//		try {
-//			Thread.sleep(INVESTIGATION_DELAY);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
-//
+	//	/**
+	//	 * causes an extended delay that could be used for debugging
+	//	 */
+	//	public void delayForDebugging(){
+	//		try {
+	//			Thread.sleep(INVESTIGATION_DELAY);
+	//		} catch (InterruptedException e) {
+	//			e.printStackTrace();
+	//		}
+	//	}
+	//
+	//
 	/**
 	 * causes the driver to wait for a default duration. This method could be used to delay the next action during interactions where an animation or transition is going to happen
 	 */
@@ -241,7 +241,7 @@ public class PageObject {
 	}
 
 
-	private void setDriverImpliciteWait(int delay, TimeUnit unit) {
+	private static void setDriverImpliciteWait(int delay, TimeUnit unit) {
 		driver.manage().timeouts().implicitlyWait(delay, unit);
 	}
 
@@ -278,18 +278,18 @@ public class PageObject {
 		WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);	
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(cssSelector)));
 	}
-	
+
 	/**
 	 * @param clazz is the class that if becomes available on the current page the wait will be over
 	 * 
 	 * waits until the element specified by the class  becomes available
 	 */
-	public void waitUntilClassIsNotAvailable(String clazz){
+	public static void waitUntilClassIsNotAvailable(String clazz){
 		setDriverImpliciteWait(0, TimeUnit.MILLISECONDS); 
 		WebDriverWait wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);
 		wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.className(clazz),1));
 		setDriverImpliciteWait(DEFAULT_TIMEOUT, TimeUnit.SECONDS); 
-		
+
 	}
 
 	private Point calcOffset(Point destination, Point source) {
@@ -344,7 +344,7 @@ public class PageObject {
 		return findElements(scope, By.id(id));
 	}
 
-	
+
 
 	/**
 	 * @param visualText the visual text by which the driver tries to find an element
@@ -445,7 +445,7 @@ public class PageObject {
 	 * 
 	 * tries to find an element based on the provided cssSelector on the page
 	 */
-	public WebElement findElementByCssSelector(String cssSelector){
+	public static WebElement findElementByCssSelector(String cssSelector){
 
 		return findElementByCssSelector(null, cssSelector);
 	}
@@ -468,7 +468,7 @@ public class PageObject {
 	 * 
 	 * tries to find an element based on the cssSelector on the provided scope
 	 */
-	public WebElement findElementByCssSelector(WebElement scope, String cssSelector){
+	public static WebElement findElementByCssSelector(WebElement scope, String cssSelector){
 
 		return findElement(scope, By.cssSelector(cssSelector));
 	}
@@ -503,7 +503,7 @@ public class PageObject {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * @param element the web element for which the clickability is going to be checked
 	 * @return true of the specified element is clickable, otherwise false
@@ -514,23 +514,23 @@ public class PageObject {
 			element.click();
 	}
 
-//	public WebElement findElement(By by) {
-//		final Wait<WebDriver> wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);
-//		final WebElement element = wait.until(visibilityOfElementLocated(by));
-//		return element;
-//	}
-	
+	//	public WebElement findElement(By by) {
+	//		final Wait<WebDriver> wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);
+	//		final WebElement element = wait.until(visibilityOfElementLocated(by));
+	//		return element;
+	//	}
+
 	public WebElement findElement(By by) {
 		return findElement(null, by);
 	}
 
-	public WebElement findElement(WebElement scope, By by) {
+	public static WebElement findElement(WebElement scope, By by) {
 		final Wait<WebDriver> wait = new WebDriverWait(driver, DEFAULT_TIMEOUT);
 		final WebElement element = wait.until(visibilityOfElementLocated(scope, by));
 		return element;
 	}
-	
-	private ExpectedCondition<WebElement> visibilityOfElementLocated(WebElement scope, final By by) {
+
+	private static ExpectedCondition<WebElement> visibilityOfElementLocated(WebElement scope, final By by) {
 		return new ExpectedCondition<WebElement>() {
 			@Override
 			public WebElement apply(final WebDriver driver) {
@@ -544,8 +544,8 @@ public class PageObject {
 		};
 	}
 
-	
-	
+
+
 	public List<WebElement> findElements(By by) {
 		return findElements(null, by);
 	}
@@ -555,7 +555,7 @@ public class PageObject {
 		final List<WebElement> elements = wait.until(visibilityOfElementsLocated(scope, by));
 		return elements;
 	}
-	
+
 	private ExpectedCondition<List<WebElement>> visibilityOfElementsLocated(WebElement scope, final By by) {
 		return new ExpectedCondition<List<WebElement>>() {
 			@Override
@@ -569,7 +569,7 @@ public class PageObject {
 			}
 		};
 	}
-	
+
 	/**
 	 * @param y a position on the Y axes of the page
 	 * 
@@ -590,36 +590,40 @@ public class PageObject {
 		return html;
 	}
 
-	
-//	public WebElement findElementPredicateWait(By by) {
-//		final FluentWait<By> fluentWait = new FluentWait<By>(by);
-//		fluentWait.pollingEvery(100, TimeUnit.MILLISECONDS);
-//		fluentWait.withTimeout(15, TimeUnit.SECONDS);
-//		fluentWait.until(new PredicateWait(driver));
-//
-//		return driver.findElement(by);
-//	}
-//
-//	private class PredicateWait implements Predicate<By> {
-//
-//		private final WebDriver driver;
-//
-//		public PredicateWait(final WebDriver driver) {
-//			this.driver = driver;
-//		}
-//
-//		@Override
-//		public boolean apply(final By by) {
-//			try {
-//				return driver.findElement(by).isDisplayed();
-//			} catch (final NoSuchElementException ex) {
-//				return false;
-//			}
-//		}
-//	}
-	
-	
-	
+
+	//	public WebElement findElementPredicateWait(By by) {
+	//		final FluentWait<By> fluentWait = new FluentWait<By>(by);
+	//		fluentWait.pollingEvery(100, TimeUnit.MILLISECONDS);
+	//		fluentWait.withTimeout(15, TimeUnit.SECONDS);
+	//		fluentWait.until(new PredicateWait(driver));
+	//
+	//		return driver.findElement(by);
+	//	}
+	//
+	//	private class PredicateWait implements Predicate<By> {
+	//
+	//		private final WebDriver driver;
+	//
+	//		public PredicateWait(final WebDriver driver) {
+	//			this.driver = driver;
+	//		}
+	//
+	//		@Override
+	//		public boolean apply(final By by) {
+	//			try {
+	//				return driver.findElement(by).isDisplayed();
+	//			} catch (final NoSuchElementException ex) {
+	//				return false;
+	//			}
+	//		}
+	//	}
+
+	public static void putMeInContainer(){
+
+		driver.switchTo().defaultContent();
+		waitUntilClassIsNotAvailable("modal-open");
+	}
+
 	public void logError(String log){
 
 		BusinessScenarioLogger.getLogger().error(log);

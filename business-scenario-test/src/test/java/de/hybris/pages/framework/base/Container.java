@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import de.hybris.base.PageObject;
 
-public class Container extends PageObject{
+public abstract class Container extends PageObject{
 
 	public Container(WebDriver driver) {
 		super(driver);
@@ -12,9 +12,5 @@ public class Container extends PageObject{
 	}
 
 
-	public void putMeInContainer(){
-		
-		driver.switchTo().defaultContent();
-		waitUntilClassIsNotAvailable("modal-open");
-	}
+	
 }

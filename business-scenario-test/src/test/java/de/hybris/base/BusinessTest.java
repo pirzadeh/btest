@@ -23,7 +23,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 
-public class BusinessTest {
+public abstract class BusinessTest {
 	protected WebDriver driver;
 	private String currentBrowser="";
 	//	@BeforeClass

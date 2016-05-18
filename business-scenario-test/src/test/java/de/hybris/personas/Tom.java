@@ -1,6 +1,8 @@
 package de.hybris.personas;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import de.hybris.base.Persona;
@@ -31,19 +33,22 @@ public class Tom extends Persona {
 		
 	}
 	
-	public <T> void getListOfAvailableInteractions(){
+	public <T> List<Method> getListOfAvailableInteractions(){
+		Method[] methods = null;
+		List<Method> annotatedMethods = new ArrayList<>();
 		try {
-            Class c = SmartEdit.class;
-            Method[] m = c.getDeclaredMethods();
-            for (int i = 0; i < m.length; i++){
-            	if	(m[i].isAnnotationPresent(Interaction.class))
-            		System.out.println(m[i].toString());
-            	
+            Class clazz = SmartEdit.class;
+            methods = clazz.getDeclaredMethods();
+            for (int i = 0; i < methods.length; i++){
+            	if	(methods[i].isAnnotationPresent(Interaction.class))
+            		annotatedMethods.add(methods[i]);            	
             }
             	
         } catch (Throwable e) {
             System.err.println(e);
         }
+		return annotatedMethods;
+		
 	}
 
 }
